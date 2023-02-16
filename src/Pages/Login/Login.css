@@ -1,0 +1,65 @@
+body {
+  
+  background-color: rgb(228, 227, 227);
+}
+.loginPage {
+  padding-top: 7%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+form#loginform {
+  text-align: left;
+  background-color: #fff;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px #beb4b4;
+  box-shadow: 0 0 10px #b2abab;
+}
+
+#loginform input {
+  width: 220px;
+  padding: 7px 7px;
+  border: solid 0.4px #555353;
+  border-radius: 3px;
+}
+
+h4#pass {
+  display: inline-block;
+  padding-right: 60px;
+}
+
+form #forgotpass {
+  display: inline-block;
+  text-decoration: none;
+  color: blue;
+  font-size: 13px;
+}
+
+.loginButton {
+  height: 35px;
+  padding: 5px 100px;
+  background-color: rgb(51, 158, 239);
+  border: 1px solid rgb(51, 158, 239);
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+.loginButton:hover {
+  background-color: rgb(12, 109, 206);
+}
+
+#signuplink {
+  text-decoration: none;
+  font-size: 13px;
+  color: blue;
+}
+
+p {
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 13px;
+}
