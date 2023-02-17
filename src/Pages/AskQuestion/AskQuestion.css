@@ -1,17 +1,17 @@
 
 
-.ask-question{
-    min-height: 100vh;
-    background-color: #e5e6e8;
-}
+
 
 .ask-ques-container{
-    margin: auto;
-    max-width: 1200px;
+    /* border: 5px solid black; */
+    display: inline-block;
+    width:100%;
+    text-align: center;
 
 }
 .ask-ques-container h1{
-    padding: 80px 0px 20px 0px;
+    display: block;
+    padding-top: 5%;
 
 }
 
@@ -34,10 +34,18 @@
     font-size: 13px;
     padding: 3px 0px;
 }
+.ask-form-container{
+    
+    text-align: left;
+    border: 1px solid black;
+    width: 60%;
+    margin:auto;
+    margin-top: 2%;
 
+}
 .ask-form-container label input{
     padding: 10px;
-    border: solid 1px #dea6a63e;
+    border: solid 1px #9657573e;
     font-family: 'Roboto','sans-serif';
     width: 96%;
     resize: vertical;
@@ -53,7 +61,8 @@
 
 
 .review-btn{
-    margin: 50px 0px;
+    
+    margin: auto;
     padding: 10px;
     background-color: #009dff;
     border: solid 1px #009dff;

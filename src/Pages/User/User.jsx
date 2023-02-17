@@ -1,27 +1,22 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
-import LeftSidebar from '../../components/LeftsideBar/LeftsideBar'
-import UsersList from './UsersList'
-import './User.css'
+import React from "react";
+import { useLocation } from "react-router-dom";
+import LeftSidebar from "../../components/LeftsideBar/LeftsideBar";
+import UsersList from "./UsersList";
+import "./User.css";
 const User = () => {
-
-  const location = useLocation()
+  const location = useLocation();
 
   return (
-    <div className='.home-container-1'>
-      <div id="leftsidebar">
+    <div className="userpage">
+      <div className="home-container-1">
         <LeftSidebar />
       </div>
-      <div className="tags-container-5">
-        
-          <h1>Users</h1>
-          <UsersList />
-
-
-       
+      <div className="home-container-2" id="userlist">
+        <h1 style={{fontWeight:"400"}}>Users</h1>
+        <UsersList />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default User
+export default User;

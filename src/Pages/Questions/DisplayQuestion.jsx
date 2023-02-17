@@ -12,16 +12,20 @@ const DisplayQuestion = () => {
                 <LeftsideBar />
 
             </div>
-            <div className="home-container-2">
-            <QuestionDetails />
+            <div className="home-container-2" style={{padding:"60px 25px"}}>
+                <div className="home-container-2-1">
+                    <QuestionDetails />
+                </div>
+                <div className="home-container-2-2" style={{padding:"0px 25px"}}>
+                    <RightsideBar />
+                </div>
             </div>
-           
-            <div className="home-container-3">
-                <RightsideBar />
-            </div>
-
-
         </div>
+
+
+
+
+      
     )
 }
 

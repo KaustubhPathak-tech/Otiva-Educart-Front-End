@@ -27,13 +27,13 @@ const AskQuestion = () => {
         }
     }
     return (
-
-        <div className='ask-question'>
+//
+        
             <div className="ask-ques-container">
                 <h1>
                     Ask a Public Question
                 </h1>
-                {/* <h1>{questionBody}</h1> */}
+                
                 <form onSubmit={handleSubmit}>
                     <div className='ask-form-container'>
                         <label htmlFor="ask-ques-tite">
@@ -63,11 +63,11 @@ const AskQuestion = () => {
                             </p><br />
                             <input type="text" name='questionTags' onChange={(e) => { setQuestionTags(e.target.value.split(" ")) }} id='ask-ques-tags' placeholder='e.g. database array python mongodb ' />
                         </label>
-                    </div>
+                    </div><br />
                     <input type="submit" value='Review your Question ' className='review-btn' />
                 </form>
             </div>
-        </div>
+      
     )
 }
 

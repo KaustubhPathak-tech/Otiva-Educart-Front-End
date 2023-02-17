@@ -1,3 +1,10 @@
+
+#tagspage{
+  padding-left: 2%;
+  width:80%;
+  display: inline-block;
+}
+
 .tags-list-container {
   padding: 30px 0px;
   display: grid;
@@ -12,7 +19,7 @@
 }
 .tags-h1 {
   font-weight: 400;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .tags-p {
@@ -50,18 +57,6 @@
   border-right: 1px solid #9e9c9c;
 }
 
-/* #plain-text{
-    margin-left: 25%;
-    margin-top: -20%;
-} */
 
 
-#hr
- {
-   background-color:#C80000;
-   color:#C80000;
-   transform:rotate(90deg);
-   position:absolute;
-   left:130px;
-   border:2px;
- }
+

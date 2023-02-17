@@ -81,13 +81,13 @@ const Homemainbar = () => {
   const redirect = () => { user === null ? navigate('/login') : navigate('/AskQuestions') }
 
   return (
-    <div className='main-bar'>
-      <div className='main-bar-header'>
+    <div>
+      <div className='intro-container'>
         {
           location.pathname === '/' ? <h1>Top Questions</h1> : <h1>All Questions</h1>
         }
         <button className='ask-btn' onClick={redirect}>Ask Question</button>
-
+        
         {/* <Link to='/AskQuestions' className='ask-btn' onClick={authenticate}>Ask  Question</Link> */}
 
       </div>
@@ -98,7 +98,7 @@ const Homemainbar = () => {
         {
           questionsList.data === null ? <h1>Loading...</h1> :
             <>
-              <p>{questionsList.data.length} Questions </p>
+              <p id="noOfQuestions">{questionsList.data.length} Questions </p>
               <QuestionList questionsList={questionsList.data} />
             </>
 

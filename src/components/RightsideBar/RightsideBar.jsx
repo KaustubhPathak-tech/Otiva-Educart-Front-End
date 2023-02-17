@@ -8,10 +8,10 @@ import './RightsideBar.css'
 const RightsideBar = () => {
   return (
     <div>
-      <aside className='right-sidebar'>
+      
         <Widget />
         <WidgetTags />
-      </aside>
+     
     </div>
   )
 }

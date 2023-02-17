@@ -19,7 +19,7 @@ const Login = () => {
     console.log({ email, password })
   }
 
-
+//
   return (
     <div className='loginPage'>
 
@@ -29,7 +29,7 @@ const Login = () => {
         <label htmlFor="email">
           <h4>Email</h4>
           <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} ></input>
-        </label>
+        </label><br />
         <label htmlFor="password">
           <br /><h4 id='pass'>Password</h4><Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
           <br />

@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // importing from assets and css
+import './custom.scss';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 import "./App.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -13,25 +16,25 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import User from "./Pages/User/User";
-import Tags from "./Pages/Tags/Tags"
+import Tags from "./Pages/Tags/Tags";
 import Questions from "./Pages/Questions/Questions";
 import AskQuestion from "./Pages/AskQuestion/AskQuestion";
 import DisplayQuestion from "./Pages/Questions/DisplayQuestion";
 import { fetchAllquestions } from "./actions/question";
-import {fetchAllUsers} from './actions/users'
-import UserProfile from './Pages/UserProfile/UserProfile';
+import { fetchAllUsers } from "./actions/users";
+import UserProfile from "./Pages/UserProfile/UserProfile";
 //main function starts
 function App() {
-  const dispatch = useDispatch()
-useEffect(()=>{
-  dispatch(fetchAllquestions())
-  dispatch(fetchAllUsers())
-},[dispatch])
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAllquestions());
+    dispatch(fetchAllUsers());
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
       {/* This is navigation bar */}
-
+      
       <Navbar />
 
       <Routes>

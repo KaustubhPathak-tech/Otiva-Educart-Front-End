@@ -20,6 +20,7 @@ const Signup = () => {
     console.log({ name, email, password })
 
   }
+  //
   return (
     <div className='signup_page'>
       <div className="plaincontent">
@@ -37,7 +38,7 @@ const Signup = () => {
         <form id='signupform' onSubmit={handleSubmit}>
 
           <label htmlFor="name">
-            <h4>Display name</h4>
+            <h4 style={{paddingTop:"10px"}}>Display name</h4>
             <input type="text" required name='name' id='name' onChange={(e) => { setName(e.target.value) }} />
           </label>
           <label htmlFor="email">

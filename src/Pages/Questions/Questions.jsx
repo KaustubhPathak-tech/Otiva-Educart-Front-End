@@ -9,21 +9,19 @@ import HomemainBar from '../../components/HomemainBar/HomemainBar'
 
 const Questions = () => {
   return (
-    <div className="homePage">
-      <div className='home-container-1'>
-
+    <div className="questionPage">
+      <div className="home-container-1">
         <LeftsideBar />
-
       </div>
       <div className="home-container-2">
-
-        <HomemainBar />
+        <div className="home-container-2-1">
+          <HomemainBar />
+        </div>
+        <div className="home-container-2-2">
+          
+          <RightsideBar />
+        </div>
       </div>
-      <div className="home-container-3">
-        <RightsideBar />
-      </div>
-
-
     </div>
 
   )
