@@ -81,7 +81,7 @@ const QuestionDetails = () => {
   const User = useSelector((state) => (state.fetch_current_userReducer))
   const [Answer, setAnswer] = useState('')
   const location = useLocation()
-  const url = 'https://stack-0ver-flow-clone.netlify.app'        //to be updated further
+  const url = 'https://stack-over-flow-clone-2023.netlify.app'        //to be updated further
   const handleShare = () => {
     copy(url + location.pathname)
     alert('Copied url : ' + url + location.pathname)
