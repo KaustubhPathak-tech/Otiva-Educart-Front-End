@@ -19,14 +19,15 @@
     color: #7e7e7e;
 }
 .edit-profile-btn{
+    color: black;
     padding: 8px 10px;
     border: solid 1px #7e7e7e;
     border-radius: 2px;
     background-color: white;
     cursor: pointer;
     transition: 0.3s;
-    margin-left: 52%;
-   
+    margin-left: 45%;
+   width: 15%;
     
     
 }
@@ -90,7 +91,7 @@
     position: absolute;
     margin-left: 24%;
     margin-top: 6%;
-    width: 59%;
+    width: 61%;
     /* border: 1px solid blue; */
 }
 

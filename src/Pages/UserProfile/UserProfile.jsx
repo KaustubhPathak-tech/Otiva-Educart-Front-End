@@ -39,7 +39,7 @@ const UserProfile = () => {
                                 <p><FontAwesomeIcon icon={faBirthdayCake} />   &nbsp;  Joined {moment(currentProfile?.joinedOn).fromNow()}</p>
                             </div>
                             {
-                                currentUser?.result._id === id && (<button type='button' onClick={() => setSwitch(true)} className='edit-profile-btn'> <FontAwesomeIcon icon={faPen} />  Edit Profile</button>)
+                                currentUser?.result._id === id && (<button type='button' onClick={() => setSwitch(true)} className='edit-profile-btn'> <FontAwesomeIcon icon={faPen} /> Edit Profile</button>)
                             }
                         </div>
 
