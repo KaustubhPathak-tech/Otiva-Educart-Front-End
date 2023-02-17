@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // importing from assets and css
-import './custom.scss';
+import "./custom.scss";
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import "./App.css";
@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 // importing navbar
 import Navbar from "./components/navbar/Navbar";
 import "./components/navbar/Navbar.css";
-
+import Footer from "./components/Footer/Footer";
 // importing pages
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -34,7 +34,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* This is navigation bar */}
-      
+
       <Navbar />
 
       <Routes>
@@ -59,6 +59,7 @@ function App() {
         {/*This is Tags Page Route*/}
         <Route path="/tags" element={<Tags />}></Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

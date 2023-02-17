@@ -81,7 +81,7 @@ const Homemainbar = () => {
   const redirect = () => { user === null ? navigate('/login') : navigate('/AskQuestions') }
 
   return (
-    <div>
+    <div >
       <div className='intro-container'>
         {
           location.pathname === '/' ? <h1>Top Questions</h1> : <h1>All Questions</h1>
