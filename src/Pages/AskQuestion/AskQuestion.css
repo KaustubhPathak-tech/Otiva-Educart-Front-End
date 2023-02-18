@@ -4,7 +4,6 @@
 
 .ask-ques-container{
 
-    /* border: 5px solid black; */
     display: inline-block;
     width:100%;
     text-align: center;
@@ -37,8 +36,7 @@
 }
 .ask-form-container{
     
-    /* text-align: left; */
-    /* border: 1px solid black; */
+  
     width: 60%;
     margin:auto;
     margin-top: 2%;
@@ -90,7 +88,6 @@
     .ask-form-container{
     
         text-align: left;
-        /* border: 1px solid black; */
         width: 80%;
         margin:auto;
         margin-top: 2%;

@@ -5,7 +5,6 @@
   padding-left: 2%;
   width:80%;
   display: inline-block;
-  /* border: 10px solid red; */
 }
 
 .tags-list-container {
@@ -52,14 +51,7 @@
   line-height: 17px;
 }
 
-/* self-css */
 
-/* #leftsidebar {
-  display: inline-block;
-  margin-left: 10.25%;
-  position: fixed;
-  border-right: 1px solid #9e9c9c;
-} */
 
 @media(min-width: 780px) and (max-width:1300px){
   .tagsPage{
@@ -75,7 +67,6 @@
     padding-left: 10%;
     width:80%;
     display: inline-block;
-    /* border: 10px solid red; */
   }
 }
 

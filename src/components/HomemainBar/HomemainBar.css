@@ -1,5 +1,4 @@
 .intro-container {
-  /* border: 1px solid black; */
   padding-left: 4%;
 }
 
@@ -8,11 +7,9 @@
   float: left;
   margin: -60px 0px 0px 0px;
   padding: 0;
-  /* border: 2px solid rgb(236, 27, 27); */
 }
 
 .intro-container {
-  /* border: 5px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +35,6 @@
 }
 
 #noOfQuestions{
-    /* border: 2px solid black; */
     margin-left: 5%;
     font-size: 22px;
     font-weight: bold;
@@ -58,12 +54,10 @@
   padding: 1% 2% 1% 2%;
   margin: 0%;
   text-align: center;
-  /* border: 1px solid red; */
 }
 
 .display-question-details {
   flex-grow: 1;
-  /* border: 1px solid black; */
   padding: 0px 20px;
 }
 

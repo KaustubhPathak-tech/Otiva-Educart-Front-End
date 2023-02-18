@@ -1,6 +1,5 @@
 
 .signup_page {
-  /* border: 1px solid black; */
   padding-top: 4%;
   margin-left: 2%;
   width: 95%;
@@ -11,7 +10,6 @@
 }
 #PlainContent{
   
-  /* border: 1px solid red; */
   padding-top: 15%;
   padding-left: 25%;
   width: 60%;
@@ -29,7 +27,6 @@
 
 #form-container{
   width: 35%;
-  /* border: 1px solid green; */
   padding-left: 1%;
 }
 
@@ -113,7 +110,6 @@
 
 @media (max-width:1500px) {
   .signup_page {
-    /* border: 1px solid black; */
     padding-top: 8%;
     margin-left: 2%;
     width: 95%;
@@ -124,14 +120,12 @@
 
 @media (max-width:780px) {
   .signup_page {
-    /* border: 1px solid black; */
     padding-top: 12%;
     margin-left: 2%;
     width: 95%;
   }
   #PlainContent{
   
-    /* border: 1px solid red; */
     padding-top: 15%;
     padding-left: 15%;
     width: 100%;
@@ -139,101 +133,7 @@
   #form-container{
     padding-top:2%;
     width: 100%;
-    /* border: 1px solid green; */
     padding-left: 1%;
   }
 }
 
-/* .plaincontent {
-  padding: 20px;
-  margin-left: 15%;
-  justify-content: center;
-  text-align: left;
-  display: inline-block;
-} */
-/* h1#main {
-  font-weight: 300;
-}
- */
-
-/* .form {
-  width: 21%;
-  display: inline-block;
-  margin-left: 5%;
-  margin-top: 3%;
-  text-align: center;
-} */
-
-/* #signupform {
-    border: 1px solid black; 
-  position: relative;
-  text-align: left;
-  border-radius: 5px;
-  padding-left: 25px;
-  padding-top: 10px;
-  background-color: #fff;
-  line-height: 1.4rem;
-  -webkit-box-shadow: 0 0 10px #cbc1c1;
-  box-shadow: 0 0 10px #dad4d4;
-   box-shadow: 0px 2px 1px #3d3c3c; 
-} */
-/* #signupform input {
-  width: 260px;
-  padding: 7px 7px;
-  border: solid 1px rgb(68, 66, 66);
-  border-radius: 3px;
-} */
-
-/* #signupform input#opt {
-  width: auto;
-}
-#opt {
-  display: inline;
-  margin-right: 10px;
-  padding-bottom: 50px;
-} */
-/* .promotion {
-  position: absolute;
-  font-size: small;
-  left: 40px;
-  bottom: 110px;
-  line-height: 1rem;
-} */
-
-/* #signupbutton {
-  margin-top: 40px;
-  height: 35px;
-  padding: 5px 105px;
-  background-color: rgb(51, 158, 239);
-  border: 1px solid rgb(51, 158, 239);
-  border-radius: 3px;
-  cursor: pointer;
-  color: #fff;
-} */
-
-/* #signupbutton:hover {
-  background-color: rgb(12, 109, 206);
-}
-
-#signupformlink {
-  text-decoration: none;
-  font-size: small;
-  color: rgb(0, 89, 255);
-} */
-
-/* @media (min-width) and (max-width:1400px) {
-  .signup_page {
-    /* border: 1px solid black; 
-    padding-top: 10%;
-    display: flex;
-  }
-}
-
-
-@media(max-width:780px){
-  .signup_page {
-    /* border: 1px solid black; 
-    padding-top: 10%;
-    display: flex;
-  }
-} */

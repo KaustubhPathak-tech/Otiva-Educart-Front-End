@@ -15,7 +15,6 @@
     display: flex;
 }
 .question-votes{
-    /* border: 1px solid black; */
     padding: 5px 10px 5px 12px;
 }
 .question-votes p{
@@ -90,7 +89,6 @@ p#question-tag,
 .user-link div{
     padding-left: 10px;
 }
-/* post answer container */
 
 .post-ans-container form textarea{
     padding: 10px;
@@ -115,7 +113,6 @@ p#question-tag,
     background-color: #0086d8;
 }
 
-/* Display answer container */
 
 .display-ans{
     padding-bottom: 20px;

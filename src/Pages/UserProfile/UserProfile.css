@@ -5,7 +5,6 @@
     width: 100%;
     display:flex;
     align-items: flex-start;
-    /* border: 1px solid black; */
 }
 
 .user-name{
@@ -40,8 +39,7 @@
 }
 .edit-profile-form {
     padding: 8px;
-    /* line-height: 2.5; */
-    /* border: solid 1px #9a1414; */
+   
     border-radius: 5px;
     font-size: 16px;
 }
@@ -53,17 +51,9 @@
     margin: 0%;
     padding: 3px 0px;
 }
-/* .edit-profile-form label input, .edit-profile-form label textarea{
-    color: rgb(235, 221, 221);
-    padding: 5px 100px;
-    margin-bottom: 20px;
-    border: solid 1px #dbd9d9;
-    width: 50%;
-    
-} */
+
 
 .edit-profile-form input{
-    /* border: solid 1px #040404; */
     color: black;
 }
 
@@ -90,14 +80,14 @@
     cursor: pointer;
 }
 
-/* self-css */
+
 
 #userprofile{
     position: absolute;
     margin-left: 24%;
     margin-top: 6%;
     width: 61%;
-    /* border: 1px solid blue; */
+    
 }
 
 #leftsidebar {
@@ -111,16 +101,14 @@
 #content{
     padding-left: 3%;
     width: 80%;
-    /* border: 1px solid black; */
+    
 }
 
 @media (max-width:780px) {
     #content{
-        /* border: 1px solid red; */
         padding-left: 0.5%;
         width: 80%;
         margin: 8% 1% 2% 0%;
         float: left;
-        /* border: 1px solid black; */
     }
 }
