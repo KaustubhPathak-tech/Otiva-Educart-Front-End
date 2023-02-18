@@ -1,37 +1,171 @@
-body {
-  background-color: rgb(228, 227, 227);
-  padding-bottom: 500px;
-}
+
 .signup_page {
   /* border: 1px solid black; */
-  padding-top: 60px;
-  display: flexbox;
+  padding-top: 4%;
+  margin-left: 2%;
+  width: 95%;
 }
 
-.plaincontent {
+.signup_page a:hover{
+  text-decoration: none;
+}
+#PlainContent{
+  
+  /* border: 1px solid red; */
+  padding-top: 15%;
+  padding-left: 25%;
+  width: 60%;
+}
+#PlainContent h1{
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.content {
+  line-height: 2.5rem;
+}
+
+
+
+#form-container{
+  width: 35%;
+  /* border: 1px solid green; */
+  padding-left: 1%;
+}
+
+#form-container{
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-container form{
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 5%),
+   0 20px 48px rgb(0 0 0 / 5%),
+   0 1px 4px rgb(0 0 0 / 10%);
+}
+
+#form-container form label input{
+  padding: 10px;
+  width: calc( 100% - 30px );
+  border: solid 1px #0000003e;
+  font-size: 13px;
+}
+
+#form-container form label:nth-child(1) h4,
+#form-container form label:nth-child(2) h4,
+#form-container form label:nth-child(3) h4{
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#form-container form label:nth-child(4){
+  display: flex;
+}
+
+#form-container form label:nth-child(4) input{
+  width: 15%;
+  margin: 13px 0px;
+}
+#opt {
+  display: inline;
+  margin-right: 10px;
+  padding-bottom: 50px;
+} */
+ .promotion {
+  position: absolute;
+  font-size: small;
+  left: 40px;
+  bottom: 110px;
+  line-height: 1rem;
+} 
+#signupbutton{
+  width: 95%;
+  margin-top: 10px;
+  padding: 0px 0px;
+  background-color: #009dff;
+  border: solid 1px #009dff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 18px;
+  font-weight: 420;
+}
+
+#signupbutton:hover{
+  background-color: #018ce3;
+}
+
+#loginRedirect{
+  left:3%;
+}
+
+
+@media (max-width:1500px) {
+  .signup_page {
+    /* border: 1px solid black; */
+    padding-top: 8%;
+    margin-left: 2%;
+    width: 95%;
+  }
+  
+}
+
+
+@media (max-width:780px) {
+  .signup_page {
+    /* border: 1px solid black; */
+    padding-top: 12%;
+    margin-left: 2%;
+    width: 95%;
+  }
+  #PlainContent{
+  
+    /* border: 1px solid red; */
+    padding-top: 15%;
+    padding-left: 15%;
+    width: 100%;
+  }
+  #form-container{
+    padding-top:2%;
+    width: 100%;
+    /* border: 1px solid green; */
+    padding-left: 1%;
+  }
+}
+
+/* .plaincontent {
   padding: 20px;
   margin-left: 15%;
   justify-content: center;
   text-align: left;
   display: inline-block;
-}
-h1#main {
+} */
+/* h1#main {
   font-weight: 300;
 }
-.content {
-  line-height: 2.5rem;
-}
+ */
 
-.form {
+/* .form {
   width: 21%;
   display: inline-block;
   margin-left: 5%;
   margin-top: 3%;
   text-align: center;
-}
+} */
 
-#signupform {
-    /* border: 1px solid black; */
+/* #signupform {
+    border: 1px solid black; 
   position: relative;
   text-align: left;
   border-radius: 5px;
@@ -41,32 +175,32 @@ h1#main {
   line-height: 1.4rem;
   -webkit-box-shadow: 0 0 10px #cbc1c1;
   box-shadow: 0 0 10px #dad4d4;
-  /* box-shadow: 0px 2px 1px #3d3c3c; */
-}
-#signupform input {
+   box-shadow: 0px 2px 1px #3d3c3c; 
+} */
+/* #signupform input {
   width: 260px;
   padding: 7px 7px;
   border: solid 1px rgb(68, 66, 66);
   border-radius: 3px;
-}
+} */
 
-#signupform input#opt {
+/* #signupform input#opt {
   width: auto;
 }
 #opt {
   display: inline;
   margin-right: 10px;
   padding-bottom: 50px;
-}
-.promotion {
+} */
+/* .promotion {
   position: absolute;
   font-size: small;
   left: 40px;
   bottom: 110px;
   line-height: 1rem;
-}
+} */
 
-#signupbutton {
+/* #signupbutton {
   margin-top: 40px;
   height: 35px;
   padding: 5px 105px;
@@ -75,8 +209,9 @@ h1#main {
   border-radius: 3px;
   cursor: pointer;
   color: #fff;
-}
-#signupbutton:hover {
+} */
+
+/* #signupbutton:hover {
   background-color: rgb(12, 109, 206);
 }
 
@@ -84,4 +219,21 @@ h1#main {
   text-decoration: none;
   font-size: small;
   color: rgb(0, 89, 255);
+} */
+
+/* @media (min-width) and (max-width:1400px) {
+  .signup_page {
+    /* border: 1px solid black; 
+    padding-top: 10%;
+    display: flex;
+  }
 }
+
+
+@media(max-width:780px){
+  .signup_page {
+    /* border: 1px solid black; 
+    padding-top: 10%;
+    display: flex;
+  }
+} */

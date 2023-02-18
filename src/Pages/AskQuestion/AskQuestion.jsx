@@ -45,7 +45,7 @@ const AskQuestion = () => {
                             </p><br />
                             <input type="text" onChange={(e) => { setQuestionTitle(e.target.value) }} name='questionTitle' id='ask-ques-title' placeholder='e.g. C++ is easy or difficult?' />
                         </label>
-                        <label htmlFor="ask-ques-body">
+                        <label htmlFor="ask-ques-body"><br />
                             <h4>
                                 What are the details of your problem ?
                             </h4>
@@ -54,7 +54,7 @@ const AskQuestion = () => {
                             </p><br />
                             <textarea name='questionBody' id='ask-ques-body' onChange={(e) => { setQuestionBody(e.target.value) }} cols={30} rows="10" onKeyPress={handleEnter} />
                         </label>
-                        <label htmlFor="ask-ques-tags">
+                        <label htmlFor="ask-ques-tags"><br />
                             <h4>
                                 Tags
                             </h4>

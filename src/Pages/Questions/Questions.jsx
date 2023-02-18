@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import { Link, animateScroll as scroll } from 'react-scroll'
+
 import '../../App.css'
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 import RightsideBar from '../../components/RightsideBar/RightsideBar'

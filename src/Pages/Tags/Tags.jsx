@@ -51,6 +51,7 @@ const Tags = () => {
         <LeftsideBar />
       </div>
       <div className="home-container-2" id="tagspage">
+
         <div id="plain-text">
           <h1 className='tags-h1'>Tags</h1>
           <p className='tags-p'>A tag is a keyword or label that categorizes your question with other, similar questions.</p><br />
@@ -63,15 +64,15 @@ const Tags = () => {
             ))
           }
         </div>
-
       </div>
 
+
     </div>
-  
 
 
 
-    
+
+
   )
 }
 

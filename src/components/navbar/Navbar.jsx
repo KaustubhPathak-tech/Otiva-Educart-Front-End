@@ -200,7 +200,7 @@ const Navbar = () => {
               />
               {/* <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> */}
               {/* <button class="btn btn-outline-success" type="submit" className="nav-links nav-btn nav-item" >Search</button> */}
-            </form>
+            </form>&nbsp;&nbsp;
             {User === null ? (
               <>
                 <Link to="/login" className="nav-links nav-btn nav-item">

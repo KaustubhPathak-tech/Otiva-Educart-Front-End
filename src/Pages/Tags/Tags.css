@@ -1,8 +1,11 @@
-
+.tagsPage{
+  margin-top: 1.2%;
+}
 #tagspage{
   padding-left: 2%;
   width:80%;
   display: inline-block;
+  /* border: 10px solid red; */
 }
 
 .tags-list-container {
@@ -10,6 +13,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
+  
 }
 
 .tags-container-5 {
@@ -50,13 +54,29 @@
 
 /* self-css */
 
-#leftsidebar {
+/* #leftsidebar {
   display: inline-block;
   margin-left: 10.25%;
   position: fixed;
   border-right: 1px solid #9e9c9c;
+} */
+
+@media(min-width: 780px) and (max-width:1300px){
+  .tagsPage{
+    margin-top: 5%;
+  }
 }
+@media (max-width:780px){
+  .tagsPage{
+    margin-top: 10%;
 
-
+  }
+  #tagspage{
+    padding-left: 10%;
+    width:80%;
+    display: inline-block;
+    /* border: 10px solid red; */
+  }
+}
 
 

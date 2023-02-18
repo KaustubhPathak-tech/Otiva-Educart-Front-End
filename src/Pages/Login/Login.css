@@ -4,7 +4,7 @@ body {
 }
 .loginPage {
   display: flexbox;
-  padding-top: 7%;
+  padding-top: 15%;
   text-align: center;
   justify-content: center;
   align-items: center;

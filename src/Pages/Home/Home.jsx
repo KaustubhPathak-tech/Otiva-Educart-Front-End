@@ -1,9 +1,10 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+
 import "../../App.css";
 import LeftsideBar from "../../components/LeftsideBar/LeftsideBar";
 import RightsideBar from "../../components/RightsideBar/RightsideBar";
 import HomemainBar from "../../components/HomemainBar/HomemainBar";
+
 
 const Home = () => {
   return (
@@ -12,13 +13,16 @@ const Home = () => {
         <LeftsideBar />
       </div>
       <div className="home-container-2">
+
         <div className="home-container-2-1">
           <HomemainBar />
         </div>
         <div className="home-container-2-2">
           
           <RightsideBar />
+         
         </div>
+       
       </div>
     </div>
   );

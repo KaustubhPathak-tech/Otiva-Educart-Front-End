@@ -12,6 +12,7 @@
 }
 
 .intro-container {
+  /* border: 5px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,9 +55,10 @@
 }
 
 .display-question-container .display-votes-ans {
-  padding: 20px;
+  padding: 1% 2% 1% 2%;
   margin: 0%;
   text-align: center;
+  /* border: 1px solid red; */
 }
 
 .display-question-details {
@@ -102,5 +104,9 @@
   font-size: 13px;
 }
 
-@media (max: 1000px) {
+
+@media (max-width:780px) {
+  .intro-container{
+    margin: 2%;
+  }
 }

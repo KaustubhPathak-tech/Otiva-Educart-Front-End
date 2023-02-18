@@ -113,3 +113,14 @@
     width: 80%;
     /* border: 1px solid black; */
 }
+
+@media (max-width:780px) {
+    #content{
+        /* border: 1px solid red; */
+        padding-left: 0.5%;
+        width: 80%;
+        margin: 8% 1% 2% 0%;
+        float: left;
+        /* border: 1px solid black; */
+    }
+}

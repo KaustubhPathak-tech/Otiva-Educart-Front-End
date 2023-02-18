@@ -10,7 +10,6 @@ import { useDispatch } from "react-redux";
 // importing navbar
 import Navbar from "./components/navbar/Navbar";
 import "./components/navbar/Navbar.css";
-import Footer from "./components/Footer/Footer";
 // importing pages
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -23,6 +22,10 @@ import DisplayQuestion from "./Pages/Questions/DisplayQuestion";
 import { fetchAllquestions } from "./actions/question";
 import { fetchAllUsers } from "./actions/users";
 import UserProfile from "./Pages/UserProfile/UserProfile";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import india from "./assets/india.png";
 //main function starts
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +37,9 @@ function App() {
   return (
     <BrowserRouter>
       {/* This is navigation bar */}
-
+      {alert(
+        "The site is Performing slowly due to server speed. Kindly wait some Time after hitting any key like login,ask question,signup..."
+      )}
       <Navbar />
 
       <Routes>
@@ -59,7 +64,21 @@ function App() {
         {/*This is Tags Page Route*/}
         <Route path="/tags" element={<Tags />}></Route>
       </Routes>
-      <Footer />
+      <div className="footer">
+        <div className="footer-1">
+          <p>
+            Made with{" "}
+            <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} /> in{" "}
+            <img src={india} width="18" alt="I Love my India" />
+          </p>
+        </div>
+        <div className="footer-2">
+          &copy;{" "}
+          <a href="https://www.linkedin.com/in/kaustubh-pathak-293116198/">
+            Kaustubh Pathak
+          </a>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }
