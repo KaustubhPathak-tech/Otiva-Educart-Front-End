@@ -1,20 +1,18 @@
-
 .signup_page {
   padding-top: 4%;
   margin-left: 2%;
   width: 95%;
 }
 
-.signup_page a:hover{
+.signup_page a:hover {
   text-decoration: none;
 }
-#PlainContent{
-  
+#PlainContent {
   padding-top: 15%;
   padding-left: 25%;
   width: 60%;
 }
-#PlainContent h1{
+#PlainContent h1 {
   font-weight: 400;
   font-size: 30px;
 }
@@ -23,14 +21,12 @@
   line-height: 2.5rem;
 }
 
-
-
-#form-container{
+#form-container {
   width: 35%;
   padding-left: 1%;
 }
 
-#form-container{
+#form-container {
   min-width: 20%;
   display: flex;
   flex-direction: column;
@@ -38,7 +34,7 @@
   align-items: center;
 }
 
-#form-container form{
+#form-container form {
   width: 100%;
   padding: 20px;
   background-color: white;
@@ -46,30 +42,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 0 10px 25px rgb(0 0 0 / 5%),
-   0 20px 48px rgb(0 0 0 / 5%),
-   0 1px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%),
+    0 1px 4px rgb(0 0 0 / 10%);
 }
 
-#form-container form label input{
+#form-container form label input {
   padding: 10px;
-  width: calc( 100% - 30px );
+  width: calc(100% - 30px);
   border: solid 1px #0000003e;
   font-size: 13px;
 }
 
 #form-container form label:nth-child(1) h4,
 #form-container form label:nth-child(2) h4,
-#form-container form label:nth-child(3) h4{
+#form-container form label:nth-child(3) h4 {
   margin-bottom: 5px;
   margin-top: 10px;
 }
 
-#form-container form label:nth-child(4){
+#form-container form label:nth-child(4) {
   display: flex;
 }
 
-#form-container form label:nth-child(4) input{
+#form-container form label:nth-child(4) input {
   width: 15%;
   margin: 13px 0px;
 }
@@ -77,15 +72,15 @@
   display: inline;
   margin-right: 10px;
   padding-bottom: 50px;
-} */
+}
  .promotion {
   position: absolute;
   font-size: small;
   left: 40px;
   bottom: 110px;
   line-height: 1rem;
-} 
-#signupbutton{
+}
+#signupbutton {
   width: 95%;
   margin-top: 10px;
   padding: 0px 0px;
@@ -99,41 +94,36 @@
   font-weight: 420;
 }
 
-#signupbutton:hover{
+#signupbutton:hover {
   background-color: #018ce3;
 }
 
-#loginRedirect{
-  left:3%;
+#loginRedirect {
+  left: 3%;
 }
 
-
-@media (max-width:1500px) {
+@media (max-width: 1500px) {
   .signup_page {
     padding-top: 8%;
     margin-left: 2%;
     width: 95%;
   }
-  
 }
 
-
-@media (max-width:780px) {
+@media (max-width: 780px) {
   .signup_page {
     padding-top: 12%;
     margin-left: 2%;
     width: 95%;
   }
-  #PlainContent{
-  
+  #PlainContent {
     padding-top: 15%;
     padding-left: 15%;
     width: 100%;
   }
-  #form-container{
-    padding-top:2%;
+  #form-container {
+    padding-top: 2%;
     width: 100%;
     padding-left: 1%;
   }
 }
-
