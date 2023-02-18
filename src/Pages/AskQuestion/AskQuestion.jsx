@@ -27,7 +27,7 @@ const AskQuestion = () => {
         }
     }
     return (
-//
+
         
             <div className="ask-ques-container">
                 <h1>

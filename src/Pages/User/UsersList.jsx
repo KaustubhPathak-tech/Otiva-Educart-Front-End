@@ -4,7 +4,7 @@ import './User.css'
 import User from './Users'
 const UsersList = () => {
   const users = useSelector((state) => state.usersReducer)
-  // console.log(users)
+  
   return (
     <div className="userList-container">
       {

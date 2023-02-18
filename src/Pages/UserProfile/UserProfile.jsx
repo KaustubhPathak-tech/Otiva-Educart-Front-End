@@ -17,9 +17,7 @@ const UserProfile = () => {
 
   const currentUser = useSelector((state) => state.fetch_current_userReducer);
   const [Switch, setSwitch] = useState(false);
-  // const handleEdit=()=>{
-
-  // }
+  
   return (
     <div className="userprofilepage">
       <div className="home-container-1">

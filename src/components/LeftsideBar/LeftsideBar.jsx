@@ -6,7 +6,7 @@ import Globe from "../../assets/Globe.svg";
 const LeftsideBar = ({ question }) => {
   return (
     <div className="home-container-1-1">
-      {/* <nav> */}
+      
         <div className="side-nav-div">
           <NavLink to="/" className="side-nav-links" activeclassname="active">
             <p>Home</p>
@@ -38,7 +38,7 @@ const LeftsideBar = ({ question }) => {
             <p>Users</p>
           </NavLink>
         </div>
-      {/* </nav> */}
+     
     </div>
   );
 };

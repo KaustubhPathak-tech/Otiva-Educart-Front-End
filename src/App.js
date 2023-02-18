@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// importing from assets and css
-import "./custom.scss";
-// Put any other imports below so that CSS from your
-// components takes precedence over default styles.
-import "./App.css";
+
+import './custom.scss';
+
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-// importing navbar
+
 import Navbar from "./components/navbar/Navbar";
 import "./components/navbar/Navbar.css";
-// importing pages
+
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
@@ -26,7 +24,7 @@ import UserProfile from "./Pages/UserProfile/UserProfile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import india from "./assets/india.png";
-//main function starts
+
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -83,5 +81,5 @@ function App() {
   );
 }
 
-//exporting main function
+
 export default App;

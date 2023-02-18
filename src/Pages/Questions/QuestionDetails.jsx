@@ -13,75 +13,13 @@ const QuestionDetails = () => {
   const { id } = useParams();
   const questionsList = useSelector(state => state.questionReducer)
   console.log(questionsList)
-  // var questionsList = [
-  //   {
-  //     _id: "1",
-  //     upVotes: 3,
-  //     downVotes: 2,
-  //     noOfAnswers: 120,
-  //     questionTitle: "What is a function?",
-  //     questionBody: "It meant to be",
-  //     questionTags: ["java", "node js", "react js", "mongo db", "express js"],
-  //     userPosted: "mano",
-  //     userId: 1,
-  //     askedOn: "jan 1",
-  //     answer: [
-  //       {
-  //         answerBody: "Answer",
-  //         userAnswered: "kumar",
-  //         answeredOn: "jan 2",
-  //         userId: 2,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     _id: "2",
-  //     upVotes: 4,
-  //     downVotes: 2,
-  //     noOfAnswers: 5,
-  //     questionTitle: "What is a function?",
-  //     questionBody: "It meant to be",
-  //     questionTags: ["javascript", "R", "python"],
-  //     userPosted: "mano",
-  //     askedOn: "jan 1",
-  //     userId: 1,
-  //     answer: [
-  //       {
-  //         answerBody: "Answer",
-  //         userAnswered: "kumar",
-  //         answeredOn: "jan 2",
-  //         userId: 2,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     _id: "3",
-  //     upVotes: 3,
-  //     downVotes: 2,
-  //     noOfAnswers: 10,
-  //     questionTitle: "What is a function?",
-  //     questionBody: "It meant to be",
-  //     questionTags: ["javascript", "R", "python"],
-  //     userPosted: "mano",
-  //     askedOn: "jan 1",
-  //     userId: 1,
-  //     answer: [
-  //       {
-  //         answerBody: "Answer",
-  //         userAnswered: "kumar",
-  //         answeredOn: "jan 2",
-  //         userId: 2,
-  //       },
-  //     ],
-  //   },
-  // ];
-  // questionsList=null
+
   const Navigate = useNavigate()
   const dispatch = useDispatch()
   const User = useSelector((state) => (state.fetch_current_userReducer))
   const [Answer, setAnswer] = useState('')
   const location = useLocation()
-  const url = 'https://stack-over-flow-clone-2023.netlify.app'        //to be updated further
+  const url = 'https://stack-over-flow-clone-2023.netlify.app'        
   const handleShare = () => {
     copy(url + location.pathname)
     alert('Copied url : ' + url + location.pathname)

@@ -19,7 +19,7 @@ const Login = () => {
     console.log({ email, password })
   }
 
-//
+
   return (
     <div className='loginPage'>
 
@@ -46,4 +46,3 @@ const Login = () => {
 }
 
 export default Login
-//

@@ -47,27 +47,6 @@
   position: fixed;
 }
 
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-
-::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-
-::-webkit-scrollbar-thumb {
-  background: #f69240;
-  border-radius: 5px;
-  width: 5px;
-}
-
-
-::-webkit-scrollbar-thumb:hover {
-  background: #009dff;
-  transition: 0.2s;
-}
 
 
 @media (min-width: 780px) and (max-width: 1300px) {

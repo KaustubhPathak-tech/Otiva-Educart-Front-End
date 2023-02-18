@@ -26,7 +26,7 @@ const Signup = () => {
     console.log({ name, email, password })
 
   }
-  //
+  
   return (
 
     <div className='signup_page'>
@@ -92,4 +92,3 @@ const Signup = () => {
 }
 
 export default Signup
-//

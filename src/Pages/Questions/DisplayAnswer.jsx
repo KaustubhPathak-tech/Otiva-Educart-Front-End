@@ -1,9 +1,9 @@
 import React from 'react'
 import moment from 'moment'
 import { useDispatch, useSelector } from 'react-redux'
-import copy from 'copy-to-clipboard'
-import { useLocation } from 'react-router-dom'
-import QuestionDetails from './QuestionDetails'
+
+
+
 import Avatar from '../../components/navbar/Avatar'
 import {Link,useParams} from 'react-router-dom'
 import {deleteAnswer} from '../../actions/question'
