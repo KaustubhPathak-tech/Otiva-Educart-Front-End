@@ -29,9 +29,9 @@ const Login = () => {
         <label htmlFor="email">
           <h4>Email</h4>
           <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} ></input>
-        </label><br />
+        </label><br/>
         <label htmlFor="password">
-          <br /><h4 id='pass'>Password</h4><Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
+          <h4 id='pass'>Password</h4><Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
           <br />
           <input type="password" name="password" required id="password" onChange={(e) => { setPassword(e.target.value) }} /><br />
         </label>

@@ -28,18 +28,18 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
             <form className="edit-profile-form" onSubmit={handleSubmit}>
                 <label htmlFor="name">
                     <h4>Display name</h4>
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} class="d-flex form-control me-2"/>
+                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} class="d-flex"/>
                 </label><br /><br/>
                 <label htmlFor="about">
                     <h4>About me</h4>
-                    <textarea id="about" cols="100" rows="10" value={about} onChange={(e) => setAbout(e.target.value)} class="d-flex form-control me-2"></textarea>
+                    <textarea id="about" cols="100" rows="10" value={about} onChange={(e) => setAbout(e.target.value)} class="d-flex"></textarea>
                 </label><br /><br />
                 <label htmlFor="tags">
                     <h4>Watched tags</h4>
                     <p>Add tags separated by 1 space</p><br />
-                    <input type="text" id='tags' onChange={(e) => setTags(e.target.value.split(' '))} class="d-flex form-control me-2"/>
+                    <input type="text" id='tags' onChange={(e) => setTags(e.target.value.split(' '))} class="d-flex"/>
                 </label><br /><br />
-                <input type="submit" value="Save Profile" className='user-submit-btn' style={{color:"white",fontWeight:"400",padding:"5px 5px"}} />
+                <input type="submit" value="Save Profile" className='user-submit-btn' />
                 <button type='button' className='user-cancel-btn' onClick={() => setSwitch(false)}>Cancel</button>
             </form>
         </div>

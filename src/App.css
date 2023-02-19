@@ -1,7 +1,7 @@
 .home-container-1 {
   position: fixed;
   height: 100vh;
-  width: 12%;
+  width: 12.5%;
   display: flex;
   justify-content: space-between;
   margin: 0% 0%;
@@ -30,15 +30,17 @@
 }
 .home-container-2-1 {
   float: left;
-  margin-right: 0%;
+  padding-left: 0;
+  margin-right: 0px;
   position: sticky;
-  width: 74%;
+  width:75%;
   display: flex;
   box-shadow: border-box;
 
 }
 .home-container-2-2 {
   width: 25%;
+  padding-left: -2%;
   float: right;
   display: flex;
 }
@@ -47,7 +49,26 @@
   position: fixed;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f07e0c;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2ea4ed;
+}
 
 @media (min-width: 780px) and (max-width: 1300px) {
   .home-container-1 {
@@ -167,7 +188,7 @@
 
 .footer {
   background: linear-gradient(36deg, #ff9933, #fff, rgb(2, 99, 2));
- 
+  margin-top: 15%;
   margin-left: 13.4%;
   width: 86%;
   height: fit-content;
