@@ -8,7 +8,7 @@ export const signup = (authData, navigate) => async (dispatch) => {
     const { data } = await api.signUp(authData);
     dispatch({ type: "AUTH", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    alert("Sign Up Successful! login session expires in 1 hour, after 1 hour refresh,logout and login agian for full functionality!");
+    alert("Sign Up Successful! login session expires in 1 hour!");
     navigate("/");
   } catch (error) {
     toast(error.response.data);
@@ -21,7 +21,7 @@ export const login = (authData, navigate) => async (dispatch) => {
     const { data } = await api.logIn(authData);
     dispatch({ type: "AUTH", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    alert("log in Successful! login session expires in 1 hour, after 1 hour refresh,logout and login again for full functionality!");
+    alert("log in Successful! login session expires in 1 hour !");
 
     navigate("/");
   } catch (error) {
