@@ -50,7 +50,7 @@ const AskQuestion = () => {
                             <p>
                                 Be specific and imagine you're asking a question to another person.
                             </p><br />
-                            <input type="text" onChange={(e) => { setQuestionTitle(e.target.value) }} name='questionTitle' id='ask-ques-title' placeholder='e.g. C++ is easy or difficult?' />
+                            <input type="text" onChange={(e) => { setQuestionTitle(e.target.value) }} name='questionTitle' id='ask-ques-title' placeholder='e.g. C++ is easy or difficult?' required/>
                         </label>
                         <label htmlFor="ask-ques-body"><br />
                             <h4>
@@ -59,7 +59,7 @@ const AskQuestion = () => {
                             <p>
                                 Introduce the problem and expand on what you put in the title. Minimum 20 characters.
                             </p><br />
-                            <textarea name='questionBody' id='ask-ques-body' onChange={(e) => { setQuestionBody(e.target.value) }} cols={30} rows="10" onKeyPress={handleEnter} />
+                            <textarea name='questionBody' id='ask-ques-body' onChange={(e) => { setQuestionBody(e.target.value) }} cols={30} rows="10" onKeyPress={handleEnter} required/>
                         </label>
                         <label htmlFor="ask-ques-tags"><br />
                             <h4>
@@ -68,7 +68,7 @@ const AskQuestion = () => {
                             <p>
                                 Add up to 5 tags to describe what your question is about. Start typing to see suggestions.
                             </p><br />
-                            <input type="text" name='questionTags' onChange={(e) => { setQuestionTags(e.target.value.split(" ")) }} id='ask-ques-tags' placeholder='e.g. database array python mongodb ' />
+                            <input type="text" name='questionTags' onChange={(e) => { setQuestionTags(e.target.value.split(" ")) }} id='ask-ques-tags' placeholder='e.g. database array python mongodb ' required/>
                         </label>
                     </div><br />
                     <input type="submit" value='Review your Question ' className='review-btn' />
