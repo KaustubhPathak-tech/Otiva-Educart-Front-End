@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Avatar from "../../components/navbar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
 import "./Questions.css";
-import { ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import upvote from "../../assets/sort-up.svg";
 import downvote from "../../assets/sort-down.svg";
@@ -22,7 +22,7 @@ const QuestionDetails = () => {
   const User = useSelector((state) => (state.fetch_current_userReducer))
   const [Answer, setAnswer] = useState('')
   const location = useLocation()
-  const url = 'https://stack-over-flow-clone-2023.vercel.app'        
+  const url = 'https://stack-over-flow-clone-2023.vercel.app'
   const handleShare = () => {
     copy(url + location.pathname)
     toast('Copied url : ' + url + location.pathname);
@@ -35,7 +35,7 @@ const QuestionDetails = () => {
     }
     else {
       if (Answer === '') {
-        toast('Enter an Answer before Posting !',{position:"bottom-left"});
+        toast('Enter an Answer before Posting !', { position: "bottom-center" });
       }
       else {
         dispatch(postAnswer({ id, noOfAnswer: answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId: User?.result?._id }))
@@ -44,14 +44,21 @@ const QuestionDetails = () => {
 
   }
   const handleDelete = () => {
+
     dispatch(deleteQuestion(id, Navigate))
   }
 
-  const handleUpVote = () => {
-    dispatch(voteQuestion(id, 'upVote', User.result._id))
+  const handleUpVote = (e) => {
+    if (User == null) {
+      alert('Please Login to Vote!');
+      dispatch(voteQuestion(id, 'upVote', User.result._id))
+    }
   }
-  const handleDownVote = () => {
-    dispatch(voteQuestion(id, 'downVote', User.result._id))
+  const handleDownVote = (e) => {
+    if (User == null) {
+      alert('Please Login to Vote!');
+      dispatch(voteQuestion(id, 'downVote', User.result._id))
+    }
   }
   return (
     <div className="question-details-page">
@@ -72,7 +79,7 @@ const QuestionDetails = () => {
                         alt="uparrow"
 
                         width="18"
-                        className="votes-icon" onClick={handleUpVote}
+                        className="votes-icon" onClick={(e) => { handleUpVote(e) }}
                       />
                       <p>{question.upVote.length - question.downVote.length}</p>
                       <img
@@ -80,7 +87,7 @@ const QuestionDetails = () => {
                         alt="downarrow"
                         width="18"
 
-                        className="votes-icon" onClick={handleDownVote}
+                        className="votes-icon" onClick={(e) => { handleDownVote(e) }}
                       />
                     </div>
                     <div style={{ width: "100%" }}>
@@ -157,7 +164,7 @@ const QuestionDetails = () => {
             ))}
         </>
       )}
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };
