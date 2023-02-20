@@ -18,7 +18,7 @@ const Homemainbar = () => {
   console.log(questionsList)
 
  
-  const redirect = () => { user === null ? toast("Login/Signup to ask a Question !",{position:"bottom-left"}): navigate('/AskQuestions') }
+  const redirect = () => { user === null ? toast("Login/Signup to ask a Question !",{position:"top-center"}): navigate('/AskQuestions') }
 
   return (
     <div className='home-main-bar'>
