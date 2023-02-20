@@ -29,6 +29,7 @@
 }
 
 #questions {
+  height: 45px;
   padding-bottom: 10px;
 }
 
@@ -36,9 +37,11 @@
   
 
   .side-nav-div {
+    
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 45px;
+    margin-top: 0px;
     
   }
   #side-nav-div-public {
@@ -72,11 +75,12 @@
   }
 
   #questions {
+    height: 40px;
     padding-bottom: 10px;
   }
 }
 
-@media(max-width: 780px) {
+@media(max-width: 783px) {
    .side-nav-div {
     padding: 0px 0px;
   }
@@ -92,7 +96,7 @@
   .side-nav-links {
     
     height: 40px;
-    width: 25%;
+    width: 30%;
     padding-left: 10px;
     padding-top: 10px;
     text-decoration: none;
@@ -109,15 +113,17 @@
   }
 
   .active {
-    padding-left: 25px;
+    padding-left: 5px;
     font-weight: bolder;
     color: black;
     background-color: rgb(201, 194, 194);
     border: solid 3px #ef8236;
-    border-top: none;
+    
   }
 
   #questions {
+    height: 40px;
     padding-bottom: 10px;
   }
+
 }

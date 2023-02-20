@@ -38,6 +38,7 @@
   
   width: 100%;
   padding: 20px;
+  padding-right: 0px;
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -103,6 +104,7 @@
     margin-left: 2%;
     width: 95%;
   }
+  
 }
 
 @media (max-width: 780px) {
@@ -121,4 +123,5 @@
     width: 100%;
     padding-left: 1%;
   }
+  
 }

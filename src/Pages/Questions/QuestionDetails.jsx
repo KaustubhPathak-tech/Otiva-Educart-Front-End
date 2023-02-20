@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import moment from 'moment'
 import copy from 'copy-to-clipboard'
+
 import { useSelector, useDispatch } from 'react-redux'
 import Avatar from "../../components/navbar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
 import "./Questions.css";
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import upvote from "../../assets/sort-up.svg";
 import downvote from "../../assets/sort-down.svg";
 import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
@@ -22,17 +25,17 @@ const QuestionDetails = () => {
   const url = 'https://stack-over-flow-clone-2023.netlify.app'        
   const handleShare = () => {
     copy(url + location.pathname)
-    alert('Copied url : ' + url + location.pathname)
+    toast('Copied url : ' + url + location.pathname);
   }
   const hadlePostAns = (e, answerLength) => {
     e.preventDefault()
     if (User == null) {
-      alert('Login or Signup to answer a question')
-      Navigate('/signup')
+      alert('Please Login to answer a question !');
+      Navigate('/login')
     }
     else {
       if (Answer === '') {
-        alert('Enter an Answer before Submitting')
+        toast('Enter an Answer before Posting !',{position:"bottom-left"});
       }
       else {
         dispatch(postAnswer({ id, noOfAnswer: answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId: User?.result?._id }))
@@ -154,6 +157,7 @@ const QuestionDetails = () => {
             ))}
         </>
       )}
+      <ToastContainer/>
     </div>
   );
 };

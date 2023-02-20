@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { faCommentsDollar} from "@fortawesome/free-solid-svg-icons";
 import { faTags} from "@fortawesome/free-solid-svg-icons";
 import { faTrophy} from "@fortawesome/free-solid-svg-icons";
@@ -84,7 +85,7 @@ const Signup = () => {
           </div>
         </div>
       </section>
-
+      <ToastContainer />
     </div>
 
 

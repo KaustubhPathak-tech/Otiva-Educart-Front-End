@@ -1,4 +1,6 @@
 import * as api from "../api";
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const askQuestion = (questionData, navigate) => async (dispatch) => {
   try {
@@ -7,7 +9,10 @@ export const askQuestion = (questionData, navigate) => async (dispatch) => {
     dispatch(fetchAllquestions());
     navigate("/");
   } catch (error) {
+    
     console.log(error);
+    toast(error.response.data);
+    <ToastContainer/>
   }
 };
 
@@ -18,6 +23,8 @@ export const fetchAllquestions = () => async (dispatch) => {
     dispatch({ type: "FETCH_ALL_QUESTIONS", payload: data });
   } catch (error) {
     console.log(error);
+    toast(error.response.data);
+    <ToastContainer/>
   }
 };
 
@@ -29,6 +36,8 @@ export const deleteQuestion = (id, navigate) => async (dispatch) => {
     navigate("/");
   } catch (error) {
     console.log(error);
+    toast(error.response.data);
+    <ToastContainer/>
   }
 };
 
@@ -46,6 +55,8 @@ export const postAnswer = (answerData) => async (dispatch) => {
     dispatch(fetchAllquestions());
   } catch (error) {
     console.log(error);
+    toast(error.response.data);
+    <ToastContainer/>
   }
 };
 
@@ -55,6 +66,8 @@ export const deleteAnswer = (id, answerId, noOfAnswer) => async (dispatch) => {
     dispatch(fetchAllquestions());
   } catch (error) {
     console.log(error);
+    toast(error.response.data);
+    <ToastContainer/>
   }
 };
 
@@ -63,6 +76,8 @@ export const voteQuestion =(id,value,userId)=>async(dispatch)=>{
     const {data} =await api.voteQuestion(id,value,userId)
     dispatch(fetchAllquestions())
   } catch (error) {
-    console.log(error)
+    console.log(error);
+    toast(error.response.data);
+    <ToastContainer/>
   }
 }

@@ -13,6 +13,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   var User = useSelector((state) => state.fetch_current_userReducer);
+  
   // User=JSON.parse(localStorage.getItem('Profile'))
 
   // const [User,setUser]=useState();
@@ -51,7 +52,7 @@ const Navbar = () => {
     // }
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
   }, [dispatch]);
-
+  
   // [dispatch,handleLogout]
 
   return (
@@ -104,7 +105,7 @@ const Navbar = () => {
                   aria-expanded="false"
                   className="nav-item nav-btn"
                 >
-                  My Projects
+                  Projects
                 </a>
                 <ul class="dropdown-menu">
                   <li>
@@ -174,15 +175,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li>
-                <Link
-                  to="https://stackoverflow.co/teams"
-                  target="_blank"
-                  className="nav-btn nav-item"
-                >
-                  For Teams
-                </Link>
-              </li>
+              
             </ul>
             <form class="d-flex" role="search" id="searchform">
               <img

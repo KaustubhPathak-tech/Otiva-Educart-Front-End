@@ -2,9 +2,13 @@
   margin-top: 1.2%;
 }
 #tagspage{
-  padding-left: 2%;
-  width:80%;
+  padding-left: 0.4%;
+  width:85%;
   display: inline-block;
+}
+
+#plain-text{
+  width:90%;
 }
 
 .tags-list-container {
@@ -55,7 +59,20 @@
 
 @media(min-width: 780px) and (max-width:1300px){
   .tagsPage{
-    margin-top: 5%;
+    margin-top: 6%;
+  }
+  #tagspage{
+
+    padding:10% 1% 2% 1%;
+    width:100%;
+    display: inline-block;
+  }
+  .tags-list-container {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    
   }
 }
 @media (max-width:780px){
@@ -64,9 +81,18 @@
 
   }
   #tagspage{
-    padding-left: 10%;
-    width:80%;
+
+    padding:15% 1% 2% 1%;
+    width:100%;
     display: inline-block;
+  }
+  
+  .tags-list-container {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    
   }
 }
 

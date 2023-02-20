@@ -5,7 +5,7 @@ body {
 }
  .loginPage {
   display: block;
-  padding-top: 15%;
+  padding-top: 7%;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -13,14 +13,14 @@ body {
 
 form#loginform {
   display: block;
-  width: 25%;
+  width: fit-content;
   text-align: left;
   background-color: #fff;
   
   margin: 5% auto;
   margin-bottom: 1%;
-  padding: 2%;
-  padding-right: 4%;
+  padding:4%;
+  padding-right: 5.5%;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 10px #beb4b4;
   box-shadow: 0 0 10px #b2abab;
@@ -73,3 +73,19 @@ p {
   padding-right: 20px;
   font-size: 13px;
 } 
+@media (max-width:1000px) {
+  .loginPage{
+    padding-top: 15%;
+  }
+}
+
+
+@media(max-width:780px){
+  .loginPage{
+    padding-top: 25%;
+  }
+  form#loginform{
+    padding-right: 7%;
+  }
+  
+}

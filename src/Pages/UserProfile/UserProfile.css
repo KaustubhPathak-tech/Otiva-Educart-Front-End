@@ -1,19 +1,129 @@
-
-
-.user-details{
-    display: flexbox;
-    width: 100%;
-    display:flex;
-    align-items: flex-start;
+.userprofilepage {
+  top: 10%;
+}
+.user-details {
+  display: flexbox;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 
-.user-name{
-    padding-left: 20px;
+.user-name {
+  padding-left: 20px;
 }
 .user-name p {
-    color: #7e7e7e;
+  color: #7e7e7e;
 }
-.edit-profile-btn{
+.edit-profile-btn {
+  color: black;
+  padding: 0px 5px;
+  border: solid 1px #7e7e7e;
+  border-radius: 2px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 45%;
+}
+.edit-profile-btn:hover {
+  background-color: #c4dcee;
+}
+.edit-profile-title {
+  padding: 20px 0px;
+  border-bottom: solid 1px #dbd9d9;
+}
+.edit-profile-title-2 {
+  color: grey;
+  font-weight: 400;
+}
+.edit-profile-form {
+  padding: 8px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.edit-profile-form label h3 {
+  margin: 0%;
+  padding: 3px 0px;
+}
+.edit-profile-form label p {
+  margin: 0%;
+  padding: 3px 0px;
+}
+
+.edit-profile-form input {
+  color: rgb(255, 171, 3);
+  background-color: white;
+}
+.edit-profile-form input::content {
+  background-color: white;
+}
+.edit-profile-form textarea {
+  /* color: rgb(255, 255, 255); */
+  color: rgb(255, 171, 3);
+
+  background-color: white;
+}
+
+.user-submit-btn {
+  padding: 5px 5px;
+  background-color: #0a95ff;
+  color: white;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: "500";
+}
+
+.user-submit-btn:hover {
+  background-color: #0074cc;
+  color: aliceblue;
+}
+
+.user-cancel-btn {
+  padding: 5px 10px;
+  color: #0a95ff;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#userprofile {
+  position: absolute;
+  margin-left: 24%;
+  margin-top: 6%;
+  width: 61%;
+}
+
+#leftsidebar {
+  display: inline-block;
+  margin-left: 10.25%;
+  position: fixed;
+  border-right: 1px solid #9e9c9c;
+}
+
+#content {
+  padding-left: 3%;
+  width: 80%;
+}
+@media (min-width: 770px) and (max-width: 1300px) {
+  #content {
+    padding-left: 0.5%;
+    width: 98%;
+    margin: 12% 4% 2% 0%;
+    float: left;
+  }
+}
+@media (max-width: 780px) {
+  #content {
+    padding-left: 0.5%;
+    width: 95%;
+    margin: 12% 4% 2% 0%;
+    float: left;
+  }
+  .edit-profile-btn {
     color: black;
     padding: 0px 5px;
     border: solid 1px #7e7e7e;
@@ -21,108 +131,6 @@
     background-color: white;
     cursor: pointer;
     transition: 0.3s;
-    margin-left: 45%;
-    
-    
-    
-}
-.edit-profile-btn:hover{
-    background-color: #c4dcee;
-}
-.edit-profile-title{
-    padding: 20px 0px;
-    border-bottom: solid 1px #dbd9d9;
-}
-.edit-profile-title-2{
-    color: grey;
-    font-weight: 400;
-}
-.edit-profile-form {
-    padding: 8px;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.edit-profile-form label h3{
-    margin: 0%;
-    padding: 3px 0px;
-}
-.edit-profile-form label p{
-    margin: 0%;
-    padding: 3px 0px;
-}
-
-
-.edit-profile-form input{
-    color: rgb(255, 171, 3);
-    background-color: white;
-}
-.edit-profile-form input::content{
-    background-color: white;
-}
-.edit-profile-form textarea{
-    /* color: rgb(255, 255, 255); */
-    color: rgb(255, 171, 3);
-
-    background-color: white;
-}
-
-.user-submit-btn{
-    padding: 5px 5px;
-    background-color: #0a95ff;
-    color: white;
-    border: none;
-    border: 1px solid black;
-    border-radius: 5px;
-    transition: 0.2s;
-    cursor: pointer;
-    font-weight:"500";
-    
-}
-
-.user-submit-btn:hover{
-    background-color: #0074cc;
-    color: aliceblue;
-}
-
-.user-cancel-btn{
-    padding: 5px 10px;
-    color: #0a95ff;
-    background-color: transparent;
-    border: none;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-
-
-#userprofile{
-    position: absolute;
-    margin-left: 24%;
-    margin-top: 6%;
-    width: 61%;
-    
-}
-
-#leftsidebar {
-    display: inline-block;
-    margin-left: 10.25%;
-    position: fixed;
-    border-right: 1px solid #9e9c9c;
+    margin-left: 5%;
   }
-
-
-#content{
-    padding-left: 3%;
-    width: 80%;
-    
-}
-
-@media (max-width:780px) {
-    #content{
-        padding-left: 0.5%;
-        width: 80%;
-        margin: 8% 1% 2% 0%;
-        float: left;
-    }
 }

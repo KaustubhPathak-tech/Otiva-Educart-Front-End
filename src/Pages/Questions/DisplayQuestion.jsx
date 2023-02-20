@@ -2,7 +2,8 @@ import React from 'react'
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 import RightsideBar from '../../components/RightsideBar/RightsideBar'
 import QuestionDetails from './QuestionDetails'
-
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DisplayQuestion = () => {
     return (
@@ -12,14 +13,15 @@ const DisplayQuestion = () => {
                 <LeftsideBar />
 
             </div>
-            <div className="home-container-2" style={{padding:"60px 25px"}}>
+            <div className="home-container-2" >
                 <div className="home-container-2-1">
                     <QuestionDetails />
                 </div>
-                <div className="home-container-2-2" style={{padding:"0px 25px"}}>
+                <div className="home-container-2-2">
                     <RightsideBar />
                 </div>
             </div>
+            <ToastContainer/>
         </div>
 
 

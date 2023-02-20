@@ -18,8 +18,8 @@ const LeftsideBar = ({ question }) => {
             activeclassname="active"
             id="questions"
           >
-            <img src={Globe} alt="globe" />
-            &nbsp; <p style={{paddingTop:"13px"}}>Questions </p>
+            <img src={Globe} alt="globe" style={{marginBottom:"6px"}}/>
+            &nbsp; <p style={{marginTop:"5px"}}>Questions </p>
           </NavLink>
 
           <NavLink

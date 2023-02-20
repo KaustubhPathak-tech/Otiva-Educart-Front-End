@@ -3,7 +3,7 @@
 
 
 .ask-ques-container{
-
+    
     display: inline-block;
     width:100%;
     text-align: center;
@@ -82,7 +82,7 @@
 @media (max-width:1300px) {
     .ask-ques-container h1{
         display: block;
-        padding-top: 15%;
+        padding-top: 35%;
     
     }    
     .ask-form-container{

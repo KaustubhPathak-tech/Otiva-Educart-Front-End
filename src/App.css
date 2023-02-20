@@ -5,13 +5,14 @@
   display: flex;
   justify-content: space-between;
   margin: 0% 0%;
+  
 }
 .home-container-1-1 {
   height: auto;
   width: 100%;
   
   position: sticky;
-  margin: 40px 0px 0px 0px;
+  margin: 60px 0px 0px 0px;
   padding: 0px 0px;
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow ease-in-out 0.1s, transform ease-in-out;
@@ -27,22 +28,29 @@
   padding: 60px 0px;
   box-shadow: border-box;
   display: flex;
+ 
 }
 .home-container-2-1 {
   float: left;
-  padding-left: 0;
+  padding-left: 0px;
   margin-right: 0px;
   position: sticky;
   width:75%;
   display: flex;
   box-shadow: border-box;
+  padding-right: 5%;
+ 
+
+  
+
 
 }
 .home-container-2-2 {
-  width: 25%;
-  padding-left: -2%;
+  width: 24.5%;
+  border-radius: 5px;
   float: right;
   display: flex;
+  
 }
 
 .footer-content {
@@ -72,10 +80,11 @@
 
 @media (min-width: 780px) and (max-width: 1300px) {
   .home-container-1 {
-    top: 55px;
+    
+    top: 65px;
     background-color: #d3d2d2;
     position: fixed;
-    height: 47px;
+    height: 50px;
     
     width: 100%;
     display: flex;
@@ -85,7 +94,7 @@
     margin: 0% 0%;
   }
   .home-container-1-1 {
-    height: auto;
+    height: 50px;
     position: fixed;
     display: flex;
     max-width: 100%;
@@ -126,11 +135,11 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 785px) {
   .home-container-1 {
     position: fixed;
     background-color: #f69240;
-    top: 60px;
+    top: 63px;
     height: 40px;
 
     width: 100%;
@@ -171,17 +180,17 @@
     width: 100%;
     display: flex;
     display: block;
-    padding: 10% 0%;
+    padding: 10% 1%;
     box-shadow: border-box;
    
   }
   .home-container-2-2 {
-    margin-top: 2%;
-    width: 80%;
+    margin:2% 0% 5% 0%;
+    width: 100%;
     border-radius: 20px;
     display: block;
-    margin-right: 10%;
-    margin-bottom: 5%;
+    padding: 5% 1%;
+    
   }
 }
 
@@ -192,11 +201,12 @@
   margin-left: 13.4%;
   width: 86%;
   height: fit-content;
-  border-radius: 5px;
+  
 
   
 }
 .footer-1 p {
+  margin-top: 1%;
   padding-left: 42%;
   font-size: 18px;
   color: rgb(2, 99, 2);
@@ -205,6 +215,7 @@
 .footer-2 {
   color: #ff9933;
   padding-left: 42%;
+  padding-bottom: 1%;
 }
 
 .footer a {
@@ -213,7 +224,7 @@
   color: #f7991f;
 }
 .footer a:hover {
-  color: rgb(22, 244, 74);
+  color: rgb(0, 0, 0);
   transition: 0.3s;
   text-decoration: none;
 }
@@ -226,7 +237,7 @@
     margin-left: 0%;
     width: 100%;
     height: fit-content;
-    border-radius: 5px;
+   
 
    
   }
@@ -253,7 +264,7 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .footer {
     display: none;
   }

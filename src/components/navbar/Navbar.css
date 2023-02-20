@@ -1,12 +1,18 @@
-@media (min-width: 775px) {
+@media (min-width:760px) {
   .container-fluid {
-    height: 45px;
+    height: 50px;
     border-top: solid 3px #fb9404;
-
-    
+    box-shadow: 1px 2px 2px #8b8989;
+    padding-bottom: 0.4%;
   }
 }
+  
 
+@media (min-width:760px) and (max-width:950px) {
+  .container-fluid{
+    height: 65px;
+  }
+}
 
 
 .navbar {
@@ -30,10 +36,12 @@
   padding: 3px 10px;
   transition: 0.1s;
 }
-
+.nav-item:hover{
+  background-color: #dfdfdf;
+}
 .nav-logo {
   margin-top: 8px;
-  padding: 10px 16px;
+  padding: 9px 16px;
 }
 
 .nav-btn {
@@ -43,9 +51,7 @@
   color: #000000;
   cursor: pointer;
 }
-.nav-item:hover {
-  background-color: rgb(225, 225, 225);
-}
+
 
 #searchform {
   flex-grow: 1;
@@ -180,7 +186,7 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 760px) {
   #navbarSupportedContent {
     line-height: 2.5rem;
   }

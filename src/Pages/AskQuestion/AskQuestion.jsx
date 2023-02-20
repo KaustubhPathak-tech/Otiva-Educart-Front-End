@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { askQuestion } from '../../actions/question'
 import './AskQuestion.css'
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import Leftsidebar from '../../components/LeftsideBar/LeftsideBar'
 const AskQuestion = () => {
     const [questionTitle, setQuestionTitle] = useState('')
     const [questionBody, setQuestionBody] = useState('')
@@ -15,7 +18,7 @@ const AskQuestion = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log({ questionTitle, questionBody, questionTags })
-        dispatch(askQuestion({ questionTitle, questionBody, questionTags, userPosted: User.result.name,userId:User?.result?._id }, navigate))  //may be modified further
+        dispatch(askQuestion({ questionTitle, questionBody, questionTags, userPosted: User.result.name, userId: User?.result?._id }, navigate))  //may be modified further
 
     }
 
@@ -27,14 +30,18 @@ const AskQuestion = () => {
         }
     }
     return (
-
-        
+        <div className='askquestionpage'>
+            <div className="home-container-1">
+                <Leftsidebar/>
+            </div>
+            
             <div className="ask-ques-container">
                 <h1>
                     Ask a Public Question
                 </h1>
-                
+
                 <form onSubmit={handleSubmit}>
+
                     <div className='ask-form-container'>
                         <label htmlFor="ask-ques-tite">
                             <h4>
@@ -67,7 +74,8 @@ const AskQuestion = () => {
                     <input type="submit" value='Review your Question ' className='review-btn' />
                 </form>
             </div>
-      
+            <ToastContainer/>
+        </div>
     )
 }
 

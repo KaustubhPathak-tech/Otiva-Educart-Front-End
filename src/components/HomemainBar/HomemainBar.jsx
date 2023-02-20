@@ -1,6 +1,7 @@
 import React from 'react'
 
-
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {  useLocation, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './HomemainBar.css'
@@ -17,10 +18,10 @@ const Homemainbar = () => {
   console.log(questionsList)
 
  
-  const redirect = () => { user === null ? navigate('/login') : navigate('/AskQuestions') }
+  const redirect = () => { user === null ? toast("Login/Signup to ask a Question !",{position:"bottom-left"}): navigate('/AskQuestions') }
 
   return (
-    <div>
+    <div className='home-main-bar'>
       <div className='intro-container'>
         {
           location.pathname === '/' ? <h1>Top Questions</h1> : <h1>All Questions</h1>
@@ -43,6 +44,7 @@ const Homemainbar = () => {
 
         }
       </div>
+      <ToastContainer/>
     </div >
   )
 }

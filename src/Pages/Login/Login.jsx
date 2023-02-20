@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import { login } from '../../actions/auth'
 import icon from '../../assets/icon.png'
 const Login = () => {
-
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,7 +18,8 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(login({ email, password }, navigate))
-    console.log({ email, password })
+    
+
   }
 
 
@@ -41,6 +44,7 @@ const Login = () => {
 
 
       <p>Don't have an account ? </p><Link to='/signup' id="signuplink">Sign up</Link>
+      <ToastContainer />
     </div>
   )
 }

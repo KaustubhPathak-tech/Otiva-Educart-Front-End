@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import {useDispatch} from 'react-redux'
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from '../../actions/users';
 const EditProfileForm = ({ currentUser, setSwitch }) => {
 
@@ -9,6 +11,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
     const [tags, setTags] = useState('')
     const handleSubmit =(e)=>{
        e.preventDefault()
+       toast('Changes are reflected on navbar on next login !');
        if(tags.length===0){
         dispatch(updateProfile(currentUser?.result?._id,{name,about,tags:currentUser?.result?.tags}))
        }
@@ -32,7 +35,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
                 </label><br /><br/>
                 <label htmlFor="about">
                     <h4>About me</h4>
-                    <textarea id="about" cols="100" rows="10" value={about} onChange={(e) => setAbout(e.target.value)} class="d-flex"></textarea>
+                    <textarea id="about" cols="35" rows="10" value={about} onChange={(e) => setAbout(e.target.value)} class="d-flex"></textarea>
                 </label><br /><br />
                 <label htmlFor="tags">
                     <h4>Watched tags</h4>
@@ -42,6 +45,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
                 <input type="submit" value="Save Profile" className='user-submit-btn' />
                 <button type='button' className='user-cancel-btn' onClick={() => setSwitch(false)}>Cancel</button>
             </form>
+            <ToastContainer/>
         </div>
     )
 }
