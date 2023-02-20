@@ -215,7 +215,7 @@ const Navbar = () => {
                   py="7px"
                   borderRadius="50%"
                   color="white"
-                >
+                  >
                   <Link
                     to={`/users/${User?.result?._id}`}
                     style={{ color: "white", textDecoration: "none" }}

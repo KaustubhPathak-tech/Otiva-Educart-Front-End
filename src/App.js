@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './custom.scss';
+import "./custom.scss";
 
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -67,19 +67,16 @@ function App() {
           <p>
             Made with{" "}
             <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} /> in{" "}
-            <img src={india} width="18" alt="I Love my India" />
+            <img src={india} width="18" alt="I Love my India" />{" "}
+            &nbsp;&nbsp;&nbsp; &copy;{" "}
+            <a href="https://www.linkedin.com/in/kaustubh-pathak-293116198/">
+              Kaustubh Pathak
+            </a>
           </p>
-        </div>
-        <div className="footer-2">
-          &copy;{" "}
-          <a href="https://www.linkedin.com/in/kaustubh-pathak-293116198/">
-            Kaustubh Pathak
-          </a>
         </div>
       </div>
     </BrowserRouter>
   );
 }
-
 
 export default App;

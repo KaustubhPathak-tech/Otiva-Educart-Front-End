@@ -1,4 +1,4 @@
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .container-fluid {
     height: 50px;
     border-top: solid 3px #fb9404;
@@ -6,20 +6,16 @@
     padding-bottom: 0.4%;
   }
 }
-  
 
-@media (min-width:760px) and (max-width:950px) {
-  .container-fluid{
+@media (min-width: 760px) and (max-width: 950px) {
+  .container-fluid {
     height: 65px;
   }
 }
 
-
 .navbar {
   padding-top: 0px;
 }
-
-
 
 .navbar {
   min-width: 85%;
@@ -36,7 +32,7 @@
   padding: 3px 10px;
   transition: 0.1s;
 }
-.nav-item:hover{
+.nav-item:hover {
   background-color: #dfdfdf;
 }
 .nav-logo {
@@ -51,7 +47,6 @@
   color: #000000;
   cursor: pointer;
 }
-
 
 #searchform {
   flex-grow: 1;
@@ -105,9 +100,6 @@
 }
 
 @media (max-width: 1000) {
-  
-
-  
   .nav-item {
     margin: 0px 3px;
     font-size: small;
@@ -191,5 +183,3 @@
     line-height: 2.5rem;
   }
 }
-
-

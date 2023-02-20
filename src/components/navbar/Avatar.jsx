@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Avatar.css'
 const Avatar = ({ children, backgroundColor,
     px,py,
     color,
@@ -17,7 +17,7 @@ const Avatar = ({ children, backgroundColor,
 
     }
     return (
-        <div style={style}>
+        <div style={style} id="avatarcontent">
             {children}
         </div>
     )

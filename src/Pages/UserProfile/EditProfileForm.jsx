@@ -11,7 +11,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
     const [tags, setTags] = useState('')
     const handleSubmit =(e)=>{
        e.preventDefault()
-       toast('Changes are reflected on navbar on next login !');
+       toast('Changes on navbar are reflected on next login !');
        if(tags.length===0){
         dispatch(updateProfile(currentUser?.result?._id,{name,about,tags:currentUser?.result?.tags}))
        }
