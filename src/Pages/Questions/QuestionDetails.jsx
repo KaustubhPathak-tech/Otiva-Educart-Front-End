@@ -22,7 +22,7 @@ const QuestionDetails = () => {
   const User = useSelector((state) => (state.fetch_current_userReducer))
   const [Answer, setAnswer] = useState('')
   const location = useLocation()
-  const url = 'https://stack-over-flow-clone-2023.netlify.app'        
+  const url = 'https://stack-over-flow-clone-2023.vercel.app'        
   const handleShare = () => {
     copy(url + location.pathname)
     toast('Copied url : ' + url + location.pathname);
