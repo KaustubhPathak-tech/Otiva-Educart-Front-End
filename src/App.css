@@ -212,11 +212,7 @@
   color: rgb(2, 99, 2);
 }
 
-.footer-2 {
-  color: #ff9933;
-  padding-left: 42%;
-  
-}
+
 
 .footer a {
   font-weight: 600;
@@ -242,15 +238,12 @@
    
   }
   .footer-1 p {
-    padding-left: 42%;
+    padding-left: 38%;
     font-size: 18px;
     color: rgb(2, 99, 2);
   }
 
-  .footer-2 {
-    color: #ff9933;
-    padding-left: 42%;
-  }
+  
 
   .footer a {
     font-weight: 600;
