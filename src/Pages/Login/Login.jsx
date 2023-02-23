@@ -1,12 +1,19 @@
+//importing packages
 import React, { useState } from 'react'
 import { useDispatch} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+
+//importing styles
 import { ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
-import { login } from '../../actions/auth'
 import icon from '../../assets/icon.png'
+
+//importing component
+import { login } from '../../actions/auth'
+
+//main function goes here
 const Login = () => {
   
   const [email, setEmail] = useState('');
@@ -50,3 +57,7 @@ const Login = () => {
 }
 
 export default Login
+
+
+
+//login page ends.

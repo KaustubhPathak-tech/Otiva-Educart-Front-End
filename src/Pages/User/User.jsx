@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./User.css";
+
 import LeftSidebar from "../../components/LeftsideBar/LeftsideBar";
 import UsersList from "./UsersList";
-import "./User.css";
+
 const User = () => {
  
 

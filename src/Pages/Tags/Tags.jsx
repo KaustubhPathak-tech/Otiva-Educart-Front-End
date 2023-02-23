@@ -1,7 +1,10 @@
 import React from 'react'
+
+import './Tags.css'
+
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 import TagsList from './TagsList'
-import './Tags.css'
+
 const Tags = () => {
 
   const tagsList = [{

@@ -1,14 +1,21 @@
+//importing packages
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import "./custom.scss";
-
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
+
+//importing styles
+
+import "./custom.scss";
 import Navbar from "./components/navbar/Navbar";
 import "./components/navbar/Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import india from "./assets/india.png";
 
+
+//importing pages
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
@@ -21,10 +28,9 @@ import { fetchAllquestions } from "./actions/question";
 import { fetchAllUsers } from "./actions/users";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import india from "./assets/india.png";
 
+
+//main function starts here
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -33,13 +39,14 @@ function App() {
   }, [dispatch]);
 
   return (
-    <BrowserRouter>
+    
+      <BrowserRouter>
       {/* This is navigation bar */}
       {alert(
         "The Web-site may Perform slowly due to slow server speed.Kindly wait some time after pressing any key like login, signup, ask question, edit profile..."
       )}
       <Navbar />
-
+      
       <Routes>
         {/* This is Home Page Route */}
         <Route path="/" element={<Home />} />
@@ -80,3 +87,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+//main react frontend server ended

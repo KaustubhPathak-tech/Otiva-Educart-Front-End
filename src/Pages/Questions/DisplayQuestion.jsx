@@ -1,9 +1,11 @@
 import React from 'react'
+
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 import RightsideBar from '../../components/RightsideBar/RightsideBar'
 import QuestionDetails from './QuestionDetails'
-import { ToastContainer,toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const DisplayQuestion = () => {
     return (

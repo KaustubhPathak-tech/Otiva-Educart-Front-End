@@ -1,6 +1,8 @@
 import React from "react";
-import "./LeftsideBar.css";
 import { NavLink } from "react-router-dom";
+
+import "./LeftsideBar.css";
+
 import Globe from "../../assets/Globe.svg";
 
 const LeftsideBar = ({ question }) => {

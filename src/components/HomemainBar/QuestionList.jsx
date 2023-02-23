@@ -1,6 +1,6 @@
 import React from 'react'
-import Question from './Question'
 import './HomemainBar.css'
+import Question from './Question'
 
 const QuestionList = ({questionsList}) => {
     return (

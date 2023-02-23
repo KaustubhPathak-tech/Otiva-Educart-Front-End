@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import './User.css'
+
 const Users = ({ user }) => {
     return (
       <Link to={`/users/${user._id}`} className='user-profile-link'>

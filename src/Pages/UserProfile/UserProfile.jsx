@@ -1,17 +1,23 @@
 import React from "react";
-import "./UserProfile.css";
 import { useState } from "react";
 import moment from "moment";
-import { ToastContainer,toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import EditProfileForm from "./EditProfileForm";
-import ProfileBio from "./ProfileBio";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+
+
+import "./UserProfile.css";
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBirthdayCake, faPen } from "@fortawesome/free-solid-svg-icons";
+
+
+import EditProfileForm from "./EditProfileForm";
+import ProfileBio from "./ProfileBio";
 import LeftSidebar from "../../components/LeftsideBar/LeftsideBar";
 import Avatar from "../../components/navbar/Avatar";
+
+
 const UserProfile = () => {
   const { id } = useParams();
   const users = useSelector((state) => state.usersReducer);

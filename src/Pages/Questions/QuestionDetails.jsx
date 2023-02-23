@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import moment from 'moment'
 import copy from 'copy-to-clipboard'
-
 import { useSelector, useDispatch } from 'react-redux'
-import Avatar from "../../components/navbar/Avatar";
-import DisplayAnswer from "./DisplayAnswer";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
+
 import "./Questions.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import Avatar from "../../components/navbar/Avatar";
+import DisplayAnswer from "./DisplayAnswer";
 import upvote from "../../assets/sort-up.svg";
 import downvote from "../../assets/sort-down.svg";
-import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { deleteQuestion, postAnswer, voteQuestion } from "../../actions/question";
+
+
 const QuestionDetails = () => {
   const { id } = useParams();
   const questionsList = useSelector(state => state.questionReducer)
@@ -51,14 +54,16 @@ const QuestionDetails = () => {
   const handleUpVote = (e) => {
     if (User == null) {
       alert('Please Login to Vote!');
-      dispatch(voteQuestion(id, 'upVote', User.result._id))
+      
     }
+    dispatch(voteQuestion(id, 'upVote', User.result._id))
   }
   const handleDownVote = (e) => {
     if (User == null) {
       alert('Please Login to Vote!');
-      dispatch(voteQuestion(id, 'downVote', User.result._id))
+      
     }
+    dispatch(voteQuestion(id, 'downVote', User.result._id))
   }
   return (
     <div className="question-details-page">
