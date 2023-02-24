@@ -31,7 +31,7 @@ const Forgotpassword = () => {
                 <form onSubmit={resetPassword}>
                     <label htmlFor="ForgotPassword">
                         Email:<br/>
-                        <input type="email" name="email" id="forgottenemail" placeholder='enter your email' onChange={(e) => { setEmail(e.target.value) }} />&nbsp;&nbsp;&nbsp;
+                        <input type="email" name="email" id="forgottenemail"  onChange={(e) => { setEmail(e.target.value) }} />&nbsp;&nbsp;&nbsp;
 
 
                     </label><br /><br />
