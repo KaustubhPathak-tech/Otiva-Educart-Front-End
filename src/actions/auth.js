@@ -30,3 +30,17 @@ export const login = (authData, navigate) => async (dispatch) => {
     <ToastContainer />;
   }
 };
+
+
+export const reset = (authData,navigate)=>async(dispatch)=>{
+  try {
+    const {data}=await api.reset(authData);
+    dispatch({type:"RESET",data});
+    alert("If user exists then password will be updated ! Click Ok to login !");
+    navigate("/login");
+  } catch (error) {
+    toast(error.response.data);
+    console.log(error);
+    <ToastContainer/>;
+  }
+}

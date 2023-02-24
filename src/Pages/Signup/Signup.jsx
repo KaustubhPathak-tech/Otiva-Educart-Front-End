@@ -2,15 +2,17 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
+
 import { Link } from 'react-router-dom'
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { faCommentsDollar} from "@fortawesome/free-solid-svg-icons";
-import { faTags} from "@fortawesome/free-solid-svg-icons";
-import { faTrophy} from "@fortawesome/free-solid-svg-icons";
+import { faCommentsDollar } from "@fortawesome/free-solid-svg-icons";
+import { faTags } from "@fortawesome/free-solid-svg-icons";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 import './Signup.css'
 import { signup } from '../../actions/auth'
@@ -23,13 +25,16 @@ const Signup = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  
+
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(signup({ name, email, password }, navigate))
     console.log({ name, email, password })
 
   }
-  
+
   return (
 
     <div className='signup_page'>
@@ -40,8 +45,8 @@ const Signup = () => {
             <h1>Join the Stack Overflow community</h1><br />
             <div className="content">
               <FontAwesomeIcon icon={faCommentsDollar} />  Get unstuck — ask a question<br />
-              <FontAwesomeIcon icon={faTags}/> Unlock new privileges like voting and commenting<br />
-              <FontAwesomeIcon icon={faTags}/> Save your favorite tags, filters, and jobs<br />
+              <FontAwesomeIcon icon={faTags} /> Unlock new privileges like voting and commenting<br />
+              <FontAwesomeIcon icon={faTags} /> Save your favorite tags, filters, and jobs<br />
               <FontAwesomeIcon icon={faTrophy} /> Earn reputation and badges<br />
             </div>
             <br />
@@ -51,6 +56,8 @@ const Signup = () => {
           <div class="col-lg-6" id='form-container'>
 
             <div className="form">
+              <div id="signInDiv" style={{ paddingTop: "90px" }}></div>
+
               <form id='signupform' onSubmit={handleSubmit}>
 
                 <label htmlFor="name">
