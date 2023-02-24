@@ -83,6 +83,11 @@ function App() {
             </p>
           </div>
         </div>
+        {
+          window.onbeforeunload = function() {
+            localStorage.clear();
+         }
+        }
       </BrowserRouter>
     </div>
   );
