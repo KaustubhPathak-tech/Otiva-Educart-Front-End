@@ -5,7 +5,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-
+import { useSelector } from "react-redux";
 
 //importing styles
 
@@ -29,7 +29,7 @@ import { fetchAllquestions } from "./actions/question";
 import { fetchAllUsers } from "./actions/users";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Forgotpassword from "./Pages/ForgotPassword/Forgotpassword";
-
+import Chat from "./components/Chat";
 //main function starts here
 function App() {
   const dispatch = useDispatch();
@@ -37,7 +37,8 @@ function App() {
     dispatch(fetchAllquestions());
     dispatch(fetchAllUsers());
   }, [dispatch]);
-  
+  var User = useSelector((state) => state.fetch_current_userReducer);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -70,6 +71,10 @@ function App() {
           {/*This is Tags Page Route*/}
           <Route path="/tags" element={<Tags />}></Route>
         </Routes>
+        
+        {
+          User === null?(<></>):(<Chat />)
+        }
         <div className="footer">
           <div className="footer-1">
             <p>
