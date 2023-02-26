@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
-
 import { reset } from '../../actions/auth';
+
 import './Forgotpassword.css'
 const Forgotpassword = () => {
     const [email, setEmail] = useState('');

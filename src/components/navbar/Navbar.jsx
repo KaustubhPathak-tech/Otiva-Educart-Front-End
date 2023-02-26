@@ -22,7 +22,7 @@ import { setCurrentUser } from "../../actions/currentUser";
 const Navbar = () => {
   const dispatch = useDispatch();
 
-  var User = useSelector((state) => state.fetch_current_userReducer);
+  var User = useSelector((state) => (state.fetch_current_userReducer));
   
   
   const Navigate = useNavigate();

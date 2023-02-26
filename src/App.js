@@ -30,6 +30,7 @@ import { fetchAllUsers } from "./actions/users";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Forgotpassword from "./Pages/ForgotPassword/Forgotpassword";
 import Chat from "./components/Chat";
+import VerifyOTP from "./Pages/VerifyOTP/VerifyOTP";
 //main function starts here
 function App() {
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ function App() {
           <Route path="/forgotpassword" element={<Forgotpassword />}></Route>
           {/* This is Signup Page Route */}
           <Route path="/signup" element={<Signup />}></Route>
-
+          <Route path="/verify" element={<VerifyOTP />}></Route>
           {/* This is User Page Route */}
           <Route path="/users" element={<User />}></Route>
           <Route path="/users/:id" element={<UserProfile />}></Route>

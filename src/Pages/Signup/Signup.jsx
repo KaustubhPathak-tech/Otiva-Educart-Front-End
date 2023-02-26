@@ -17,21 +17,22 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import './Signup.css'
 import { signup } from '../../actions/auth'
 
+
 const Signup = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(signup({ name, email, password }, navigate))
-    console.log({ name, email, password })
+
 
   }
 
@@ -85,11 +86,12 @@ const Signup = () => {
                 <br />
                 <button type="submit" name='signup' id='signupbutton'>Sign up</button>
                 <br />
+                
                 <p>By clicking “Sign up”, you agree to our <Link id='signupformlink'>terms of <br />service</Link> , <Link id='signupformlink' >privacy policy</Link> and <Link id='signupformlink' >cookie policy</Link></p>
               </form>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <p id='loginRedirect'>Already have an account? <Link to='/login' id='signupformlink'   >Log in</Link></p>
-
+              
             </div>
           </div>
         </div>
