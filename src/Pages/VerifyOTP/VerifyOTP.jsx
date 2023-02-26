@@ -22,6 +22,7 @@ const VerifyOTP = () => {
 
             <div className="home-container-2" id='verification'>
                 <div className="form-container">
+                    <h4>Please enter your email and otp sent to your email id to verify your account </h4>
                     <form onSubmit={handleVerify}>
                         
                         <label htmlFor="email">
@@ -32,7 +33,7 @@ const VerifyOTP = () => {
                         <label htmlFor="otp">
                             <h6>Enter OTP sent to your Signup Email </h6>
                             <input type="text" onChange={(e) => { setOtp(e.target.value) }} /><br /><br />
-                            <button type="submit" name='submit'>Submit</button>
+                            <button type="submit" name='submit'>Verify</button>
                         </label>
                     </form>
                 </div>
