@@ -20,17 +20,17 @@ const VerifyOTP = () => {
     return (
         <div className='verifypage'>
 
-            <div className="home-container-2">
+            <div className="home-container-2" id='verification'>
                 <div className="form-container">
                     <form onSubmit={handleVerify}>
                         
                         <label htmlFor="email">
-                            <h6>Enter Your Signup Email :</h6><br/>
+                            <h6>Enter Your Signup Email </h6>
                             <input type="email" onChange={(e) => { setEmail(e.target.value) }}></input>
                         </label>
-                        <br />
+                        <br /><br/>
                         <label htmlFor="otp">
-                            <h6>Enter OTP sent to your Email : </h6>
+                            <h6>Enter OTP sent to your Signup Email </h6>
                             <input type="text" onChange={(e) => { setOtp(e.target.value) }} /><br /><br />
                             <button type="submit" name='submit'>Submit</button>
                         </label>
