@@ -28,8 +28,10 @@ const QuestionDetails = () => {
   const url = 'https://stack-over-flow-clone-2023.vercel.app'
   const handleShare = () => {
     copy(url + location.pathname)
-    alert('Copied url : ' + url + location.pathname);
+    
+    toast('Copied url : ' + url + location.pathname,{position:"bottom-center"})
   }
+  
   const hadlePostAns = (e, answerLength) => {
     e.preventDefault()
     if (User == null) {

@@ -51,7 +51,7 @@ export const verifyOTP = (authData, navigate) => async (dispatch) => {
     dispatch({ type: "VERIFY", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
     
-    alert("success!");
+    
     navigate("/");
   } catch (error) {
     toast(error.response.data);
@@ -59,5 +59,6 @@ export const verifyOTP = (authData, navigate) => async (dispatch) => {
     <ToastContainer />;
   }
 };
+
 
 

@@ -94,6 +94,22 @@
   background-color: #018ce3;
 }
 
+.copy{
+  background-color: transparent;
+  border: none;
+  padding: 5px 0px;
+  margin: 0px 10px 0px 0px;
+  text-decoration: underline;
+  color: #a49f9f;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  
+}
+.copy:active{
+  border-bottom: solid 2px black;
+  text-decoration: none;
+}
 #loginRedirect {
   left: 3%;
 }

@@ -45,9 +45,7 @@ function App() {
       <BrowserRouter>
        
         {/* This is navigation bar */}
-        {alert(
-          "The Web-site may Perform slowly due to slow server speed.Kindly wait some time after pressing any key like login, signup, ask question, edit profile..."
-        )}
+        
         <Navbar />
 
         <Routes>

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import './VerifyOTP.css'
 import { verifyOTP } from '../../actions/auth'
 const VerifyOTP = () => {
+    
 
     const[email,setEmail]=useState('');
     const [otp, setOtp] = useState('');
@@ -16,6 +17,7 @@ const VerifyOTP = () => {
         e.preventDefault()
         dispatch(verifyOTP({email,otp}, navigate));
     }
+    
 
     return (
         <div className='verifypage'>
@@ -26,14 +28,15 @@ const VerifyOTP = () => {
                     <form onSubmit={handleVerify}>
                         
                         <label htmlFor="email">
-                            <h6>Enter Your Signup Email </h6>
-                            <input type="email" onChange={(e) => { setEmail(e.target.value) }}></input>
+                            <h6> Your Email </h6>
+                            <input type="email" onChange={(e) => setEmail(e.target.value)} required placeholder='paste/enter copied email  '></input>
                         </label>
                         <br /><br/>
                         <label htmlFor="otp">
                             <h6>Enter OTP sent to your Signup Email </h6>
                             <input type="text" onChange={(e) => { setOtp(e.target.value) }} /><br /><br />
-                            <button type="submit" name='submit'>Verify</button>
+                            <button type="submit" name='submit'>Verify</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                         </label>
                     </form>
                 </div>

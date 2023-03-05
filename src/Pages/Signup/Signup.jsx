@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
+import copy from 'copy-to-clipboard'
 
 import { Link } from 'react-router-dom'
 
@@ -34,6 +34,11 @@ const Signup = () => {
     dispatch(signup({ name, email, password }, navigate))
 
 
+  }
+  const handleCopy = () => {
+    copy(email)
+    
+    toast('Copied email : ' + email,{position:"bottom-center"})
   }
 
   return (
@@ -67,7 +72,9 @@ const Signup = () => {
                 </label><br />
                 <label htmlFor="email">
                   <h4>Email</h4>
-                  <input type="email" required name='email' id='email' onChange={(e) => { setEmail(e.target.value) }}></input>
+                  <input type="email" required name='email' id='email' onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter Active Email id" ></input><br /><br />
+                  <button type="button" onClick={handleCopy} className='copy'>Copy email to fill during verification</button>
+                  
                 </label>
                 <br />
                 <label htmlFor="password">
