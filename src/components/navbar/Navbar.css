@@ -179,7 +179,11 @@
   }
 }
 
-
+@media (max-width:1300px){
+  .navbar{
+    padding-bottom: 0px;
+  }
+}
 
 @media (max-width:850px) and (min-width:765px){
   .nav-links {

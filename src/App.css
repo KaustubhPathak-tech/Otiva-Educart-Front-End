@@ -10,7 +10,7 @@
 .home-container-1-1 {
   height: auto;
   width: 100%;
-  
+
   position: sticky;
   margin: 60px 0px 0px 0px;
   padding: 0px 0px;
@@ -28,29 +28,22 @@
   padding: 60px 0px;
   box-shadow: border-box;
   display: flex;
- 
 }
 .home-container-2-1 {
   float: left;
   padding-left: 0px;
   margin-right: 0px;
   position: sticky;
-  width:75%;
+  width: 75%;
   display: flex;
   box-shadow: border-box;
   padding-right: 5%;
- 
-
-  
-
-
 }
 .home-container-2-2 {
   width: 24.5%;
   border-radius: 5px;
   float: right;
   display: flex;
-  
 }
 
 .footer-content {
@@ -70,22 +63,24 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #f07e0c;
-  
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #2ea4ed;
 }
-
+@media (min-width: 760px) and(max-width:950px) {
+  .home-container-1{
+    top:60px;
+  }
+}
 @media (min-width: 780px) and (max-width: 1300px) {
   .home-container-1 {
-    
-    top: 65px;
+    top: 50px;
     background-color: #d3d2d2;
     position: fixed;
     height: 50px;
-    
+
     width: 100%;
     display: flex;
     z-index: 10;
@@ -115,7 +110,6 @@
     padding: 60px 0px;
     box-shadow: border-box;
     display: flex;
-
   }
   .home-container-2-1 {
     float: left;
@@ -125,7 +119,6 @@
     display: flex;
     padding: 20px 24px;
     box-shadow: border-box;
-    
   }
   .home-container-2-2 {
     margin-left: 2%;
@@ -139,7 +132,7 @@
   .home-container-1 {
     position: fixed;
     background-color: #f69240;
-    top: 63px;
+    top: 55px;
     height: 40px;
 
     width: 100%;
@@ -171,10 +164,8 @@
     padding: 60px 0px;
     box-shadow: border-box;
     display: block;
-
   }
   .home-container-2-1 {
-   
     margin-right: 0%;
     position: sticky;
     width: 100%;
@@ -182,18 +173,15 @@
     display: block;
     padding: 10% 1%;
     box-shadow: border-box;
-   
   }
   .home-container-2-2 {
-    margin:2% 0% 5% 0%;
+    margin: 2% 0% 5% 0%;
     width: 100%;
     border-radius: 20px;
     display: block;
     padding: 5% 1%;
-    
   }
 }
-
 
 .footer {
   background: linear-gradient(36deg, #ff9933, #fff, rgb(2, 99, 2));
@@ -201,9 +189,6 @@
   margin-left: 12.5%;
   width: 87.5%;
   height: 32px;
-  
-
-  
 }
 .footer-1 p {
   width: 100%;
@@ -212,8 +197,6 @@
   color: rgb(2, 99, 2);
   margin-bottom: 0;
 }
-
-
 
 .footer a {
   font-weight: 400;
@@ -229,24 +212,18 @@
 }
 
 @media (min-width: 781px) and (max-width: 1300px) {
-  
   .footer {
     background: linear-gradient(36deg, #ff9933, #fff, rgb(2, 99, 2));
 
     margin-left: 0%;
     width: 100%;
     height: fit-content;
-   
-
-   
   }
   .footer-1 p {
     padding-left: 33%;
     font-size: 18px;
     color: rgb(2, 99, 2);
   }
-
-  
 
   .footer a {
     font-weight: 400;
