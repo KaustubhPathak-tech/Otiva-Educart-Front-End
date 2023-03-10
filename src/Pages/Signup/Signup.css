@@ -3,7 +3,10 @@
   margin-left: 2%;
   width: 95%;
 }
-
+#signupleft{
+  left: 0px;
+  
+}
 .signup_page a:hover {
   text-decoration: none;
 }
@@ -125,7 +128,7 @@
 
 @media (max-width: 780px) {
   .signup_page {
-    padding-top: 12%;
+    padding-top: 20%;
     margin-left: 2%;
     width: 95%;
   }
@@ -135,9 +138,11 @@
     width: 100%;
   }
   #form-container {
+    
     padding-top: 2%;
     width: 100%;
-    padding-left: 1%;
+    padding-left: 5%;
+    
   }
   
 }

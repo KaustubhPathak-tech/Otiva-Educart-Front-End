@@ -16,6 +16,7 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 import './Signup.css'
 import { signup } from '../../actions/auth'
+import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 
 
 const Signup = () => {
@@ -44,6 +45,9 @@ const Signup = () => {
   return (
 
     <div className='signup_page'>
+      <div className="home-container-1" id='signupleft'>
+        <LeftsideBar />
+      </div>
       <section className='test-content'>
         <div class="row">
           <div class="col-lg-6" id='PlainContent'>
