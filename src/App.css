@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0% 0%;
-  
+  top: 0px;
 }
 .home-container-1-1 {
   height: auto;
@@ -21,7 +21,7 @@
 }
 
 .home-container-2 {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-left: 13.5%;
 
   width: 86%;
@@ -64,7 +64,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #e4dede;
 }
 
 /* Handle */
