@@ -321,9 +321,10 @@
     margin-left: 0%;
     width: 100%;
     height: fit-content;
+    padding-bottom: 1%;
   }
   .footer-1 p {
-    padding-left: 33%;
+    padding-left: 30%;
     font-size: 18px;
     color: rgb(2, 99, 2);
   }
