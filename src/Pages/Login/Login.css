@@ -77,15 +77,15 @@ form #forgotpass {
   text-decoration: none;
   color: blue;
 }
-p {
+p{
   display: inline-block;
   padding-right: 0.5%;
   font-size: 13px;
 } 
 
-@media (max-width:1000px) {
+@media (max-width:1300px) {
   .loginPage{
-    padding-top: 15%;
+    padding-top: 25%;
   }
 }
 
@@ -99,6 +99,9 @@ p {
 }
 
 @media(max-width:450px){
+  .loginPage{
+    padding-top: 40%;
+  }
   form#loginform{
     margin-top: 10%;
     padding: 5%;
