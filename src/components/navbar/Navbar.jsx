@@ -48,6 +48,7 @@ const Navbar = () => {
           </Link>
           <button
             class="navbar-toggler"
+            
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -178,12 +179,12 @@ const Navbar = () => {
             </form>&nbsp;&nbsp;
             {User === null ? (
               <>
-                <Link to="/login" className="nav-links nav-btn nav-item">
+                <Link to="/login" className="nav-links nav-btn nav-item fonting">
                   Log in
                 </Link>
                 <Link
                   to="/signup"
-                  className="nav-links nav-btn nav-item"
+                  className="nav-links nav-btn nav-item fonting"
                   id="special-button"
                 >
                   Sign up
@@ -207,7 +208,7 @@ const Navbar = () => {
                 </Avatar>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button
-                  className="nav-links nav-btn nav-item"
+                  className="nav-links nav-btn nav-item fonting"
                   onClick={handleLogout}
                   id="special-button"
                 >
