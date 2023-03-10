@@ -78,7 +78,8 @@ function App() {
               Made with{" "}
               <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} /> in{" "}
               <img src={india} width="18" alt="I Love my India" />{" "}
-              &nbsp;&nbsp;&nbsp; &copy;{" "}
+              &nbsp;&nbsp;&nbsp;All rights reserved. &copy;{" "}
+
               <a href="https://www.linkedin.com/in/kaustubh-pathak-293116198/">
                 Kaustubh Pathak
               </a>
