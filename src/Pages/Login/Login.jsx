@@ -28,7 +28,7 @@ const Login = () => {
 
 
 
-  
+
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(login({ email, password }, navigate))
@@ -39,19 +39,22 @@ const Login = () => {
     <div className='loginPage'>
 
       <img src={icon} alt='logo-icon'></img>
-      
-      <form id='loginform' onSubmit={handleSubmit}>
-        <label htmlFor="email">
-          <h4>Email</h4>
-          <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} ></input>
-        </label><br />
-        <label htmlFor="password">
-          <h4 id='pass'>Password</h4><Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
-          <br />
-          <input type="password" name="password" required id="password" onChange={(e) => { setPassword(e.target.value) }} /><br />
-        </label>
 
-        <br /><button type="submit" name='submit' className='loginButton' > Log in</button>
+      <form id='loginform' onSubmit={handleSubmit}>
+        
+          <h5 style={{ fontSize: "18px" }}>Email</h5>
+          <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} />
+          <br />
+        
+          
+          <h5 style={{ fontSize: "18px" }} id="pass">Password</h5>         
+          <Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
+          
+          <div className="password-container">
+          <input type="password" name="password" required id="password" onChange={(e) => { setPassword(e.target.value) }} /><br /></div>
+        <br />
+
+        <button type="submit" name='submit' className='loginButton' > Log in</button>
       </form>
 
 

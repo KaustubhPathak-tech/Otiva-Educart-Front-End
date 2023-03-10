@@ -13,50 +13,60 @@ body {
 
 form#loginform {
   display: block;
-  width: fit-content;
+  width: 280px;
   text-align: left;
   background-color: #fff;
   
-  margin: 5% auto;
+  margin: 3% auto;
   margin-bottom: 1%;
-  padding:4%;
-  padding-right: 5.5%;
+  padding:1.5%;
+  padding-top: 2.5%;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 10px #beb4b4;
   box-shadow: 0 0 10px #b2abab;
 }
 
 #loginform input {
-  font-size: 23px;
-  margin: 10px;
-  width:100%;
-  padding: 5% 0% 5% 1%;
+  font-size: 12px;
+  margin: 0px;
+  width: 100%;
+  padding: 4% 4% 4% 4%;
   border: solid 0.4px #555353;
   border-radius: 3px;
 }
-
-h4#pass {
+h5#pass {
+  margin-top: 1%;
+  
   display: inline-block;
-  padding-right: 60px;
+  position: absolute;
+  
 }
-
 form #forgotpass {
   display: inline-block;
   text-decoration: none;
   color: blue;
   font-size: 13px;
+  position: relative;
+  margin-top: 7%;
+  margin-left: 55%;
+  
 }
-
+.password-container{
+  margin-top: 5%;
+}
 .loginButton {
-  margin: 2%;
-  height: 10%;
-  width: 103%;  
+  margin-top: 1%;
+  margin-bottom: 2%;
+  padding-top: 2.5%;
+  padding-bottom: 3%;
+  height: 7%;
+  width: 100%;  
   background-color: rgb(51, 158, 239);
   border: 1px solid rgb(51, 158, 239);
   border-radius: 3px;
   cursor: pointer;
   color: #fff;
-  font-size: 24px;
+  font-size: 14px;
 }
 .loginButton:hover {
   background-color: rgb(12, 109, 206);
@@ -64,17 +74,15 @@ form #forgotpass {
 
 #signuplink {
   font-size: 13px;
-  color: blue;
-}
-#signuplink:hover{
   text-decoration: none;
-  transition: 0.2s;
+  color: blue;
 }
 p {
   display: inline-block;
-  padding-right: 20px;
+  padding-right: 0.5%;
   font-size: 13px;
 } 
+
 @media (max-width:1000px) {
   .loginPage{
     padding-top: 15%;
@@ -86,8 +94,13 @@ p {
   .loginPage{
     padding-top: 25%;
   }
-  form#loginform{
-    padding-right: 7%;
-  }
   
+  
+}
+
+@media(max-width:450px){
+  form#loginform{
+    margin-top: 10%;
+    padding: 5%;
+  }
 }
