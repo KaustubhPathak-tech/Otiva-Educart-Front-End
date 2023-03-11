@@ -76,7 +76,7 @@ function App() {
           <div className="footer-1">
             <p>
               Made with{" "}
-              <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} /> in{" "}
+              <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} /> in{" "}
               <img src={india} width="18" alt="I Love my India" />{" "}
               &nbsp;&nbsp;&nbsp;All rights reserved. &copy;{" "}
 
