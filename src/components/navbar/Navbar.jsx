@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 import searchicon from "../../assets/searchicon.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 //importing components
@@ -23,8 +25,8 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   var User = useSelector((state) => (state.fetch_current_userReducer));
-  
-  
+
+
   const Navigate = useNavigate();
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -32,23 +34,20 @@ const Navbar = () => {
     dispatch(setCurrentUser(null));
   };
   useEffect(() => {
-    
+
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
   }, [dispatch]);
-  
-  
-
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
         <div class="container-fluid">
-          
+
           <Link to="/" className="nav-logo nav-item">
             <img src={logo} alt="official logo"></img>
           </Link>
           <button
             class="navbar-toggler"
-            
+
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -56,13 +55,13 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="" ><FontAwesomeIcon icon={faBars} style={{color:"#fb9404"}} /></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-             
+
               <li>
-               
+
                 <Link
                   to="https://stackoverflow.co/"
                   target="_blank"
@@ -159,7 +158,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              
+
             </ul>
             <form class="d-flex" role="search" id="searchform">
               <img
@@ -175,7 +174,7 @@ const Navbar = () => {
                 placeholder="Search..."
                 class="form-control me-2"
               />
-             
+
             </form>&nbsp;&nbsp;
             {User === null ? (
               <>
@@ -198,7 +197,7 @@ const Navbar = () => {
                   py="7px"
                   borderRadius="50%"
                   color="white"
-                  >
+                >
                   <Link
                     to={`/users/${User?.result?._id}`}
                     style={{ color: "white", textDecoration: "none" }}
@@ -219,7 +218,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      
+
     </div>
   );
 };
