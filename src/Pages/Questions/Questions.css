@@ -17,10 +17,9 @@
 .question-votes{
     padding: 5px 10px 5px 12px;
 }
-.question-votes p{
+#votep{
     
-    margin:9.5%;
-    
+    margin:16%;
     font-size: 25px;
     text-align: center;
 }

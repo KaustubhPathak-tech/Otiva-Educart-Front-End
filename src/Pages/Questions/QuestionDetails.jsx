@@ -88,7 +88,7 @@ const QuestionDetails = () => {
                         width="18"
                         className="votes-icon" onClick={(e) => { handleUpVote(e) }}
                       />
-                      <p>{question.upVote.length - question.downVote.length}</p>
+                      <p id="votep">{question.upVote.length - question.downVote.length}</p>
                       <img
                         src={downvote}
                         alt="downarrow"
