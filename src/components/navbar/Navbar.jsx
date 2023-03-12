@@ -1,9 +1,9 @@
 //importing packages
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { logout } from "../../actions/auth";
 
 //importing style
 
@@ -23,16 +23,34 @@ import { setCurrentUser } from "../../actions/currentUser";
 //main function goes here
 const Navbar = () => {
   const dispatch = useDispatch();
-
   var User = useSelector((state) => (state.fetch_current_userReducer));
+  const [email,setEmail]=useState(User?.result?.email);
+  // console.log(User);
+  var currentplan = (User?.result?.plan);
 
+  var premiumcontent = "Get Premium";
+  
+  if (currentplan === "Free" || currentplan === "NULL") {
 
+    premiumcontent = "Get Premium"
+  }
+  else if (currentplan === "Silver") {
+
+    premiumcontent = "Upgrade"
+  }
+  else if (currentplan === "Gold") {
+
+    premiumcontent = "!"
+  }
   const Navigate = useNavigate();
-  const handleLogout = () => {
+  const handleLogout = (e) => {
+    dispatch(logout({ email }));
     dispatch({ type: "LOGOUT" });
     Navigate("/");
+    e.preventDefault()
     dispatch(setCurrentUser(null));
   };
+  
   useEffect(() => {
 
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
@@ -55,7 +73,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="" ><FontAwesomeIcon icon={faBars} style={{color:"#fb9404"}} /></span>
+            <span class="" ><FontAwesomeIcon icon={faBars} style={{ color: "#fb9404" }} /></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -72,11 +90,10 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="https://stackoverflow.co/"
-                  target="_blank"
+                  to="/pricing"
                   className="nav-btn nav-item"
                 >
-                  Products
+                  Pricing
                 </Link>
               </li>
               <li class="dropdown">
@@ -176,6 +193,10 @@ const Navbar = () => {
               />
 
             </form>&nbsp;&nbsp;
+
+
+
+
             {User === null ? (
               <>
                 <Link to="/login" className="nav-links nav-btn nav-item fonting">
@@ -215,6 +236,9 @@ const Navbar = () => {
                 </button>
               </>
             )}
+            {
+              currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting">{premiumcontent}</Link></>)
+            }
           </div>
         </div>
       </nav>

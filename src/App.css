@@ -62,7 +62,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f07e0c;
+  background: rgb(245, 149, 6);
 }
 
 /* Handle on hover */
@@ -287,7 +287,7 @@
 }
 
 .footer {
- background-color: #ee7b08;
+ background-color: rgb(245, 149, 6);
  text-align: center;
   margin-top: 15%;
   margin-left: 12.5%;
@@ -348,7 +348,7 @@
 }
 @media (min-width: 781px) and (max-width: 1300px) {
   .footer {
-    background-color: #f07e0c;
+    background-color: rgb(245, 149, 6);
 
     margin-left: 0%;
     width: 100%;

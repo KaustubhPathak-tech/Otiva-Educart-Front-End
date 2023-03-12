@@ -16,7 +16,7 @@ const Homemainbar = () => {
   const navigate = useNavigate();
 
   const questionsList = useSelector(state => state.questionReducer)
-  console.log(questionsList)
+  
 
  
   const redirect = () => { user === null ? toast("Login/Signup to ask a Question !",{position:"bottom-center"}): navigate('/AskQuestions') }

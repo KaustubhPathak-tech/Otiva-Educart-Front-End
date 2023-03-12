@@ -3,7 +3,7 @@
 //importing packages
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 //importing styles
@@ -30,8 +30,27 @@ import UserProfile from "./Pages/UserProfile/UserProfile";
 import Forgotpassword from "./Pages/ForgotPassword/Forgotpassword";
 import Chat from "./components/Chat";
 import VerifyOTP from "./Pages/VerifyOTP/VerifyOTP";
+import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
+import Pricing from "./Pages/Pricing/Pricing";
 //main function starts here
 function App() {
+  var payment = useSelector((state) => state.fetch_current_userReducer);
+  var data = payment?.time;
+  var expiry = data + 3600000;
+  var diff = expiry - Date.now();
+  function refresh() {
+    window.location.reload(true);
+    localStorage.clear();
+  }
+  if(isNaN(expiry)){
+    
+    
+  }
+  else{
+    setInterval(refresh,diff);
+    console.log(diff);
+  }
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllquestions());
@@ -54,6 +73,8 @@ function App() {
           <Route path="/forgotpassword" element={<Forgotpassword />}></Route>
           {/* This is Signup Page Route */}
           <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/Pricing" element={<Pricing />}></Route>
+          <Route path="/paymentsuccess" element={<Paymentsuccess />}></Route>
           <Route path="/verify" element={<VerifyOTP />}></Route>
           {/* This is User Page Route */}
           <Route path="/users" element={<User />}></Route>
@@ -108,17 +129,18 @@ function App() {
               <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} /> in{" "}
               <img src={india} width="18" alt="I Love my India" />{" "}
               &nbsp;&nbsp;&nbsp;All rights reserved. &copy;{" "}
-              <a href="https://www.linkedin.com/in/kaustubh-pathak-293116198/" target="_blank" id="me">
+              <a
+                href="https://www.linkedin.com/in/kaustubh-pathak-293116198/"
+                target="_blank"
+                id="me"
+              >
                 Kaustubh Pathak
               </a>
             </p>
           </div>
         </div>
-        {
-          (window.onbeforeunload = function() {
-            localStorage.clear();
-          })
-        }
+        
+        
       </BrowserRouter>
     </div>
   );
