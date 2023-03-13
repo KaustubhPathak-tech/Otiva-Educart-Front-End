@@ -28,8 +28,8 @@ const Paymentsuccess = () => {
 </div>
         
         <div class="row" style={{width:"90%"}}>
-          <div class="col-lg-6" style={{textAlign:"right"}}><Button variant='outline-warning' onClick={gohome}>Browse more Questions </Button></div>
-          <div class="col-lg-6" style={{textAlign:"left"}}><Button variant='outline-warning' onClick={ask}>Ask Question</Button></div>
+          <div class="col-lg-6" style={{textAlign:"center"}}><Button variant='outline-warning' onClick={gohome}>Browse more Questions </Button></div>
+          <div class="col-lg-6" style={{textAlign:"center"}}><Button variant='outline-warning' onClick={ask}>Ask Question</Button></div>
         </div>
       </div>
     </div>
