@@ -37,10 +37,13 @@ blink {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px)and (min-width:482px) {
   .col-lg-4 {
     margin: 3% 0%;
   }
+  .row{
+    margin-left: 30%;
+}
 }
 
 @media(max-width:480px){

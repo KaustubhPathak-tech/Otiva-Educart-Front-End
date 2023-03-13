@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../actions/auth";
-
+import Button from 'react-bootstrap/Button'
 //importing style
 
 
@@ -227,17 +227,17 @@ const Navbar = () => {
                   </Link>
                 </Avatar>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button
+                <Link
                   className="nav-links nav-btn nav-item fonting"
                   onClick={handleLogout}
                   id="special-button"
                 >
                   Log out
-                </button>
+                </Link>
               </>
             )}
             {
-              currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting">{premiumcontent}</Link></>)
+              currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button">{premiumcontent}</Link></>)
             }
           </div>
         </div>

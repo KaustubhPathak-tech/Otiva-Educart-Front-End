@@ -182,21 +182,18 @@
   }
 }
 
-@media (max-width:1300px){
+@media (max-width:1300px) and (min-width:850px){
   .navbar{
     padding-bottom: 0px;
   }
-}
-
-@media (max-width:850px) and (min-width:765px){
   .nav-links {
     text-align: center;
     padding: 4px 6px;
-    width: 12%;
+    width: 8%;
     cursor: pointer;
     border: solid 1px rgb(85, 65, 238);
     border-radius: 3px;
-    background-color: #eff1ff;
+    background-color: #d6f0f4;
   }
   #special-button {
     text-align: center;
@@ -217,8 +214,54 @@
     font-size: 13px;
   }
 }
+
+@media (max-width:850px) and (min-width:760px){
+  .nav-links {
+    text-align: center;
+    padding: 4px 6px;
+    width: 17%;
+    cursor: pointer;
+    border: solid 1px rgb(85, 65, 238);
+    border-radius: 3px;
+    background-color: #d6f0f4;
+  }
+  #special-button {
+    text-align: center;
+
+    font-weight: 400;
+    margin: 20px 0px;
+    padding: 4px 4px;
+    width: 25%;
+
+    background-color: #009dff;
+    color: white;
+    border-color: #fcfdfd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s all;
+  }
+  .fonting{
+    font-size: 13px;
+  }
+}
 @media (max-width: 760px) {
   #navbarSupportedContent {
     line-height: 2.5rem;
+  }
+  
+  #special-button {
+    text-align: center;
+
+    font-weight: 400;
+    margin: 20px 0px;
+    padding: 8px 12px;
+    width: 12%;
+
+    background-color: #009dff;
+    color: rgb(255, 255, 255);
+    border-color: #fcfdfd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s all;
   }
 }
