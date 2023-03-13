@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 import "./AskQuestion.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { setCurrentUser } from "../../actions/currentUser";
 import Leftsidebar from "../../components/LeftsideBar/LeftsideBar";
 import { askQuestion } from "../../actions/question";
-
 const AskQuestion = () => {
   const [questionTitle, setQuestionTitle] = useState("");
   const [questionBody, setQuestionBody] = useState("");
@@ -16,7 +15,6 @@ const AskQuestion = () => {
   const dispatch = useDispatch();
   const User = useSelector((state) => state.fetch_current_userReducer);
   const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -32,6 +30,8 @@ const AskQuestion = () => {
         navigate
       )
     );
+    
+    dispatch(setCurrentUser(null));
      //may be modified further
   };
 
@@ -47,10 +47,10 @@ const AskQuestion = () => {
       </div>
 
       <div className="ask-ques-container">
-        <div className="heading">
-          <h5>Please Login Again after Successfully Posting a Question to access all services.</h5>
+        
+          
           <h1>Ask a Public Question</h1>
-        </div>
+       
         <form onSubmit={handleSubmit}>
           <div className="ask-form-container">
             <label htmlFor="ask-ques-tite">

@@ -44,11 +44,11 @@ const Navbar = () => {
   }
   const Navigate = useNavigate();
   const handleLogout = (e) => {
+    e.preventDefault()
     dispatch(logout({ email }));
     dispatch({ type: "LOGOUT" });
-    Navigate("/");
-    e.preventDefault()
     dispatch(setCurrentUser(null));
+    Navigate("/");
   };
   
   useEffect(() => {

@@ -30,6 +30,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1,email },navigate));
+        
     };
     const handlesilver = (e) => {
         e.preventDefault()
@@ -38,6 +39,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 100,email },navigate));
+        
     };
     const handlegold = (e) => {
         e.preventDefault()
@@ -46,6 +48,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1000,email },navigate));
+        
     };
     return (
         <div>
@@ -54,7 +57,7 @@ const Pricing = () => {
             </div>
             <div className="home-container-2" id='pricing-content'>
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
-                    <h5>Please Login Again after Successful Payment to access all services.</h5>
+                    <h5> <blink><span style={{color:"red"}}>ALERT ! </span></blink> &nbsp;&nbsp;Please Login Again after Successful Payment to access all services.</h5>
                     <h1>
                         Pricing
                         <img src={subscribe} alt="subscribe" width="40px" />

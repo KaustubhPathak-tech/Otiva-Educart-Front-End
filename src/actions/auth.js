@@ -60,6 +60,7 @@ export const getpremium = (authData, navigate) => async (dispatch) => {
         "https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-official.svg",
       order_id: data.order.id, //order.id This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       callback_url: "https://stack-overflow-server.vercel.app/payment/paymentverification",
+
       prefill: {
         name: "Gaurav Kumar",
         email: "gaurav.kumar@example.com",

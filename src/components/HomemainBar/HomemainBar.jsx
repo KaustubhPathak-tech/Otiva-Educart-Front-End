@@ -18,9 +18,6 @@ const Homemainbar = () => {
   const questionsList = useSelector(state => state.questionReducer)
   const permit=user?.result?.permi;
   const askedq=user?.result?.noOfQuestionperday;
-  console.log(permit);
-  console.log(askedq);
-
   const redirect = () => { if (user === null) { toast("Login/Signup to ask a Question !", { position: "bottom-center" }) } else { if(permit>askedq){navigate("/AskQuestions")}else{toast("Daily Limit Exceeded !", { position: "bottom-center" })} }}
 
   return (
