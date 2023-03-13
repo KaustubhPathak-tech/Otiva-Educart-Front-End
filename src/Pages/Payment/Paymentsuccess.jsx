@@ -23,10 +23,13 @@ const Paymentsuccess = () => {
       </div>
       <div className='home-container-2' style={{ display: "block", textAlign: "center" }}>
         <div className="ref">Reference No.  <b>{reference}</b></div><br />
-        <img src={success} alt="success" style={{ marginLeft: "auto" }} />
-        <div class="row" style={{width:"95%"}}>
-          <div class="col-lg-6" style={{textAlign:"right"}}><Button variant='outline-warning' onClick={gohome}>Browse more Questions </Button></div>
-          <div class="col-lg-6" style={{textAlign:"left"}}><Button variant='outline-warning' onClick={ask}>Ask Question</Button></div>
+<div class="row" style={{width:"90%"}}>
+<img src={success} alt="success" style={{ marginLeft: "auto" }} />
+</div>
+        
+        <div class="row" style={{width:"90%"}}>
+          <div class="col-lg-6" style={{textAlign:"center"}}><Button variant='outline-warning' onClick={gohome}>Browse more Questions </Button></div>
+          <div class="col-lg-6" style={{textAlign:"center"}}><Button variant='outline-warning' onClick={ask}>Ask Question</Button></div>
         </div>
       </div>
     </div>
