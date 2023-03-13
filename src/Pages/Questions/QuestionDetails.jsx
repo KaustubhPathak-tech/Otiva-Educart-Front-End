@@ -18,8 +18,6 @@ import { deleteQuestion, postAnswer, voteQuestion } from "../../actions/question
 const QuestionDetails = () => {
   const { id } = useParams();
   const questionsList = useSelector(state => state.questionReducer)
-  console.log(questionsList)
-
   const Navigate = useNavigate()
   const dispatch = useDispatch()
   const User = useSelector((state) => (state.fetch_current_userReducer))

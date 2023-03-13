@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
 import "./AskQuestion.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,6 +19,7 @@ const AskQuestion = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     dispatch(
       askQuestion(
         {
@@ -31,7 +31,8 @@ const AskQuestion = () => {
         },
         navigate
       )
-    ); //may be modified further
+    );
+     //may be modified further
   };
 
   const handleEnter = (e) => {
