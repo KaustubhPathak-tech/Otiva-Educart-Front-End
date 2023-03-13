@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
 import './Pricing.css'
@@ -13,19 +14,38 @@ import silver from '../../assets/silver-medal.png';
 import free from '../../assets/free.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Pricing = () => {
     const dispatch=useDispatch();
     var payment = useSelector((state) => (state.authReducer));
     console.log(payment);
     const navigate=useNavigate();
     var User = useSelector((state) => (state.fetch_current_userReducer));
-    const handlePremium = (e) => {
+    const[email,setEmail]=useState(User?.result?.email);
+    
+    const handlefree = (e) => {
         e.preventDefault()
         if(User===null){
             toast("Please Login or Signup to Subscribe");
             return;
         }
-        dispatch(getpremium({ amount: 100 },navigate));
+        dispatch(getpremium({ amount: 1,email },navigate));
+    };
+    const handlesilver = (e) => {
+        e.preventDefault()
+        if(User===null){
+            toast("Please Login or Signup to Subscribe");
+            return;
+        }
+        dispatch(getpremium({ amount: 100,email },navigate));
+    };
+    const handlegold = (e) => {
+        e.preventDefault()
+        if(User===null){
+            toast("Please Login or Signup to Subscribe");
+            return;
+        }
+        dispatch(getpremium({ amount: 1000,email },navigate));
     };
     return (
         <div>
@@ -34,6 +54,7 @@ const Pricing = () => {
             </div>
             <div className="home-container-2" id='pricing-content'>
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
+                    <h5>Please Login Again after Successful Payment to access all services.</h5>
                     <h1>
                         Pricing
                         <img src={subscribe} alt="subscribe" width="40px" />
@@ -47,7 +68,7 @@ const Pricing = () => {
                             <Card.Body>
                                 <Card.Title style={{ textAlign: "center" }}>Free</Card.Title>
                                 <Card.Text>
-                                    <h4>₹ 0 /month</h4>
+                                    <h4>₹ 1 /month</h4>
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
@@ -55,7 +76,7 @@ const Pricing = () => {
 
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='outline-warning' onClick={handlePremium}>Try Free</Button>
+                                <Button variant='outline-warning' onClick={handlefree}>Try Free</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -74,7 +95,7 @@ const Pricing = () => {
                                 <ListGroup.Item>5 Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='outline-warning' onClick={handlePremium}>Get Premium</Button>
+                                <Button variant='outline-warning' onClick={handlesilver}>Get Premium</Button>
                             </Card.Body>
                         </Card></div>
                     <div class="col-lg-4">
@@ -90,7 +111,7 @@ const Pricing = () => {
                                 <ListGroup.Item>Unlimited Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='outline-warning' onClick={handlePremium}>Get Premium</Button>
+                                <Button variant='outline-warning' onClick={handlegold}>Get Premium</Button>
                             </Card.Body>
                         </Card></div>
                 </div>

@@ -48,7 +48,7 @@ export const getpremium = (authData, navigate) => async (dispatch) => {
     const { data } = await api.getPremium(authData);
     
     dispatch({ type: "GET_PREMIUM", data });
-    
+
     const options = {
       key: key, // Enter the Key ID generated from the Dashboard
       amount: data.order.amount, //order.amount Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise

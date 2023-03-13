@@ -48,7 +48,7 @@ function App() {
   }
   else{
     setInterval(refresh,diff);
-    console.log(diff);
+    
   }
 
   const dispatch = useDispatch();

@@ -9,7 +9,12 @@
     text-align: center;
 
 }
-.ask-ques-container h1{
+.heading h1{
+    display: block;
+    padding-top: 5%;
+
+}
+.heading h5{
     display: block;
     padding-top: 5%;
 

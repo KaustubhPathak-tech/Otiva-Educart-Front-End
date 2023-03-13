@@ -20,7 +20,6 @@ const AskQuestion = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ questionTitle, questionBody, questionTags });
     dispatch(
       askQuestion(
         {
@@ -47,8 +46,10 @@ const AskQuestion = () => {
       </div>
 
       <div className="ask-ques-container">
-        <h1>Ask a Public Question</h1>
-
+        <div className="heading">
+          <h5>Please Login Again after Successfully Posting a Question to access all services.</h5>
+          <h1>Ask a Public Question</h1>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="ask-form-container">
             <label htmlFor="ask-ques-tite">
