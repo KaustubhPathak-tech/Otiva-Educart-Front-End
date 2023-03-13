@@ -36,7 +36,7 @@ import Pricing from "./Pages/Pricing/Pricing";
 function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
   var data = payment?.time;
-  var expiry = data + 10000;
+  var expiry = data + 60000;
   var diff = expiry - Date.now();
   function refresh() {
     window.location.reload(true);
