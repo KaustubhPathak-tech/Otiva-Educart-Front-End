@@ -1,3 +1,10 @@
+.ref{
+    margin-left: -10%;
+}
+#success{
+    margin-left:15%;
+    width:60%;
+}
 blink {
     animation: 1s linear infinite condemned_blink_effect;
   }
@@ -12,4 +19,26 @@ blink {
     100% {
       visibility: visible;
     }
+  }
+  @media (max-width: 992px) {
+    .col-lg-4 {
+      margin: 3% 0%;
+    }
+    .home-container-2{
+        padding-top: 12%;
+    }
+  }
+  
+  @media(max-width:520px){
+    .home-container-2{
+        padding-top: 25%;
+    }
+        #success{
+            margin-left: 0%;
+            width:100%;
+        }
+        .row{
+           
+            margin-left: 5%;
+      }
   }

@@ -57,7 +57,7 @@ const Pricing = () => {
             </div>
             <div className="home-container-2" id='pricing-content'>
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
-                    <h5> <blink><span style={{color:"red"}}>ALERT ! </span></blink> &nbsp;&nbsp;Please Login Again after Successful Payment to access all services.</h5>
+                    <h5> <blink><span style={{color:"red"}}>ALERT ! </span></blink> &nbsp;&nbsp;Please <b style={{color:"red"}}>Login Again</b> after Successful Payment to access services you paid for !</h5>
                     <h1>
                         Pricing
                         <img src={subscribe} alt="subscribe" width="40px" />
@@ -79,7 +79,7 @@ const Pricing = () => {
 
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='outline-warning' onClick={handlefree}>Try Free</Button>
+                                <Button variant='warning' onClick={handlefree}>Try Free</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -98,7 +98,7 @@ const Pricing = () => {
                                 <ListGroup.Item>5 Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='outline-warning' onClick={handlesilver}>Get Premium</Button>
+                                <Button variant='warning' onClick={handlesilver}>Get Premium</Button>
                             </Card.Body>
                         </Card></div>
                     <div class="col-lg-4">
@@ -114,7 +114,7 @@ const Pricing = () => {
                                 <ListGroup.Item>Unlimited Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='outline-warning' onClick={handlegold}>Get Premium</Button>
+                                <Button variant='warning' onClick={handlegold}>Get Premium</Button>
                             </Card.Body>
                         </Card></div>
                 </div>

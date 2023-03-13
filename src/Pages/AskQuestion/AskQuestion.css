@@ -9,12 +9,12 @@
     text-align: center;
 
 }
-.heading h1{
+.ask-ques-container h1{
     display: block;
     padding-top: 5%;
 
 }
-.heading h5{
+.ask-ques-container h5{
     display: block;
     padding-top: 5%;
 
@@ -87,7 +87,37 @@
 @media (max-width:1300px) {
     .ask-ques-container h1{
         display: block;
-        padding-top: 35%;
+        padding-top: 15%;
+    
+    }    
+    .ask-form-container{
+    
+        text-align: left;
+        width: 80%;
+        margin:auto;
+        margin-top: 2%;
+    
+    }
+}
+@media (max-width:830px) {
+    .ask-ques-container h1{
+        display: block;
+        padding-top: 20%;
+    
+    }    
+    .ask-form-container{
+    
+        text-align: left;
+        width: 80%;
+        margin:auto;
+        margin-top: 2%;
+    
+    }
+}
+@media (max-width:480px) {
+    .ask-ques-container h1{
+        display: block;
+        padding-top: 32%;
     
     }    
     .ask-form-container{
