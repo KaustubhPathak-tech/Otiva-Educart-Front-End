@@ -21,8 +21,6 @@ export const login = (authData, navigate) => async (dispatch) => {
     const { data } = await api.logIn(authData);
     dispatch({ type: "LOGIN", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    alert("log in Successful! login session expires in 1 hour !");
-
     navigate("/");
   } catch (error) {
     toast(error.response.data);
