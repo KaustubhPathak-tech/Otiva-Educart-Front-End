@@ -44,16 +44,16 @@ function App() {
     window.location.reload(true);
     localStorage.clear();
   }
-  if(stat===true){
-    setInterval(refresh,10);
-  }
+  
   if(isNaN(expiry)){
     
     
   }
   else{
     setInterval(refresh,diff);
-    
+    if(stat===true){
+      setInterval(refresh,10);
+    }
   }
 
   const dispatch = useDispatch();
