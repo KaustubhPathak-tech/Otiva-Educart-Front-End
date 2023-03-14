@@ -34,10 +34,11 @@ import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
 import Pricing from "./Pages/Pricing/Pricing";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";//main function starts here
+import { setCurrentUser } from "./actions/currentUser";
 function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
   var data = payment?.time;
-  
+  var stat=payment?.status;
   var expiry = data + 3600000;
   var diff = expiry - Date.now();
   function refresh() {
@@ -51,6 +52,9 @@ function App() {
   }
   else{
     setInterval(refresh,diff);
+    if(stat==="yes"){
+      dispatch(setCurrentUser(null));
+    }
   }
 
   const dispatch = useDispatch();
