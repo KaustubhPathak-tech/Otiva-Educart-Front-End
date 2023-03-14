@@ -28,7 +28,6 @@ const Navbar = () => {
   // console.log(User);
   var currentplan = (User?.result?.plan);
   var stat=User?.status;
-  console.log(stat);
   var premiumcontent = "Get Premium";
   
   if (currentplan === "Free" || currentplan === "NULL") {
