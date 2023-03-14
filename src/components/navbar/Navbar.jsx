@@ -27,18 +27,19 @@ const Navbar = () => {
   const [email,setEmail]=useState(User?.result?.email);
   // console.log(User);
   var currentplan = (User?.result?.plan);
-
+  var stat=User?.status;
+  console.log(stat);
   var premiumcontent = "Get Premium";
   
   if (currentplan === "Free" || currentplan === "NULL") {
 
     premiumcontent = "Get Premium"
   }
-  else if (currentplan === "Silver") {
-
+  else if (currentplan === "Silver"&&stat==="no") {
     premiumcontent = "Upgrade"
+
   }
-  else if (currentplan === "Gold") {
+  else if (currentplan === "Gold"&&stat==="no") {
 
     premiumcontent = "!"
   }

@@ -14,7 +14,7 @@ import "./components/navbar/Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import india from "./assets/india.png";
-
+import { useNavigate } from "react-router-dom";
 //importing pages
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -32,12 +32,12 @@ import Chat from "./components/Chat";
 import VerifyOTP from "./Pages/VerifyOTP/VerifyOTP";
 import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
 import Pricing from "./Pages/Pricing/Pricing";
-//main function starts here
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";//main function starts here
 function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
   var data = payment?.time;
-  var stat=payment?.status;
-  console.log(stat);
+  
   var expiry = data + 3600000;
   var diff = expiry - Date.now();
   function refresh() {
@@ -51,9 +51,6 @@ function App() {
   }
   else{
     setInterval(refresh,diff);
-    if(stat==="yes"){
-      setTimeout(refresh,10);
-    }
   }
 
   const dispatch = useDispatch();
@@ -147,6 +144,7 @@ function App() {
         
         
       </BrowserRouter>
+      <ToastContainer />
     </div>
   );
 }
