@@ -63,7 +63,7 @@ const Login = () => {
 
         <p id='sign'>Don't have an account ? </p><Link to='/signup' id="signuplink">Sign up</Link>
       
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </div>
   )
 }

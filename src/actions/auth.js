@@ -11,7 +11,7 @@ export const signup = (authData, navigate) => async (dispatch) => {
     // alert("Sign Up Successful! login session expires in 1 hour!");
     navigate("/verify");
   } catch (error) {
-    toast(error.response.data);
+    toast(error.response.data,{position:"top-center"});
     console.log(error);
   }
 };
@@ -23,8 +23,7 @@ export const login = (authData, navigate) => async (dispatch) => {
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
     navigate("/");
   } catch (error) {
-    toast(error.response.data);
-    console.log(error);
+    toast(error.response.data,{position:"top-center"});
     <ToastContainer />;
   }
 };
@@ -33,7 +32,7 @@ export const logout = (authData) => async (dispatch) => {
     const { data } = await api.logout(authData);
     dispatch({ type: "LOGIN", data });
   } catch (error) {
-    toast(error.response.data);
+    toast(error.response.data,{position:"top-center"});
     console.log(error);
     <ToastContainer />;
   }
@@ -76,8 +75,8 @@ export const getpremium = (authData, navigate) => async (dispatch) => {
     razor.open();
     // navigate(`/paymentsuccess?reference=${razorpay_payment_id}`);
   } catch (error) {
-    toast(error.response.data);
-    console.log(error);
+    toast(error.response.data,{position:"top-center"});
+    
     <ToastContainer />;
   }
 };
@@ -106,8 +105,7 @@ export const verifyOTP = (authData, navigate) => async (dispatch) => {
 
     navigate("/");
   } catch (error) {
-    toast(error.response.data);
-    console.log(error);
+    toast(error.response.data,{position:"top-center"});
     <ToastContainer />;
   }
 };

@@ -11,7 +11,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
     const [tags, setTags] = useState('')
     const handleSubmit =(e)=>{
        e.preventDefault()
-       toast('Changes on navbar are reflected on next login !');
+       toast('Changes on navbar are reflected on next login !',{position:"top-center"});
        if(tags.length===0){
         dispatch(updateProfile(currentUser?.result?._id,{name,about,tags:currentUser?.result?.tags}))
        }
@@ -45,7 +45,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
                 <input type="submit" value="Save Profile" className='user-submit-btn' />
                 <button type='button' className='user-cancel-btn' onClick={() => setSwitch(false)}>Cancel</button>
             </form>
-            <ToastContainer/>
+            
         </div>
     )
 }

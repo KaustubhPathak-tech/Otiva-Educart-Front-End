@@ -18,7 +18,7 @@ const Homemainbar = () => {
   const questionsList = useSelector(state => state.questionReducer)
   const permit=user?.result?.permi;
   const askedq=user?.result?.noOfQuestionperday;
-  const redirect = () => { if (user === null) { toast("Login/Signup to ask a Question !", { position: "bottom-center" }) } else { if(permit>askedq){navigate("/AskQuestions")}else{toast("Daily Limit Exceeded !", { position: "bottom-center" })} }}
+  const redirect = () => { if (user === null) { toast("Login/Signup to ask a Question !", { position: "top-center" });<ToastContainer />} else { if(permit>askedq){navigate("/AskQuestions")}else{toast("Daily Limit Exceeded !", { position: "top-center" });<ToastContainer />} }}
 
   return (
     <div className='home-main-bar'>
@@ -44,7 +44,7 @@ const Homemainbar = () => {
 
         }
       </div>
-      <ToastContainer />
+      
     </div >
   )
 }

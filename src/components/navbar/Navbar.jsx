@@ -213,9 +213,9 @@ const Navbar = () => {
               <>
                 <Avatar
                   backgroundColor="#009dff"
-                  px="10px"
-                  py="7px"
-                  borderRadius="50%"
+                  px="12px"
+                  py="5px"
+                  borderRadius="10%"
                   color="white"
                 >
                   <Link

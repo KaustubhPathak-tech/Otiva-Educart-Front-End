@@ -38,7 +38,7 @@ export const deleteQuestion = (id, navigate) => async (dispatch) => {
   } catch (error) {
     console.log(error);
     toast(error.response.data);
-    <ToastContainer/>
+    // <ToastContainer/>
   }
 };
 

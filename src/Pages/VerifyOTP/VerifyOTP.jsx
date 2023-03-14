@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Leftsidebar from "../../components/LeftsideBar/LeftsideBar"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from 'react-router-dom'
@@ -21,7 +22,9 @@ const VerifyOTP = () => {
 
     return (
         <div className='verifypage'>
-
+            <div className="home-container-1">
+                <Leftsidebar />
+            </div>
             <div className="home-container-2" id='verification'>
                 <div className="form-container">
                     <h4>Please enter your email and otp sent to your email id to verify your account </h4>

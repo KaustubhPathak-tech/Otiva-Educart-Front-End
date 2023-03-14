@@ -26,19 +26,18 @@ const QuestionDetails = () => {
   const url = 'https://stack-over-flow-clone-2023.vercel.app'
   const handleShare = () => {
     copy(url + location.pathname)
-    
-    toast('Copied url : ' + url + location.pathname,{position:"bottom-center"})
+    toast('Copied url : ' + url + location.pathname,{position:"top-center"});  
   }
   
   const hadlePostAns = (e, answerLength) => {
     e.preventDefault()
     if (User == null) {
-      alert('Please Login to answer a question !');
-      Navigate('/login')
+      toast('Please Login or Signup to answer a question !', { position: "top-center" });
+      // Navigate('/login')
     }
     else {
       if (Answer === '') {
-        toast('Enter an Answer before Posting !', { position: "bottom-center" });
+        toast('Enter an Answer before Posting !', { position: "top-center" });
       }
       else {
         dispatch(postAnswer({ id, noOfAnswer: answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId: User?.result?._id }))
@@ -53,14 +52,14 @@ const QuestionDetails = () => {
 
   const handleUpVote = (e) => {
     if (User == null) {
-      alert('Please Login to Vote!');
+      toast('Please Login to Vote!', { position: "top-center" });
       
     }
     dispatch(voteQuestion(id, 'upVote', User.result._id))
   }
   const handleDownVote = (e) => {
     if (User == null) {
-      alert('Please Login to Vote!');
+      toast('Please Login to Vote!', { position: "top-center" });
       
     }
     dispatch(voteQuestion(id, 'downVote', User.result._id))
@@ -169,7 +168,7 @@ const QuestionDetails = () => {
             ))}
         </>
       )}
-      <ToastContainer />
+      
     </div>
   );
 };

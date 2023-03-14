@@ -16,7 +16,6 @@ export const updateProfile = (id, updateData) => async (dispatch) => {
     dispatch({ type: "UPDATE_CURRENT_USER", payload: data });
   } catch (error) {
     console.log(error);
-    toast(error.response.data);
-    <ToastContainer/>;
+    toast(error.response.data,{position:"top-center"});
   }
 };
