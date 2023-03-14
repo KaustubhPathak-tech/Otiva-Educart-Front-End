@@ -51,7 +51,7 @@ function App() {
   }
   else{
     setInterval(refresh,diff);
-    if(stat===true){
+    if(stat==="yes"){
       setInterval(refresh,10);
     }
   }
