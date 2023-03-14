@@ -25,7 +25,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   var User = useSelector((state) => (state.fetch_current_userReducer));
   const [email,setEmail]=useState(User?.result?.email);
-  // console.log(User);
   var currentplan = (User?.result?.plan);
   var stat=User?.status;
   var premiumcontent = "Get Premium";

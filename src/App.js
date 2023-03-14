@@ -53,7 +53,7 @@ function App() {
   else{
     setInterval(refresh,diff);
     if(stat==="yes"){
-      dispatch(setCurrentUser(null));
+      
     }
   }
 
