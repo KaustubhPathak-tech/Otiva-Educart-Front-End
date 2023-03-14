@@ -37,7 +37,7 @@ function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
   var data = payment?.time;
   var stat=payment?.status;
-  
+  console.log(stat);
   var expiry = data + 3600000;
   var diff = expiry - Date.now();
   function refresh() {
