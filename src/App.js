@@ -52,7 +52,7 @@ function App() {
   else{
     setInterval(refresh,diff);
     if(stat==="yes"){
-      setInterval(refresh,10);
+      setTimeout(refresh,10);
     }
   }
 
