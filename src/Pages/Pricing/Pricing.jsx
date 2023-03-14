@@ -14,7 +14,7 @@ import silver from '../../assets/silver-medal.png';
 import free from '../../assets/free.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { setCurrentUser } from "../../actions/currentUser";
 const Pricing = () => {
     const dispatch=useDispatch();
     var payment = useSelector((state) => (state.authReducer));
@@ -30,7 +30,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1,email },navigate));
-        
+        dispatch(setCurrentUser(null));
     };
     const handlesilver = (e) => {
         e.preventDefault()
@@ -39,7 +39,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 100,email },navigate));
-        
+        dispatch(setCurrentUser(null));
     };
     const handlegold = (e) => {
         e.preventDefault()
@@ -48,7 +48,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1000,email },navigate));
-        
+        dispatch(setCurrentUser(null));
     };
     return (
         <div>
