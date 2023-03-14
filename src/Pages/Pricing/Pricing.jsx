@@ -57,7 +57,7 @@ const Pricing = () => {
             </div>
             <div className="home-container-2" id='pricing-content'>
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
-                    <h5> <blink><span style={{color:"red"}}>ALERT ! </span></blink> &nbsp;&nbsp;Please <b style={{color:"red"}}>Login Again</b> after Successful Payment to access services you paid for !</h5>
+                    <h5> <blink><span style={{color:"red"}}><b>ALERT !</b> </span></blink> &nbsp;&nbsp;Please <b style={{color:"red"}}>Login Again</b> after Successful Payment to access services you paid for !</h5>
                     <h1>
                         Pricing
                         <img src={subscribe} alt="subscribe" width="40px" />
