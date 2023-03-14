@@ -36,11 +36,16 @@ import Pricing from "./Pages/Pricing/Pricing";
 function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
   var data = payment?.time;
+  var stat=payment?.status;
+  
   var expiry = data + 3600000;
   var diff = expiry - Date.now();
   function refresh() {
     window.location.reload(true);
     localStorage.clear();
+  }
+  if(stat===true){
+    setInterval(refresh,10);
   }
   if(isNaN(expiry)){
     
