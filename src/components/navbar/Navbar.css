@@ -9,8 +9,7 @@
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
-  /* background-color: #009dff; */
-  background-image: url("");
+  
 }
 @media (min-width: 760px) and (max-width: 950px) {
   .container-fluid {

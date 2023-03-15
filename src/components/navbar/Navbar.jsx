@@ -1,5 +1,5 @@
 //importing packages
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -22,22 +22,23 @@ import { setCurrentUser } from "../../actions/currentUser";
 
 //main function goes here
 const Navbar = () => {
+  
   const dispatch = useDispatch();
   var User = useSelector((state) => (state.fetch_current_userReducer));
-  const [email,setEmail]=useState(User?.result?.email);
+  const [email, setEmail] = useState(User?.result?.email);
   var currentplan = (User?.result?.plan);
-  var stat=User?.status;
+  var stat = User?.status;
   var premiumcontent = "Get Premium";
-  
+
   if (currentplan === "Free" || currentplan === "NULL") {
 
     premiumcontent = "Get Premium"
   }
-  else if (currentplan === "Silver"&&stat==="no") {
+  else if (currentplan === "Silver" && stat === "no") {
     premiumcontent = "Upgrade"
 
   }
-  else if (currentplan === "Gold"&&stat==="no") {
+  else if (currentplan === "Gold" && stat === "no") {
 
     premiumcontent = "!"
   }
@@ -49,7 +50,7 @@ const Navbar = () => {
     dispatch(setCurrentUser(null));
     Navigate("/");
   };
-  
+
   useEffect(() => {
 
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
@@ -64,16 +65,19 @@ const Navbar = () => {
           </Link>
           <button
             class="navbar-toggler"
-
+            id="toggle-button"
             type="Button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            style={{border:"none"}}
+            style={{ border: "none" }}
+            
           >
-            <span class="" ><FontAwesomeIcon icon={faBars} style={{ color: "#fb9404" }} /></span>
+            <span class="" ><FontAwesomeIcon icon={faBars} style={{ color: "#fb9404" }} /></span> 
+            {/* // */}
+
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
