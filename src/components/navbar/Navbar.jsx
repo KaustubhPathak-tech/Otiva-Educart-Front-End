@@ -65,12 +65,13 @@ const Navbar = () => {
           <button
             class="navbar-toggler"
 
-            type="button"
+            type="Button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style={{border:"none"}}
           >
             <span class="" ><FontAwesomeIcon icon={faBars} style={{ color: "#fb9404" }} /></span>
           </button>

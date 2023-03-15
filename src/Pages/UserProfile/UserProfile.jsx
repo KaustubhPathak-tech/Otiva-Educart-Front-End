@@ -35,11 +35,11 @@ const UserProfile = () => {
         <section id="content">
           <div className="user-details">
             <Avatar
-              backgroundColor="purple"
-              color="white"
+              backgroundColor="#53a2e8"
+              color="#ffff"
               fontSize="50px"
-              px="40px"
-              py="30px"
+              px="4%"
+              py="3%"
             >
               {currentProfile?.name.charAt(0).toUpperCase()}
             </Avatar>
