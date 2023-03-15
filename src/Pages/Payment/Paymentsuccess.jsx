@@ -39,11 +39,12 @@ const Paymentsuccess = () => {
         <div class="row" style={{ width: "90%" }} id="buttons">
           <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={log}>Back to Home </Button></div>
           <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={gohome}>Browse more Questions </Button></div>
-          <div class="col-lg-4" style={{ textAlign: "center" }}></div><Button variant='warning' onClick={ask}>Ask Question</Button></div>
-        <div/>
+          <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={ask}>Ask Question</Button></div>
+        
       </div>
 
     </div>
+  </div>
   )
 }
 
