@@ -31,7 +31,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1, email }, navigate));
-        dispatch(setCurrentUser(null));
+        
     };
     const handlesilver = (e) => {
         e.preventDefault()
@@ -40,7 +40,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 100, email }, navigate));
-        dispatch(setCurrentUser(null));
+        
     };
     const handlegold = (e) => {
         e.preventDefault()
@@ -49,13 +49,13 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1000, email }, navigate));
-        dispatch(setCurrentUser(null));
+        
     };
     return (
         <div>
-            <Popup trigger={abc} setTrigger={setAbc}>
+            {/* <Popup trigger={abc} setTrigger={setAbc}>
             <h5> <blink><span style={{ color: "red" }}><b>ALERT !</b> </span></blink> &nbsp;&nbsp;Please <b style={{ color: "red" }}>Login Again</b> after Successful Payment to access services you paid for !</h5>
-            </Popup>
+            </Popup> */}
             <div className="home-container-1">
                 <LeftsideBar />
             </div>
@@ -84,7 +84,7 @@ const Pricing = () => {
 
                             </ListGroup>
                             <Card.Body>
-                                <Button onClick={() => setAbc(true)} style={{backgroundColor:"white",border:"none"}}><Button variant='warning' onClick={handlefree}>Try Free</Button></Button>
+                                <Button variant='warning' onClick={handlefree}>Try Free</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -103,7 +103,7 @@ const Pricing = () => {
                                 <ListGroup.Item>5 Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                            <Button onClick={() => setAbc(true)} style={{backgroundColor:"white",border:"none"}}><Button variant='warning' onClick={handlesilver}>Get Premium</Button></Button>
+                            <Button variant='warning' onClick={handlesilver}>Get Premium</Button>
                             </Card.Body>
                         </Card></div>
                     <div class="col-lg-4">
@@ -119,7 +119,7 @@ const Pricing = () => {
                                 <ListGroup.Item>Unlimited Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                            <Button onClick={() => setAbc(true)} style={{backgroundColor:"white",border:"none"}}><Button variant='warning' onClick={handlegold}>Get Premium</Button></Button>
+                            <Button variant='warning' onClick={handlegold}>Get Premium</Button>
                             </Card.Body>
                         </Card></div>
                 </div>
