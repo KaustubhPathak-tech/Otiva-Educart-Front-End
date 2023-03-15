@@ -3,7 +3,7 @@
     top:0;
     left:0;
     width: 100%;
-    padding-top: 1vh;
+    /* padding-top: 1vh; */
     height: 100vh;
     background-color: rgba(13, 13, 13, 0.688);
     display: flex;
@@ -13,7 +13,7 @@
 }
 .popup-inner{
     position: relative;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     padding: 7%;
     width: 100%;
     max-width: 640px;
