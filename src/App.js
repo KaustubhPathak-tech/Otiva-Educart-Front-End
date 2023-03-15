@@ -4,7 +4,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 //importing styles
 
@@ -32,31 +32,33 @@ import Chat from "./components/Chat";
 import VerifyOTP from "./Pages/VerifyOTP/VerifyOTP";
 import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
 import Pricing from "./Pages/Pricing/Pricing";
+import Popup from "./components/Popup/Popup";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";//main function starts here
+import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
   var data = payment?.time;
-  var stat=payment?.status;
+  var stat = payment?.status;
   var expiry = data + 3600000;
   var diff = expiry - Date.now();
   function refresh() {
     window.location.reload(true);
     localStorage.clear();
   }
-  
-  if(isNaN(expiry)){
-    
-    
-  }
-  else{
-    setInterval(refresh,diff);
-    if(stat==="yes"){
-      
+  useEffect(() => {
+    setTimeout(() => {
+      setDsa(true);
+    }, 0);
+  }, []);
+  if (isNaN(expiry)) {
+  } else {
+    setInterval(refresh, diff);
+    if (stat === "yes") {
     }
   }
 
+  const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllquestions());
@@ -68,6 +70,25 @@ function App() {
       <BrowserRouter>
         {/* This is navigation bar */}
 
+        <Popup trigger={dsa} setTrigger={setDsa}>
+          <h5 style={{textAlign:"center"}}>
+            {" "}
+            <blink>
+              <div style={{ color: "red" ,textAlign:"center"}}>
+                <b>ALERT !</b>{" "}
+              </div>
+            </blink>{" "}<br/>
+            &nbsp;&nbsp;All Payments are in <b style={{ color: "red" }}>Test Mode</b>
+          </h5><br/>
+          <h5 style={{textAlign:"center"}}>Use these Card Details ⬇️</h5>
+          <p style={{position:"absolute",marginLeft:"16%"}}>Card No : 4111 1111 1111 1111</p><br/>
+          <p style={{position:"absolute",marginLeft:"16%"}}>Expiry : Any future date</p><br/>
+          <p style={{position:"absolute",marginLeft:"16%"}}>Card Holder's Name : Any Name</p><br/>
+          <p style={{position:"absolute",marginLeft:"16%"}}>CVV : Any number</p><br/><br/>
+          <h5 style={{textAlign:"center"}}>Use these UPI Details ⬇️</h5>
+          <p style={{position:"absolute",marginLeft:"16%"}}>UPI id: success@razorpay</p><br/>
+
+        </Popup>
         <Navbar />
 
         <Routes>
@@ -145,8 +166,6 @@ function App() {
             </p>
           </div>
         </div>
-        
-        
       </BrowserRouter>
       <ToastContainer />
     </div>
