@@ -172,7 +172,7 @@ const Navbar = () => {
                   <li>
                     <a
                       class="dropdown-item"
-                      href="https://myportfolio-hjbl.onrender.com/"
+                      href="https://myportfolio-pink-eta.vercel.app/"
                     >
                       My Portfolio
                     </a>
