@@ -23,7 +23,7 @@ const Paymentsuccess = () => {
   const log = (e) => {
     e.preventDefault()
     navigate("/");
-    
+
   }
   return (
     <div className="successpage">
@@ -33,16 +33,16 @@ const Paymentsuccess = () => {
       <div className='home-container-2' style={{ display: "block", textAlign: "center" }}>
         <div className="ref">Reference No.  <b>{reference}</b></div><br />
         <div class="row" style={{ width: "90%" }}>
-          <img src={success} alt="success" id='success'/>
+          <img src={success} alt="success" id='success' />
         </div>
 
-        <div class="row" style={{ width: "90%"}} id="buttons">
-          <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={log}>Back to Home </Button></div> 
-           <Button variant='warning' onClick={gohome}>Browse more Questions </Button>
-          <Button variant='warning' onClick={ask}>Ask Question</Button>
-
-        </div>
+        <div class="row" style={{ width: "90%" }} id="buttons">
+          <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={log}>Back to Home </Button></div>
+          <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={gohome}>Browse more Questions </Button></div>
+          <div class="col-lg-4" style={{ textAlign: "center" }}></div><Button variant='warning' onClick={ask}>Ask Question</Button></div>
+        <div/>
       </div>
+
     </div>
   )
 }
