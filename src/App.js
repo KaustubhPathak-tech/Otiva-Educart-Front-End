@@ -38,8 +38,9 @@ import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 function App() {
   var payment = useSelector((state) => state.fetch_current_userReducer);
+  console.log(payment);
   var data = payment?.time;
-  var stat = payment?.status;
+  // var stat = payment?.status;
   var expiry = data + 3600000;
   var diff = expiry - Date.now();
   function refresh() {
@@ -57,8 +58,6 @@ function App() {
   if (isNaN(expiry)) {
   } else {
     setInterval(refresh, diff);
-    if (stat === "yes") {
-    }
   }
 
   const [dsa, setDsa] = useState(false);
@@ -74,23 +73,41 @@ function App() {
         {/* This is navigation bar */}
 
         <Popup trigger={dsa} setTrigger={setDsa}>
-          <h5 style={{textAlign:"center"}}>
+          <h5 style={{ textAlign: "center" }}>
             {" "}
             <blink>
-              <div style={{ color: "red" ,textAlign:"center"}}>
+              <div style={{ color: "red", textAlign: "center" }}>
                 <b>ALERT !</b>{" "}
               </div>
-            </blink>{" "}<br/>
-            &nbsp;&nbsp;All Payments are in <b style={{ color: "red" }}>Test Mode</b>
-          </h5><br/>
-          <h5 style={{textAlign:"center"}}>Use these Card Details ⬇️</h5>
-          <p style={{position:"absolute",marginLeft:"16%"}}>Card No : 4111 1111 1111 1111</p><br/>
-          <p style={{position:"absolute",marginLeft:"16%"}}>Expiry : Any future date</p><br/>
-          <p style={{position:"absolute",marginLeft:"16%"}}>Card Holder's Name : Any Name</p><br/>
-          <p style={{position:"absolute",marginLeft:"16%"}}>CVV : Any number</p><br/><br/>
-          <h5 style={{textAlign:"center"}}>Use these UPI Details ⬇️</h5>
-          <p style={{position:"absolute",marginLeft:"16%"}}>UPI id: success@razorpay</p><br/>
-
+            </blink>{" "}
+            <br />
+            &nbsp;&nbsp;All Payments are in{" "}
+            <b style={{ color: "red" }}>Test Mode</b>
+          </h5>
+          <br />
+          <h5 style={{ textAlign: "center" }}>Use these Card Details ⬇️</h5>
+          <p style={{ position: "absolute", marginLeft: "16%" }}>
+            Card No : 4111 1111 1111 1111
+          </p>
+          <br />
+          <p style={{ position: "absolute", marginLeft: "16%" }}>
+            Expiry : Any future date
+          </p>
+          <br />
+          <p style={{ position: "absolute", marginLeft: "16%" }}>
+            Card Holder's Name : Any Name
+          </p>
+          <br />
+          <p style={{ position: "absolute", marginLeft: "16%" }}>
+            CVV : Any number
+          </p>
+          <br />
+          <br />
+          <h5 style={{ textAlign: "center" }}>Use these UPI Details ⬇️</h5>
+          <p style={{ position: "absolute", marginLeft: "16%" }}>
+            UPI id: success@razorpay
+          </p>
+          <br />
         </Popup>
         <Navbar />
 
@@ -169,6 +186,11 @@ function App() {
             </p>
           </div>
         </div>
+        {
+          (window.onbeforeunload = function() {
+            localStorage.clear();
+          })
+        }
       </BrowserRouter>
       <ToastContainer />
     </div>
