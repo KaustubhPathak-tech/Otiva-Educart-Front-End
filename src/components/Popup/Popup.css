@@ -28,8 +28,9 @@
     font-size: large;
     color: red;
     right: 16px;
-    border: none;
-    padding: 12px 14px;
+    border-width: 1px;
+    padding: 4px 8px;
+    border-color: red;
     border-radius: 50%;
 }
 
