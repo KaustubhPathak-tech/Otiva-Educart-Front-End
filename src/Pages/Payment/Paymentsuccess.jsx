@@ -22,8 +22,8 @@ const Paymentsuccess = () => {
   }
   const log = (e) => {
     e.preventDefault()
-    navigate("/login");
-    dispatch(setCurrentUser(null));
+    navigate("/");
+    
   }
   return (
     <div className="successpage">
@@ -37,7 +37,7 @@ const Paymentsuccess = () => {
         </div>
 
         <div class="row" style={{ width: "90%"}} id="buttons">
-          <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='danger' onClick={log}>Login Again <blink> Compulsory</blink> </Button></div> 
+          <div class="col-lg-4" style={{ textAlign: "center" }}><Button variant='warning' onClick={log}>Back to Home </Button></div> 
            <Button variant='warning' onClick={gohome}>Browse more Questions </Button>
           <Button variant='warning' onClick={ask}>Ask Question</Button>
 
