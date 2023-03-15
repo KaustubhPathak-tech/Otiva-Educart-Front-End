@@ -17,7 +17,7 @@ const AskQuestion = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    if(User!=null){
     dispatch(
       askQuestion(
         {
@@ -29,7 +29,8 @@ const AskQuestion = () => {
         },
         navigate
       )
-    );
+    
+    )}else{toast("Login to Ask Question",{position:"top-center"})};
     
     dispatch(setCurrentUser(null));
      //may be modified further
