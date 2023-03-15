@@ -50,6 +50,9 @@ function App() {
     setTimeout(() => {
       setDsa(true);
     }, 0);
+    setTimeout(() => {
+      setDsa(false);
+    }, 5000);
   }, []);
   if (isNaN(expiry)) {
   } else {
