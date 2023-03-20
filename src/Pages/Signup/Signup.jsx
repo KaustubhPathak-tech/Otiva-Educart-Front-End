@@ -49,8 +49,8 @@ const Signup = () => {
       <div className="home-container-1" id='signupleft'>
         <LeftsideBar />
       </div>
-      <section className='test-content'>
-        <div class="row">
+      
+        <div class="row" id='signuprow'>
           <div class="col-lg-6" id='PlainContent'>
 
             <h1>Join the Stack Overflow community</h1><br />
@@ -107,7 +107,7 @@ const Signup = () => {
             </div>
           </div>
         </div>
-      </section>
+      
       
     </div>
 

@@ -3,9 +3,8 @@
   margin-left: 2%;
   width: 95%;
 }
-#signupleft{
+#signupleft {
   left: 0px;
-  
 }
 .signup_page a:hover {
   text-decoration: none;
@@ -38,7 +37,6 @@
 }
 
 #form-container form {
-  
   width: 100%;
   padding: 20px;
   padding-right: 0px;
@@ -97,7 +95,7 @@
   background-color: #018ce3;
 }
 
-.copy{
+.copy {
   background-color: transparent;
   border: none;
   padding: 5px 0px;
@@ -107,9 +105,8 @@
   cursor: pointer;
   font-size: 14px;
   transition: 0.3s;
-  
 }
-.copy:active{
+.copy:active {
   border-bottom: solid 2px black;
   text-decoration: none;
 }
@@ -123,26 +120,66 @@
     margin-left: 2%;
     width: 95%;
   }
-  
 }
-
-@media (max-width: 780px) {
+@media (max-width: 1300px) and (min-width: 780px) {
+  #PlainContent {
+    padding-top: 15%;
+    /* border: 1px solid red; */
+    padding-left: 5%;
+    width: 60%;
+  }
+}
+@media (max-width: 780px) and (min-width:480px) {
+  #signuprow {
+    /* border: 1px solid red; */
+    margin-left: 100px;
+    position: absolute;
+    top: 60px;
+    left: -50px;
+  }
   .signup_page {
     padding-top: 20%;
     margin-left: 2%;
     width: 95%;
+    /* border: 1px solid red; */
   }
   #PlainContent {
     padding-top: 15%;
-    padding-left: 10%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    padding-left: 0%;
     width: 100%;
   }
   #form-container {
-    
+    /* border: 1px solid red; */
+
     padding-top: 2%;
     width: 100%;
-    padding-left: 5%;
-    
+    margin-left: -50px;
   }
-  
+}
+@media (max-width: 480px) {
+  #signuprow {
+    /* border: 1px solid red; */
+    margin-left: 100px;
+    position: absolute;
+    top: 60px;
+    left: -70px;
+  }
+  .signup_page {
+    padding-top: 20%;
+    margin-left: 2%;
+    width: 95%;
+    /* border: 1px solid red; */
+  }
+  #PlainContent {
+    padding-top: 15%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    padding-left: 0%;
+    width: 100%;
+  }
+  #form-container {
+    padding-top: 2%;
+    width: 100%;
+    margin-left:-10px;
+  }
 }
