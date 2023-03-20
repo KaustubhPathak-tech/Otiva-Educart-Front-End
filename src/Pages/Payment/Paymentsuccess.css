@@ -26,13 +26,14 @@ blink {
     }
     .home-container-2{
         padding-top: 12%;
-        margin-left: 0%;
+        
     }
   }
   
   @media(max-width:520px){
     .home-container-2{
         padding-top: 25%;
+margin-left: 3%;
     }
         #success{
             margin-left: 0%;
@@ -42,4 +43,10 @@ blink {
           margin-left: 5%;
         }
            
+<<<<<<< HEAD
   }
+=======
+            margin-left: 5%;
+      }
+  }
+>>>>>>> d95f487e6a3d5ad5d718acd24ccff60a24d7e347
