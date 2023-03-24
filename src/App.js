@@ -140,34 +140,34 @@ function App() {
         <div className="footer">
           <div className="formalities">
             <a
-              href="https://496gf0lz.r.ap-south-1.awstrack.me/L0/https:%2F%2Fmerchant.razorpay.com%2Fpolicy%2FLQDvDu1f8iCWFD%2Fprivacy/1/01090186d0ba31b6-f4e06371-3dd7-417c-90c1-129879a5a6ac-000000/wn1t4whDKSF_FuHO0ungabO6gEM=93"
+              href="https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71"
               target="_blank"
             >
               Privacy Policy
             </a>
             <a
-              href="https://496gf0lz.r.ap-south-1.awstrack.me/L0/https:%2F%2Fmerchant.razorpay.com%2Fpolicy%2FLQDvDu1f8iCWFD%2Fterms/1/01090186d0bd4667-e55c186c-c108-4cb5-a968-099269f698ef-000000/7xGyt9XN2Qr1rD0CE-vGVRYM2Ms=93"
+              href="https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0"
               target="_blank"
             >
               Terms and Conditions
             </a>
             <a
-              href="https://496gf0lz.r.ap-south-1.awstrack.me/L0/https:%2F%2Fmerchant.razorpay.com%2Fpolicy%2FLQDvDu1f8iCWFD%2Frefund/1/01090186d0be82ec-accfa903-e2d9-4402-893d-eda6d9eea843-000000/isEom1rGgI7MDVuMSNFLXc9mXaY=93"
+              href="https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46"
               target="_blank"
             >
-              Cancellation and Refund Policy
+              Return,Refund and Cancellation Policy
             </a>
             <a
-              href="https://496gf0lz.r.ap-south-1.awstrack.me/L0/https:%2F%2Fmerchant.razorpay.com%2Fpolicy%2FLQDvDu1f8iCWFD%2Fshipping/1/01090186d0bf637b-3c796adf-3ddc-42d6-85f0-ad429c259182-000000/LcGc_dDJtgpjdEBLko2dSp6oBrE=93"
-              target="_blank"
-            >
-              Merchant Schemes
-            </a>
-            <a
-              href="https://496gf0lz.r.ap-south-1.awstrack.me/L0/https:%2F%2Fmerchant.razorpay.com%2Fpolicy%2FLQDvDu1f8iCWFD%2Fcontact_us/1/01090186d0bfc1d2-92f534d7-eae4-473b-b7f6-876ff6e7b068-000000/TVaDzRjupxQ8n9vxg8htTZg3wO4=93"
+              href="https://v3056369-qgvho6pwhg5z.demo077.volusion.com/"
               target="_blank"
             >
               Contact us
+            </a>
+            <a
+              href="https://gi009.000webhostapp.com/"
+              target="_blank"
+            >
+            About us
             </a>
           </div>
           <div className="footer-1">
