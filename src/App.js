@@ -155,7 +155,7 @@ function App() {
               href="https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46"
               target="_blank"
             >
-              Return,Refund and Cancellation Policy
+              Return, Refund and Cancellation Policy
             </a>
             <a
               href="https://v3056369-qgvho6pwhg5z.demo077.volusion.com/"
