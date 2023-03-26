@@ -52,6 +52,7 @@
 }
 
 .edit-profile-form input {
+  border-radius: 5px;
   color: rgb(255, 171, 3);
   background-color: white;
 }
@@ -60,6 +61,7 @@
 }
 .edit-profile-form textarea {
   /* color: rgb(255, 255, 255); */
+  border-radius: 5px;
   color: rgb(255, 171, 3);
 
   background-color: white;
@@ -71,6 +73,7 @@
   color: white;
   border: none;
   border: 1px solid black;
+  border-color: #ff9411;
   border-radius: 5px;
   transition: 0.2s;
   cursor: pointer;
@@ -80,6 +83,7 @@
 .user-submit-btn:hover {
   background-color: #0074cc;
   color: aliceblue;
+  border-color: #0074cc;
 }
 
 .user-cancel-btn {

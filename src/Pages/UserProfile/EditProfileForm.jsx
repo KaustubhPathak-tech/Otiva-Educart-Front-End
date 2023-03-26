@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useDispatch} from 'react-redux'
+import './UserProfile.css'
 import { ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from '../../actions/users';

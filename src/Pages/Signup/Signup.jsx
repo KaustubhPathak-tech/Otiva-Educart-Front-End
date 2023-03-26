@@ -81,8 +81,9 @@ const Signup = () => {
                 <label htmlFor="email">
                   <h4>Email</h4>
                   <input type="email" required name='email' id='email' onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter Active Email id" ></input><br /><br />
-                  <button type="button" onClick={handleCopy} className='copy'>Copy email to fill during verification</button>
-                  
+                  <span style={{color:"red"}}>ALERT </span>
+                  <button type="button" onClick={handleCopy} className='copy'>Click here to Copy Email !</button><br />
+                  <p>You have to Enter email during Verification.</p>
                 </label>
                 <br />
                 <label htmlFor="password">

@@ -58,6 +58,7 @@ function App() {
       setDsa(false);
     }, 9000);
     setLoading(true);
+    document.addEventListener("mousedown",()=>{setDsa(false)});
     setTimeout(() => {
       setLoading(false);
     }, 4000);
@@ -95,7 +96,7 @@ function App() {
           <BrowserRouter>
             {/* This is navigation bar */}
 
-            <Popup trigger={dsa} setTrigger={setDsa}>
+            <Popup trigger={dsa} setTrigger={setDsa} onClose={dsa}>
               <h5 style={{ textAlign: "center" }}>
                 {" "}
                 <blink>
@@ -171,33 +172,48 @@ function App() {
             <Chat />
             <div className="footer">
               <div className="formalities">
+                <span className="privacy">
                 <a
                   href="https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71"
                   target="_blank"
                 >
                   Privacy Policy
                 </a>
+                </span>
+                <span className="privacy">
                 <a
                   href="https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0"
                   target="_blank"
                 >
                   Terms and Conditions
                 </a>
+                </span>
+                <span className="privacy">
                 <a
                   href="https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46"
                   target="_blank"
                 >
                   Return, Refund and Cancellation Policy
                 </a>
+                </span>
+                <span className="privacy">
                 <a
                   href="https://v3056369-qgvho6pwhg5z.demo077.volusion.com/"
                   target="_blank"
                 >
                   Contact us
                 </a>
+                </span>
+                <span className="privacy">
                 <a href="https://gi009.000webhostapp.com/" target="_blank">
                   About us
                 </a>
+                </span>
+                
+                
+                
+                
+                
               </div>
               <div className="footer-1">
                 <p>

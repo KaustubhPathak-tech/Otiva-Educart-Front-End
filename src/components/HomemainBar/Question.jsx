@@ -40,8 +40,8 @@ const Question = ({ question }) => {
                         }
                     </div>
                     <p className='display-time'>
-                        asked {moment(question.askedOn).fromNow()}&nbsp;&nbsp;
-                        {question.userPosted}
+                        Asked {moment(question.askedOn).fromNow()}&nbsp;&nbsp;
+                        <span style={{color:"#009dff"}}>{question.userPosted}</span>
                     </p>
                 </div>
             </div>

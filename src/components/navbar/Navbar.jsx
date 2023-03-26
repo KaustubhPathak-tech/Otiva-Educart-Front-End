@@ -194,6 +194,7 @@ const Navbar = () => {
                 id="searchinput"
                 placeholder="Search..."
                 class="form-control me-2"
+                autoComplete="off"
               />
 
             </form>&nbsp;&nbsp;

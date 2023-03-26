@@ -38,8 +38,8 @@ const DisplayAnswer = ({question,handleShare}) => {
                           }
                     </div>
                     <div>
-                        <p>
-                            answered {moment(ans.answeredOn).fromNow()}
+                        <p style={{width:"150px"}}>
+                            Answered {moment(ans.answeredOn).fromNow()}
                         </p>
                         <Link
                             to={`/users/${ans.userId}`}

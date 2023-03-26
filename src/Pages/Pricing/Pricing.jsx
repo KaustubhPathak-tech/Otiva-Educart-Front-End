@@ -16,6 +16,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { setCurrentUser } from "../../actions/currentUser";
 import Popup from "../../components/Popup/Popup";
+import Loader from '../../components/Loader/Loader';
 const Pricing = () => {
     const dispatch = useDispatch();
     var payment = useSelector((state) => (state.authReducer));
@@ -31,7 +32,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1, email }, navigate));
-        
+
     };
     const handlesilver = (e) => {
         e.preventDefault()
@@ -40,7 +41,7 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 100, email }, navigate));
-        
+
     };
     const handlegold = (e) => {
         e.preventDefault()
@@ -49,20 +50,20 @@ const Pricing = () => {
             return;
         }
         dispatch(getpremium({ amount: 1000, email }, navigate));
-        
+
     };
     return (
         <div>
-            {/* <Popup trigger={abc} setTrigger={setAbc}>
-            <h5> <blink><span style={{ color: "red" }}><b>ALERT !</b> </span></blink> &nbsp;&nbsp;Please <b style={{ color: "red" }}>Login Again</b> after Successful Payment to access services you paid for !</h5>
-            </Popup> */}
+            <Loader trigger={abc} setTrigger={setAbc}>
+
+            </Loader>
             <div className="home-container-1">
                 <LeftsideBar />
             </div>
             <div className="home-container-2" id='pricing-content'>
-               
+
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
-                    
+
                     <h1>
                         Pricing
                         <img src={subscribe} alt="subscribe" width="40px" />
@@ -84,7 +85,7 @@ const Pricing = () => {
 
                             </ListGroup>
                             <Card.Body>
-                                <Button variant='warning' onClick={handlefree}>Try Free</Button>
+                                <Button onClick={() => { if (User !== null) { setAbc(true); setTimeout(() => { setAbc(false) }, 20000) } }} style={{ backgroundColor: "white", border: "none" }}><Button variant='warning' onClick={handlefree}>Try Free</Button></Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -103,7 +104,7 @@ const Pricing = () => {
                                 <ListGroup.Item>5 Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                            <Button variant='warning' onClick={handlesilver}>Get Premium</Button>
+                                <Button onClick={() => { if (User !== null) { setAbc(true); setTimeout(() => { setAbc(false) }, 20000) } }} style={{ backgroundColor: "white", border: "none" }}><Button variant='warning' onClick={handlesilver}>Get Premium</Button></Button>
                             </Card.Body>
                         </Card></div>
                     <div class="col-lg-4">
@@ -119,7 +120,7 @@ const Pricing = () => {
                                 <ListGroup.Item>Unlimited Questions per day</ListGroup.Item>
                             </ListGroup>
                             <Card.Body>
-                            <Button variant='warning' onClick={handlegold}>Get Premium</Button>
+                                <Button onClick={() => { if (User !== null) {setAbc(true); setTimeout(() => { setAbc(false) }, 20000) }}} style={{ backgroundColor: "white", border: "none" }}><Button variant='warning' onClick={handlegold}>Get Premium</Button></Button>
                             </Card.Body>
                         </Card></div>
                 </div>
