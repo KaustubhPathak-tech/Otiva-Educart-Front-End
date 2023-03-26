@@ -1,3 +1,13 @@
+.preloader {
+  background-color: #edf2fd;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width:100%;
+  height: 100vh;
+}
+
 .home-container-1 {
   position: fixed;
   height: 100vh;

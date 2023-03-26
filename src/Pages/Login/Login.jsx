@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 //importing styles
+import Spinner from 'react-bootstrap/Spinner';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
@@ -22,7 +23,7 @@ const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -31,6 +32,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setLoading(true)
+    setTimeout(()=>{setLoading(false)},5000)
     dispatch(login({ email, password }, navigate))
   }
 
@@ -40,29 +43,29 @@ const Login = () => {
       <div className="home-container-1">
         <LeftsideBar />
       </div>
-      
-        <img src={icon} alt='logo-icon'></img>
 
-        <form id='loginform' onSubmit={handleSubmit}>
+      <img src={icon} alt='logo-icon'></img>
 
-          <h5 style={{ fontSize: "18px" }}>Email</h5>
-          <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} />
-          <br />
+      <form id='loginform' onSubmit={handleSubmit}>
 
-
-          <h5 style={{ fontSize: "18px" }} id="pass">Password</h5>
-          <Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
-
-          <div className="password-container">
-            <input type="password" name="password" required id="password" onChange={(e) => { setPassword(e.target.value) }} /><br /></div>
-          <br />
-
-          <button type="submit" name='submit' className='loginButton' > Log in</button>
-        </form>
+        <h5 style={{ fontSize: "18px" }}>Email</h5>
+        <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} />
+        <br />
 
 
-        <p id='sign'>Don't have an account ? </p><Link to='/signup' id="signuplink">Sign up</Link>
-      
+        <h5 style={{ fontSize: "18px" }} id="pass">Password</h5>
+        <Link to='/forgotpassword' id='forgotpass'>Forgot password?</Link>
+
+        <div className="password-container">
+          <input type="password" name="password" required id="password" onChange={(e) => { setPassword(e.target.value) }} /><br /></div>
+        <br />
+
+        <button type="submit" name='submit' className='loginButton' disabled={loading}>{loading && <Spinner animation="border" variant="light" size='sm' style={{marginRight:"5px"}}/>} {loading?(<></>):(<>Log in</>)}</button>
+      </form>
+
+
+      <p id='sign'>Don't have an account ? </p><Link to='/signup' id="signuplink">Sign up</Link>
+
       {/* <ToastContainer /> */}
     </div>
   )

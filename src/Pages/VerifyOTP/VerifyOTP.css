@@ -1,10 +1,80 @@
+#verifycontent{
+    margin-left: 35%;
+}
+form#verifyform {
+    display: block;
+    width: 280px;
+    text-align: left;
+    background-color: #fff;
+  
+    margin: 3% auto;
+    margin-bottom: 1%;
+    padding: 1.5%;
+    padding-top:5%;
+    padding-left: 3.5%;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px #beb4b4;
+    box-shadow: 0 0 10px #b2abab;
+  }
+  
+  #verifyform input {
+    font-size: 12px;
+    margin: 0px;
+    width: 158%;
+    padding: 4% 4% 4% 4%;
+    border: solid 0.4px #555353;
+    border-radius: 3px;
+  }
+
+  input#fillotp{
+    width:148%;
+  }
+  input#fillemail{
+    width:185%;
+  }
+  .verifybutton {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding-top: 2.5%;
+    padding-bottom: 3%;
+    height: 7%;
+    width: 148%;
+    background-color: rgb(51, 158, 239);
+    border: 1px solid rgb(51, 158, 239);
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+  }
+  .verifybutton:hover {
+    background-color: rgb(12, 109, 206);
+  }
+@media(max-width:900px) and (min-width:450px){
+    #verifycontent{
+        margin-left: 5%;
+    }
+    form#verifyform{
+        padding-left: 1.5%;
+    }
+}
+
+@media(max-width:450px){
+    .verify_header{
+        padding-top: 10vh;
+    }
+    #verifycontent{
+        margin-left: 0%;
+    }
+    form#verifyform{
+        padding-left: 3%;
+    }
+}
 
 
-
-@media (max-width:560px) {
+/*@media (max-width:560px) {
     .verifypage{
         margin-top: 1.2%;
-        /* line-height: 1.8rem; */
+        
         display: flex;
         text-align: center;
         align-items: center;
@@ -15,7 +85,7 @@
     }
     
     #verification form{
-        /* border: 1px solid black; */
+       
         width: 80%;
         margin-left: 5%;
         text-align: left;
@@ -25,3 +95,4 @@
     }   
 }
 
+*/

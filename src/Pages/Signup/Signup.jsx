@@ -17,6 +17,7 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import './Signup.css'
 import { signup } from '../../actions/auth'
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
+import Spinner from 'react-bootstrap/esm/Spinner'
 
 
 const Signup = () => {
@@ -24,7 +25,7 @@ const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
+  const [loading,setLoading]=useState(false);
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -32,6 +33,8 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setLoading(true);
+    setTimeout(()=>{setLoading(false)},5000)
     dispatch(signup({ name, email, password }, navigate))
 
 
@@ -96,7 +99,7 @@ const Signup = () => {
 
                 </label>
                 <br />
-                <button type="submit" name='signup' id='signupbutton'>Sign up</button>
+                <button type="submit" name='signup' id='signupbutton'>{loading?(<><Spinner animation="border" variant="light" size='sm'/></>):(<>Sign up</>)}</button>
                 <br />
                 
                 <p>By clicking “Sign up”, you agree to our <Link id='signupformlink'>terms of <br />service</Link> , <Link id='signupformlink' >privacy policy</Link> and <Link id='signupformlink' >cookie policy</Link></p>
