@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
   }
 }
 .preloader {
@@ -122,7 +122,7 @@
     margin-left: 0%;
     position: sticky;
     width: 100%;
-    padding: 60px 0px;
+    padding: 15px 0px;
     box-shadow: border-box;
     display: flex;
   }
@@ -175,7 +175,7 @@
     margin-left: 0%;
     position: sticky;
     width: 100%;
-    padding: 60px 0px;
+    padding: 15px 0px;
     box-shadow: border-box;
     display: flex;
   }
@@ -229,7 +229,7 @@
     margin-left: 2%;
     position: sticky;
     width: 95%;
-    padding: 60px 0px;
+    padding: 15px 0px;
     box-shadow: border-box;
     display: block;
   }
@@ -283,7 +283,7 @@
     margin-left: 2%;
     position: sticky;
     width: 95%;
-    padding: 60px 0px;
+    padding: 15px 0px;
     box-shadow: border-box;
     display: block;
   }
