@@ -63,7 +63,7 @@ form#verifyform {
         padding-top: 10vh;
     }
     #verifycontent{
-        margin-left: 0%;
+        margin-left: 2%;
     }
     form#verifyform{
         padding-left: 3%;
@@ -71,6 +71,7 @@ form#verifyform {
     input#fillemail{
         width:155%;
       }
+    
 }
 
 
