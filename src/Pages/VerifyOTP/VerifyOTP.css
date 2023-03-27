@@ -1,6 +1,7 @@
 #verifycontent{
     margin-left: 35%;
 }
+
 form#verifyform {
     display: block;
     width: 280px;
@@ -63,7 +64,7 @@ form#verifyform {
         padding-top: 10vh;
     }
     #verifycontent{
-        margin-left: 2%;
+        margin-left: 10%;
     }
     form#verifyform{
         padding-left: 3%;

@@ -33,13 +33,13 @@ const VerifyOTP = () => {
             </div>
             <div className="home-container-2" id='verification'>
                 <div className="form-container" id='verifycontent'>
-                    <div className="verify_header" style={{ textAlign: 'center' }}>
+                    <div className="verify_header" style={{ textAlign: 'center' ,display:"block"}}>
                         <h4 style={{ marginBottom: "20px" }}>Verify Your Account! </h4>
                     </div>
-                    <div className="alert" style={{ textAlign: "center" }}>
+                    <div className="alert" style={{ textAlign: "center" ,display:"block"}}>
                         <p style={{ color: "red" }}>Do not Refresh the Page</p>
                     </div>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem' }} className="card-container">
                         <Card.Body>
                             <Form onSubmit={handleVerify}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
