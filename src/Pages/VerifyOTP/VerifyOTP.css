@@ -62,6 +62,10 @@ form#verifyform {
 @media(max-width:450px){
     .verify_header{
         padding-top: 10vh;
+        text-align: right;
+      }
+    .alert{
+      text-align: right;
     }
     #verifycontent{
         margin-left: 10%;

@@ -33,10 +33,10 @@ const VerifyOTP = () => {
             </div>
             <div className="home-container-2" id='verification'>
                 <div className="form-container" id='verifycontent'>
-                    <div className="verify_header" style={{ textAlign: 'center' ,display:"block"}}>
+                    <div className="verify_header" style={{ textAlign: "center", display: "block" }}>
                         <h4 style={{ marginBottom: "20px" }}>Verify Your Account! </h4>
                     </div>
-                    <div className="alert" style={{ textAlign: "center" ,display:"block"}}>
+                    <div className="alert" style={{ textAlign: "center", display: "block" }}>
                         <p style={{ color: "red" }}>Do not Refresh the Page</p>
                     </div>
                     <Card style={{ width: '18rem' }} className="card-container">
@@ -44,20 +44,20 @@ const VerifyOTP = () => {
                             <Form onSubmit={handleVerify}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email Id</Form.Label>
-                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{fontSize:"12px"}}/>
+                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{ fontSize: "12px" }} />
 
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>OTP</Form.Label><br/>
+                                    <Form.Label>OTP</Form.Label><br />
                                     <Form.Text className="text-muted">
                                         OTP is sent to your Email
-                                    </Form.Text><br/><br/>
-                                    <Form.Control type="text" placeholder="Enter OTP" name="" onChange={(e) => { setOtp(e.target.value) }} autoComplete="off" required style={{fontSize:"12px"}}/>
+                                    </Form.Text><br /><br />
+                                    <Form.Control type="text" placeholder="Enter OTP" name="" onChange={(e) => { setOtp(e.target.value) }} autoComplete="off" required style={{ fontSize: "12px" }} />
                                 </Form.Group>
 
                                 <div className="submission" style={{ textAlign: "center" }}>
-                                    <Button variant="primary" type="submit" disabled={loading} style={{ width: "100%"}}>
+                                    <Button variant="primary" type="submit" disabled={loading} style={{ width: "100%" }}>
                                         {loading ? (<><Spinner animation="border" variant="light" size='sm' style={{ marginRight: "5px" }} /></>) : (<>Verify</>)}
                                     </Button>
                                 </div>
