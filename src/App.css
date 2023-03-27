@@ -42,7 +42,6 @@
 .home-container-2 {
   margin-top: 0px;
   margin-left: 13.5%;
-
   width: 86%;
   padding: 15px 0px;
   box-shadow: border-box;
@@ -118,11 +117,11 @@
   }
 
   .home-container-2 {
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: 0%;
     position: sticky;
     width: 100%;
-    padding: 15px 0px;
+    padding: 60px 0px;
     box-shadow: border-box;
     display: flex;
   }
@@ -175,7 +174,7 @@
     margin-left: 0%;
     position: sticky;
     width: 100%;
-    padding: 15px 0px;
+    padding: 60px 0px;
     box-shadow: border-box;
     display: flex;
   }
@@ -229,7 +228,7 @@
     margin-left: 2%;
     position: sticky;
     width: 95%;
-    padding: 15px 0px;
+    padding: 60px 0px;
     box-shadow: border-box;
     display: block;
   }
@@ -283,7 +282,7 @@
     margin-left: 2%;
     position: sticky;
     width: 95%;
-    padding: 15px 0px;
+    padding: 60px 0px;
     box-shadow: border-box;
     display: block;
   }
