@@ -59,7 +59,7 @@
 
 @media(min-width: 780px) and (max-width:1300px){
   .tagsPage{
-    margin-top: 6%;
+    margin-top: 0%;
   }
   #tagspage{
 
@@ -77,8 +77,7 @@
 }
 @media (max-width:780px){
   .tagsPage{
-    margin-top: 10%;
-
+    margin-top: 20%;
   }
   #tagspage{
 
