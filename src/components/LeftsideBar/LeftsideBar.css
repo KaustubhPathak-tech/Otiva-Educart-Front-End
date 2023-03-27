@@ -69,7 +69,7 @@
     font-weight: bolder;
     color: #302f2e;
     background-color: rgb(236, 236, 236);
-    border-bottom: 4px solid #ef8236;
+    border-bottom: 2.5px solid #ef8236;
     
   }
 
@@ -99,7 +99,9 @@
     padding-top: 10px;
     margin: 0 2px 0 2px;
     text-decoration: none;
-    color: #000000;
+    color: #010101;
+    border: 2px solid #ef8236;
+    /* background-color: #ef8236; */
     display: flex;
     font-weight: 600;
     align-items: center;
@@ -109,6 +111,7 @@
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 4px;
+    transition: 1s;
   }
 
   .active {
@@ -117,6 +120,7 @@
     color: black;
     background-color: rgb(244, 242, 242);
     border-right: none;
+    border: none;
     border-bottom: 2.5px solid #ef8236;
     
   } 

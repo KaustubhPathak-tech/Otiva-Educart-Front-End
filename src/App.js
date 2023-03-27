@@ -39,7 +39,6 @@ import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 function App() {
   const [loading, setLoading] = useState(false);
-
   var payment = useSelector((state) => state.fetch_current_userReducer);
   console.log(payment);
   var data = payment?.time;
@@ -69,7 +68,7 @@ function App() {
   } else {
     setInterval(refresh, diff);
   }
-
+  window.screen.orientation.lock('portrait');
   const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -136,7 +135,6 @@ function App() {
               <br />
             </Popup>
             <div className="landscape">
-              
               <img
                 src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg"
                 width="50"
