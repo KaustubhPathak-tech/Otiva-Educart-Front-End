@@ -1,5 +1,11 @@
 @media screen and (orientation: landscape) and(max-width:900px) {
   *{display:none;}
+  .landscape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 }
 .preloader {
   background-color: #edf2fd;
