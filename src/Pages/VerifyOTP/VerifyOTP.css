@@ -1,7 +1,15 @@
+#verification{
+  display: inline-block;
+}
 #verifycontent{
     margin-left: 35%;
 }
-
+.verify_header{
+  margin-left: 37%;
+}
+.alert{
+  margin-left: 39%;
+}
 form#verifyform {
     display: block;
     width: 280px;
@@ -62,10 +70,11 @@ form#verifyform {
 @media(max-width:450px){
     .verify_header{
         padding-top: 10vh;
-        text-align: right;
+        margin-left: 10%;
       }
     .alert{
-      text-align: right;
+      
+      margin-left: 12%;
     }
     #verifycontent{
         margin-left: 10%;
@@ -76,6 +85,10 @@ form#verifyform {
     input#fillemail{
         width:155%;
       }
+
+      
+      
+      
     
 }
 

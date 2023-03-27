@@ -32,19 +32,20 @@ const VerifyOTP = () => {
                 <Leftsidebar />
             </div>
             <div className="home-container-2" id='verification'>
+                <div className="verify_header" style={{ display: "block" }}>
+                    <h4 style={{ marginBottom: "20px" }}>Verify Your Account! </h4>
+                </div>
+                <div className="alert" style={{  display: "block" }}>
+                    <p style={{ color: "red" }}>Do not Refresh the Page</p>
+                </div>
                 <div className="form-container" id='verifycontent'>
-                    <div className="verify_header" style={{ textAlign: "center", display: "block" }}>
-                        <h4 style={{ marginBottom: "20px" }}>Verify Your Account! </h4>
-                    </div>
-                    <div className="alert" style={{ textAlign: "center", display: "block" }}>
-                        <p style={{ color: "red" }}>Do not Refresh the Page</p>
-                    </div>
+
                     <Card style={{ width: '18rem' }} className="card-container">
                         <Card.Body>
                             <Form onSubmit={handleVerify}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email Id</Form.Label>
-                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{ fontSize: "12px" }} autoComplete="off"/>
+                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{ fontSize: "12px" }} autoComplete="off" />
 
                                 </Form.Group>
 
