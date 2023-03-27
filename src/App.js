@@ -133,6 +133,7 @@ function App() {
               </p>
               <br />
             </Popup>
+<div className="landscape"><img src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg" width="50 ></div>
             <Navbar />
 
             <Routes>
