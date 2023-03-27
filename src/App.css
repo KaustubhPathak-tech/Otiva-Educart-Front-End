@@ -1,3 +1,6 @@
+@media screen and (orientation: landscape) {
+  *{display:none;}
+}
 .preloader {
   background-color: #edf2fd;
   align-items: center;
