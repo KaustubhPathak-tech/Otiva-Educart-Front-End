@@ -70,11 +70,11 @@ form#verifyform {
 @media(max-width:450px){
     .verify_header{
         padding-top: 10vh;
-        margin-left: 15%;
+        margin-left: 17%;
       }
     .alert{
       
-      margin-left: 18%;
+      margin-left: 20%;
     }
     #verifycontent{
         margin-left: 10%;
