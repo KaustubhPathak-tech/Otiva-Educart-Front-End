@@ -68,6 +68,9 @@ form#verifyform {
     form#verifyform{
         padding-left: 3%;
     }
+    input#fillemail{
+        width:160%;
+      }
 }
 
 

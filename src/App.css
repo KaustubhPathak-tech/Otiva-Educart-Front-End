@@ -1,11 +1,5 @@
-@media screen and (orientation: landscape) and (max-width:900px) {
+@media screen and (orientation: landscape) and (max-width:980px) {
   *{display:none;}
-  .landscape{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
 }
 .landscape{
   display: none;
