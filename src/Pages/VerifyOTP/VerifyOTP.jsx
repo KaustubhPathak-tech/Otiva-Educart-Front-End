@@ -44,7 +44,7 @@ const VerifyOTP = () => {
                             <Form onSubmit={handleVerify}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email Id</Form.Label>
-                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{ fontSize: "12px" }} />
+                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{ fontSize: "12px" }} autoComplete="off"/>
 
                                 </Form.Group>
 
