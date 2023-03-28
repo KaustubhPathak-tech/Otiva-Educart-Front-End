@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../actions/auth";
 import Button from 'react-bootstrap/Button'
+import Dropdown from 'react-bootstrap/Dropdown';
+import $ from 'jquery';
 //importing style
 
 
@@ -22,7 +24,7 @@ import { setCurrentUser } from "../../actions/currentUser";
 
 //main function goes here
 const Navbar = () => {
-  
+
   const dispatch = useDispatch();
   var User = useSelector((state) => (state.fetch_current_userReducer));
   const [email, setEmail] = useState(User?.result?.email);
@@ -50,7 +52,6 @@ const Navbar = () => {
     dispatch(setCurrentUser(null));
     Navigate("/");
   };
-
   useEffect(() => {
 
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
@@ -58,13 +59,175 @@ const Navbar = () => {
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
+
         <div class="container-fluid">
 
           <Link to="/" className="nav-logo nav-item">
             <img src={logo} alt="official logo"></img>
           </Link>
-          <button
-            class="navbar-toggler"
+          <Dropdown
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
+            id="landaa"
+            type="Button"
+            // data-bs-toggle="collapse"
+            // data-bs-target="#navbarSupportedContent"
+            // aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <Dropdown.Toggle style={{backgroundColor:"#faf7f7", border: "none", color: "white" }}>
+              <FontAwesomeIcon icon={faBars} style={{color:"#ff7003",width:"20px",padding:"0"}} /> 
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="https://gi009.000webhostapp.com/"><Link
+                to="https://gi009.000webhostapp.com/"
+                target="_blank"
+                className="nav-btn nav-item"
+
+              >
+                About
+              </Link></Dropdown.Item>
+              <Dropdown.Item href=""><Link
+                to="/pricing"
+                className="nav-btn nav-item"
+
+              >
+                Pricing
+              </Link></Dropdown.Item>
+              <ul type="none"><li><Dropdown>
+                <Dropdown.Toggle variant="info" id="dropdown-basic" style={{ backgroundColor: "white", border: "none", color: "white" }}>
+                  <span style={{ color: "black", fontSize: "13px", fontWeight: "600", marginLeft: "-10px" }}>Project
+                  </span>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1"><a
+                    class="dropdown-item"
+                    href="https://myportfolio-pink-eta.vercel.app/"
+                  >
+                    My Portfolio
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-2"> <a
+                    class="dropdown-item"
+                    href="https://gi-qnx4.onrender.com/"
+                  >
+                    News Letter Subscription
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"><a
+                    class="dropdown-item"
+                    href="https://stack-over-flow-clone-2023.netlify.app/"
+                  >
+                    StackOverFlow Clone
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"><a
+                    class="dropdown-item"
+                    href="https://kaustubhpathak-tech.github.io/simon_game/"
+                  >
+                    Simon Game !
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"><a
+                    class="dropdown-item"
+                    href="https://kaustubhpathak-tech.github.io/tindog-project/"
+                  >
+                    Tindog
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"><a
+                    class="dropdown-item"
+                    href="https://easy-e-life.web.app/"
+                  >
+                    Easy-e-Life
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"><a
+                    class="dropdown-item"
+                    href="https://sites.google.com/view/gayatrirubberindustries-vasai/home?pli=1"
+                  >
+                    Gayatri Industries Vasai
+                  </a></Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"> <a
+                    class="dropdown-item"
+                    href="http://gi009.000webhostapp.com/"
+                  >
+                    Gayatri Industries Vasai Project II{" "}
+                  </a></Dropdown.Item>
+
+                </Dropdown.Menu>
+              </Dropdown></li></ul>
+              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "12px" }}>
+                <img
+                  src={searchicon}
+                  alt="searchicon"
+                  width="18px"
+                  className="searchicon"
+                />
+                <input
+                  type="text"
+                  name="searchbox"
+                  id="searchinput"
+                  placeholder="Search..."
+                  class="form-control me-2"
+                  autoComplete="off"
+                />
+
+              </form><br />
+              <Dropdown.Item href="" style={{ textAlign: "center" }}>{User === null ? (
+                <>
+                  <Link to="/login" className="nav-links nav-btn nav-item fonting">
+                    Log in
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className="nav-links nav-btn nav-item fonting"
+                    id="special-button"
+                  >
+                    Sign up
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <div className="avatar" style={{ textAlign: "center" }}>
+                    <Avatar
+                      backgroundColor="#009dff"
+                      px="70px"
+                      py="7px"
+                      borderRadius="5px"
+                      color="white"
+
+                    >
+                      <Link
+                        to={`/users/${User?.result?._id}`}
+                        style={{ color: "white", textDecoration: "none" }}
+                      >
+                        {User.result.name.charAt(0).toUpperCase()}
+                      </Link>
+                    </Avatar>
+                  </div>
+                  {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+                  <Link
+                    className="nav-links nav-btn nav-item fonting"
+                    onClick={handleLogout}
+                    id="special-button"
+                    style={{ marginLeft: "6px", padding: "3px 40px 7px 53px" }}
+                  >
+                    Log out
+                  </Link>
+                </>
+              )}</Dropdown.Item>
+
+
+              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px" }}>{
+                currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "3px 38.5px 7px 50px" }}>{premiumcontent}</Link></>)
+              }</Dropdown.Item>
+
+
+
+
+
+            </Dropdown.Menu>
+
+          </Dropdown>
+          {/* <button
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
             id="toggle-button"
             type="Button"
             data-bs-toggle="collapse"
@@ -72,13 +235,14 @@ const Navbar = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            style={{ border: "none" }}
-            
           >
-            <span class="" ><FontAwesomeIcon icon={faBars} style={{ color: "#fb9404" }} /></span> 
-            {/* // */}
 
-          </button>
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+
+
+          </button> */}
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
@@ -88,6 +252,7 @@ const Navbar = () => {
                   to="https://gi009.000webhostapp.com/"
                   target="_blank"
                   className="nav-btn nav-item"
+
                 >
                   About
                 </Link>
@@ -96,6 +261,7 @@ const Navbar = () => {
                 <Link
                   to="/pricing"
                   className="nav-btn nav-item"
+
                 >
                   Pricing
                 </Link>
@@ -198,10 +364,6 @@ const Navbar = () => {
               />
 
             </form>&nbsp;&nbsp;
-
-
-
-
             {User === null ? (
               <>
                 <Link to="/login" className="nav-links nav-btn nav-item fonting">
@@ -217,6 +379,9 @@ const Navbar = () => {
               </>
             ) : (
               <>
+
+
+
                 <Avatar
                   backgroundColor="#009dff"
                   px="12px"
@@ -231,6 +396,7 @@ const Navbar = () => {
                     {User.result.name.charAt(0).toUpperCase()}
                   </Link>
                 </Avatar>
+
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link
                   className="nav-links nav-btn nav-item fonting"
@@ -241,6 +407,11 @@ const Navbar = () => {
                 </Link>
               </>
             )}
+
+
+
+
+
             {
               currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button">{premiumcontent}</Link></>)
             }
@@ -250,6 +421,8 @@ const Navbar = () => {
 
     </div>
   );
+
+
 };
 
 export default Navbar;
