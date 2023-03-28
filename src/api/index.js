@@ -18,18 +18,19 @@ export const signUp = (authData) => API.post("/user/signup", authData);
 export const verify=(authData)=>API.post("/user/verifyOTP",authData);
 
 export const postQuestion = (questionData) =>
-  API.post("/questions/Ask", questionData);
+API.post("/questions/Ask", questionData);
 
 export const getAllquestions = () => API.get("/questions/get");
 
 export const postAnswer = (id, noOfAnswer, answerBody, userAnswered, userId) =>
-  API.patch(`/answer/post/${id}`, {
-    noOfAnswer,
-    answerBody,
-    userAnswered,
-    userId,
-  });
+API.patch(`/answer/post/${id}`, {
+  noOfAnswer,
+  answerBody,
+  userAnswered,
+  userId,
+});
 
+export const deleteAccount = (id) => API.delete(`/user/deleteAccount/${id}`);
 export const deleteQuestion = (id) => API.delete(`/questions/delete/${id}`);
 
 export const deleteAnswer = (id, answerId, noOfAnswer) =>

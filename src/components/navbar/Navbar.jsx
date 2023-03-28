@@ -75,11 +75,11 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <Dropdown.Toggle style={{backgroundColor:"#faf7f7", border: "none", color: "white" }}>
-              <FontAwesomeIcon icon={faBars} style={{color:"#ff7003",width:"20px",padding:"0"}} /> 
+            <Dropdown.Toggle style={{ backgroundColor: "#faf7f7", border: "none", color: "white" }}>
+              <FontAwesomeIcon icon={faBars} style={{ color: "#ff7003", width: "20px", padding: "0" }} />
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{width:"410px"}}>
+            <Dropdown.Menu style={{ width: "410px" }}>
               <Dropdown.Item href="https://gi009.000webhostapp.com/"><Link
                 to="https://gi009.000webhostapp.com/"
                 target="_blank"
@@ -144,16 +144,11 @@ const Navbar = () => {
                   >
                     Gayatri Industries Vasai
                   </a></Dropdown.Item>
-                  <Dropdown.Item href="#/action-3"> <a
-                    class="dropdown-item"
-                    href="http://gi009.000webhostapp.com/"
-                  >
-                    Gayatri Industries Vasai Project II{" "}
-                  </a></Dropdown.Item>
+
 
                 </Dropdown.Menu>
               </Dropdown></li></ul>
-              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "24px",width:"50%" }}>
+              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "24px", width: "50%" }}>
                 <img
                   src={searchicon}
                   alt="searchicon"
@@ -172,14 +167,14 @@ const Navbar = () => {
               </form><br />
               <Dropdown.Item href="" >{User === null ? (
                 <>
-                  <Link to="/login" className="nav-links nav-btn nav-item fonting" style={{marginLeft: "21px"}}>
+                  <Link to="/login" className="nav-links nav-btn nav-item fonting" style={{ marginLeft: "21px" }}>
                     Log in
                   </Link>
                   <Link
                     to="/signup"
                     className="nav-links nav-btn nav-item fonting"
                     id="special-button"
-                    style={{marginLeft: "2px",padding:"8px 25px 9px 25px"}}
+                    style={{ marginLeft: "2px", padding: "8px 25px 9px 25px" }}
                   >
                     Sign up
                   </Link>
@@ -216,7 +211,7 @@ const Navbar = () => {
               )}</Dropdown.Item>
 
 
-              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px" ,marginLeft:"12px"}}>{
+              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px", marginLeft: "12px" }}>{
                 currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "5px 38.5px 7px 50px" }}>{premiumcontent}</Link></>)
               }</Dropdown.Item>
 
@@ -282,6 +277,14 @@ const Navbar = () => {
                   <li>
                     <a
                       class="dropdown-item"
+                      href="https://myportfolio-pink-eta.vercel.app/"
+                    >
+                      My Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
                       href="https://gi-qnx4.onrender.com/"
                     >
                       News Letter Subscription
@@ -328,22 +331,8 @@ const Navbar = () => {
                       Gayatri Industries Vasai
                     </a>
                   </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="http://gi009.000webhostapp.com/"
-                    >
-                      Gayatri Industries Vasai Project II{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="https://myportfolio-pink-eta.vercel.app/"
-                    >
-                      My Portfolio
-                    </a>
-                  </li>
+
+
                 </ul>
               </li>
 

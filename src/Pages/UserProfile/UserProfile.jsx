@@ -1,31 +1,44 @@
 import React from "react";
 import { useState } from "react";
 import moment from "moment";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useSelector ,useDispatch} from "react-redux";
+import { useParams,useNavigate } from "react-router-dom";
 
 
 import "./UserProfile.css";
 import { ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBirthdayCake, faPen } from "@fortawesome/free-solid-svg-icons";
+import { faBirthdayCake, faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 import EditProfileForm from "./EditProfileForm";
 import ProfileBio from "./ProfileBio";
 import LeftSidebar from "../../components/LeftsideBar/LeftsideBar";
 import Avatar from "../../components/navbar/Avatar";
+import Spinner from 'react-bootstrap/esm/Spinner'
+import { setCurrentUser } from "../../actions/currentUser";
 
+import {deleteAccount} from "../../actions/auth"
 
 const UserProfile = () => {
+  const navigate=useNavigate();
+  const dispatch=useDispatch();
   const { id } = useParams();
+  const [loading,setLoading]=useState(false);
   const users = useSelector((state) => state.usersReducer);
   const currentProfile = users.filter((user) => user._id === id)[0];
 
   const currentUser = useSelector((state) => state.fetch_current_userReducer);
   const [Switch, setSwitch] = useState(false);
-  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLoading(true);
+    setTimeout(()=>{setLoading(false)},8000);
+    dispatch(deleteAccount(id, navigate))
+    dispatch(setCurrentUser(null));
+
+  }
   return (
     <div className="userprofilepage">
       <div className="home-container-1">
@@ -52,6 +65,11 @@ const UserProfile = () => {
               </p>
             </div>
             {currentUser?.result._id === id && (
+              <>
+              <button className="delete-profile-btn" type="button"
+                onClick={handleSubmit}>
+              <FontAwesomeIcon icon={faTrash}  /> {loading?(<><Spinner animation="border" variant="light" size='sm'/></>):(<>Delete Account</>)}
+              </button>
               <button
                 type="button"
                 onClick={() => setSwitch(true)}
@@ -60,6 +78,7 @@ const UserProfile = () => {
                 {" "}
                 <FontAwesomeIcon icon={faPen} /> Edit Profile
               </button>
+              </>
             )}
           </div>
 
