@@ -79,7 +79,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faBars} style={{color:"#ff7003",width:"20px",padding:"0"}} /> 
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu style={{width:"301px"}}>
               <Dropdown.Item href="https://gi009.000webhostapp.com/"><Link
                 to="https://gi009.000webhostapp.com/"
                 target="_blank"
@@ -170,15 +170,16 @@ const Navbar = () => {
                 />
 
               </form><br />
-              <Dropdown.Item href="" style={{ textAlign: "center" }}>{User === null ? (
+              <Dropdown.Item href="" >{User === null ? (
                 <>
-                  <Link to="/login" className="nav-links nav-btn nav-item fonting">
+                  <Link to="/login" className="nav-links nav-btn nav-item fonting" style={{marginLeft: "15px"}}>
                     Log in
                   </Link>
                   <Link
                     to="/signup"
                     className="nav-links nav-btn nav-item fonting"
                     id="special-button"
+                    style={{marginLeft: "2px",padding:"8px 25px 9px 25px"}}
                   >
                     Sign up
                   </Link>
@@ -207,7 +208,7 @@ const Navbar = () => {
                     className="nav-links nav-btn nav-item fonting"
                     onClick={handleLogout}
                     id="special-button"
-                    style={{ marginLeft: "6px", padding: "3px 40px 7px 53px" }}
+                    style={{ marginLeft: "15px", padding: "3px 40px 7px 53px" }}
                   >
                     Log out
                   </Link>
@@ -215,7 +216,7 @@ const Navbar = () => {
               )}</Dropdown.Item>
 
 
-              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px" }}>{
+              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px" ,marginLeft:"6px"}}>{
                 currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "3px 38.5px 7px 50px" }}>{premiumcontent}</Link></>)
               }</Dropdown.Item>
 
