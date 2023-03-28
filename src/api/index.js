@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:7001" }); //http://localhost:7001 https://stack-overflow-server.vercel.app
+const API = axios.create({ baseURL: "https://stack-overflow-server-f2uu.onrender.com" }); //http://localhost:7001 https://stack-overflow-server.vercel.app
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
     req.headers.authorization = `Bearer ${
