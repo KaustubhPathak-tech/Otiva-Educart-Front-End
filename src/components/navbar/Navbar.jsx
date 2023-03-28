@@ -153,7 +153,7 @@ const Navbar = () => {
 
                 </Dropdown.Menu>
               </Dropdown></li></ul>
-              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "12px",width:"50%" }}>
+              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "18px",width:"50%" }}>
                 <img
                   src={searchicon}
                   alt="searchicon"
