@@ -153,7 +153,7 @@ const Navbar = () => {
 
                 </Dropdown.Menu>
               </Dropdown></li></ul>
-              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "18px",width:"50%" }}>
+              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "24px",width:"50%" }}>
                 <img
                   src={searchicon}
                   alt="searchicon"
@@ -172,7 +172,7 @@ const Navbar = () => {
               </form><br />
               <Dropdown.Item href="" >{User === null ? (
                 <>
-                  <Link to="/login" className="nav-links nav-btn nav-item fonting" style={{marginLeft: "15px"}}>
+                  <Link to="/login" className="nav-links nav-btn nav-item fonting" style={{marginLeft: "21px"}}>
                     Log in
                   </Link>
                   <Link
@@ -208,7 +208,7 @@ const Navbar = () => {
                     className="nav-links nav-btn nav-item fonting"
                     onClick={handleLogout}
                     id="special-button"
-                    style={{ marginLeft: "15px", padding: "3px 40px 7px 53px" }}
+                    style={{ marginLeft: "20px", padding: "3px 40px 7px 53px" }}
                   >
                     Log out
                   </Link>
@@ -216,7 +216,7 @@ const Navbar = () => {
               )}</Dropdown.Item>
 
 
-              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px" ,marginLeft:"6px"}}>{
+              <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px" ,marginLeft:"12px"}}>{
                 currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "5px 38.5px 7px 50px" }}>{premiumcontent}</Link></>)
               }</Dropdown.Item>
 
