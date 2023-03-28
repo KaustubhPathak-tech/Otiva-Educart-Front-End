@@ -96,7 +96,7 @@ function App() {
             
             <img
               src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg"
-              width="100%" height="100%"
+              width="100%" height="100vh"
             ></img>
           </div>
           <div className="portrait">
