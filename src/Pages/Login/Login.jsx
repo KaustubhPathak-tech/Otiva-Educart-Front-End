@@ -33,7 +33,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setLoading(true)
-    setTimeout(()=>{setLoading(false)},5000)
+    setTimeout(()=>{setLoading(false)},8000)
     dispatch(login({ email, password }, navigate))
   }
 
