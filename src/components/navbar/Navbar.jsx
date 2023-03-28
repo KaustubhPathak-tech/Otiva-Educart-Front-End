@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../actions/auth";
-import Button from 'react-bootstrap/Button'
+
 import Dropdown from 'react-bootstrap/Dropdown';
-import $ from 'jquery';
+
 //importing style
 
 

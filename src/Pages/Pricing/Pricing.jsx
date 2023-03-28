@@ -20,7 +20,6 @@ import Loader from '../../components/Loader/Loader';
 const Pricing = () => {
     const dispatch = useDispatch();
     var payment = useSelector((state) => (state.authReducer));
-    console.log(payment);
     const navigate = useNavigate();
     var User = useSelector((state) => (state.fetch_current_userReducer));
     const [email, setEmail] = useState(User?.result?.email);

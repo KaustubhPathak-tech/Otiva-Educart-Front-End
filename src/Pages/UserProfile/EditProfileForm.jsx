@@ -41,7 +41,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
                 <label htmlFor="tags">
                     <h4>Watched tags</h4>
                     <p>Add tags separated by 1 space</p><br />
-                    <input type="text" id='tags' onChange={(e) => setTags(e.target.value.split(' '))} class="d-flex"/>
+                    <input type="text" id='tags' required onChange={(e) => setTags(e.target.value.split(' '))} class="d-flex"/>
                 </label><br /><br />
                 <input type="submit" value="Save Profile" className='user-submit-btn' />
                 <button type='button' className='user-cancel-btn' onClick={() => setSwitch(false)}>Cancel</button>
