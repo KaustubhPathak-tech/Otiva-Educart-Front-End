@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://stack-overflow-server.vercel.app" }); //
+const API = axios.create({ baseURL: "https://stack-overflow-server.vercel.app" });
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
     req.headers.authorization = `Bearer ${
@@ -30,7 +30,7 @@ API.patch(`/answer/post/${id}`, {
   userId,
 });
 
-export const deleteaccount = (id) => API.delete(`/user/deleteAccount/${id}`);
+export const deleteaccount = (id) => API.delete(`/user/delete/${id}`);
 export const deleteQuestion = (id) => API.delete(`/questions/delete/${id}`);
 
 export const deleteAnswer = (id, answerId, noOfAnswer) =>

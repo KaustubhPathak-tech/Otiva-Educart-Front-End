@@ -18,10 +18,12 @@ export const updateProfile = (id, updateData) => async (dispatch) => {
 };
 
 export const deleteAccount = (id, navigate) => async (dispatch) => {
-  try {
+  try{
     const { data } = api.deleteaccount(id);
     dispatch(fetchAllUsers());
-    navigate("/");
+    toast.success("Account deleted successfully !",{ position: "top-center" });
+    setTimeout(()=>{navigate("/");},5000);
+    
   } catch (error) {
     toast.error(error.response.data, { position: "top-center" });
   }
