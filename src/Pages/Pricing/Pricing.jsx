@@ -28,7 +28,7 @@ const Pricing = () => {
     const handlefree = (e) => {
         e.preventDefault()
         if (User === null) {
-            toast("Please Login or Signup to Subscribe", { position: "top-center" });
+            toast.error("Please Login to Subscribe", { position: "top-center" });
             return;
         }
         dispatch(getpremium({ amount: 1, email }, navigate));
@@ -37,7 +37,7 @@ const Pricing = () => {
     const handlesilver = (e) => {
         e.preventDefault()
         if (User === null) {
-            toast.error("Please Login or Signup to Subscribe", { position: "top-center" });
+            toast.error("Please Login to Subscribe", { position: "top-center" });
             return;
         }
         dispatch(getpremium({ amount: 100, email }, navigate));
@@ -46,7 +46,7 @@ const Pricing = () => {
     const handlegold = (e) => {
         e.preventDefault()
         if (User === null) {
-            toast("Please Login or Signup to Subscribe", { position: "top-center" });
+            toast.error("Please Login to Subscribe", { position: "top-center" });
             return;
         }
         dispatch(getpremium({ amount: 1000, email }, navigate));

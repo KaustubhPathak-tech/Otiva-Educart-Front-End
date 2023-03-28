@@ -15,19 +15,6 @@ export const signup = (authData, navigate) => async (dispatch) => {
     
   }
 };
-export const deleteAccount = (id, navigate) => async (dispatch) => {
-  try {
-    const { data } = await api.deleteAccount(id);
-    
-    // dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    // alert("Sign Up Successful! login session expires in 1 hour!");
-    navigate("/");
-  } catch (error) {
-    toast.error(error.response.data,{position:"top-center"});
-    
-  }
-};
-
 export const login = (authData, navigate) => async (dispatch) => {
   try {
     const { data } = await api.logIn(authData);

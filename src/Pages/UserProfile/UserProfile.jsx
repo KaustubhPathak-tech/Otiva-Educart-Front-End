@@ -19,7 +19,7 @@ import Avatar from "../../components/navbar/Avatar";
 import Spinner from 'react-bootstrap/esm/Spinner'
 import { setCurrentUser } from "../../actions/currentUser";
 
-import {deleteAccount} from "../../actions/auth"
+import {deleteAccount} from "../../actions/users"
 
 const UserProfile = () => {
   const navigate=useNavigate();
@@ -76,7 +76,7 @@ const UserProfile = () => {
                 className="edit-profile-btn"
               >
                 {" "}
-                <FontAwesomeIcon icon={faPen} /> Edit Profile
+                <FontAwesomeIcon icon={faPen} /> Edit Account
               </button>
               </>
             )}

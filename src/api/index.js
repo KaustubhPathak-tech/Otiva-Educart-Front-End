@@ -30,7 +30,7 @@ API.patch(`/answer/post/${id}`, {
   userId,
 });
 
-export const deleteAccount = (id) => API.delete(`/user/deleteAccount/${id}`);
+export const deleteaccount = (id) => API.delete(`/user/deleteAccount/${id}`);
 export const deleteQuestion = (id) => API.delete(`/questions/delete/${id}`);
 
 export const deleteAnswer = (id, answerId, noOfAnswer) =>
