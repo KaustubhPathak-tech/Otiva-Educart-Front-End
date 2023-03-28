@@ -79,7 +79,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faBars} style={{color:"#ff7003",width:"20px",padding:"0"}} /> 
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{width:"301px"}}>
+            <Dropdown.Menu style={{width:"410px"}}>
               <Dropdown.Item href="https://gi009.000webhostapp.com/"><Link
                 to="https://gi009.000webhostapp.com/"
                 target="_blank"
@@ -153,7 +153,7 @@ const Navbar = () => {
 
                 </Dropdown.Menu>
               </Dropdown></li></ul>
-              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "12px" }}>
+              <form class="d-flex" role="search" id="searchform" style={{ marginLeft: "12px",width:"50%" }}>
                 <img
                   src={searchicon}
                   alt="searchicon"
