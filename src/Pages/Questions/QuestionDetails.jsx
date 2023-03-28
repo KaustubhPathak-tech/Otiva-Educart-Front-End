@@ -26,18 +26,18 @@ const QuestionDetails = () => {
   const url = 'https://stack-over-flow-clone-2023.vercel.app'
   const handleShare = () => {
     copy(url + location.pathname)
-    toast('Copied url : ' + url + location.pathname,{position:"top-center"});  
+    toast.success('Copied url : ' + url + location.pathname,{position:"top-center"});  
   }
   
   const hadlePostAns = (e, answerLength) => {
     e.preventDefault()
     if (User == null) {
-      toast('Please Login or Signup to answer a question !', { position: "top-center" });
+      toast.error('Please Login or Signup to answer a question !', { position: "top-center" });
       // Navigate('/login')
     }
     else {
       if (Answer === '') {
-        toast('Enter an Answer before Posting !', { position: "top-center" });
+        toast.warning('Enter an Answer before Posting !', { position: "top-center" });
       }
       else {
         dispatch(postAnswer({ id, noOfAnswer: answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId: User?.result?._id }))
@@ -52,7 +52,7 @@ const QuestionDetails = () => {
 
   const handleUpVote = (e) => {
     if (User == null) {
-      toast('Please Login to Vote!', { position: "top-center" });
+      toast.error('Please Login to Vote!', { position: "top-center" });
       
     }
     dispatch(voteQuestion(id, 'upVote', User.result._id))

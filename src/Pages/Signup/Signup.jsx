@@ -42,7 +42,7 @@ const Signup = () => {
   const handleCopy = () => {
     copy(email)
     
-    toast('Copied email : ' + email,{position:"top-center"});
+    toast.success('Copied email : ' + email,{position:"top-center"});
     <ToastContainer />
   }
 

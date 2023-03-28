@@ -30,7 +30,7 @@ const AskQuestion = () => {
         navigate
       )
     
-    )}else{toast("Login to Ask Question",{position:"top-center"})};
+    )}else{toast.error("Please Login to ask Question",{position:"top-center"})};
     
     dispatch(setCurrentUser(null));
      //may be modified further

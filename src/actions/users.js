@@ -6,7 +6,7 @@ export const fetchAllUsers = () => async (dispatch) => {
     const { data } = await api.fetchAllUsers();
     dispatch({ type: "FETCH_USERS", payload: data });
   } catch (error) {
-    console.log(error);
+    
   }
 };
 
@@ -15,7 +15,7 @@ export const updateProfile = (id, updateData) => async (dispatch) => {
     const { data } = await api.updateProfile(id, updateData);
     dispatch({ type: "UPDATE_CURRENT_USER", payload: data });
   } catch (error) {
-    console.log(error);
-    toast(error.response.data,{position:"top-center"});
+    
+    toast.error(error.response.data,{position:"top-center"});
   }
 };

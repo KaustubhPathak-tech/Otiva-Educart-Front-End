@@ -37,7 +37,7 @@ const Pricing = () => {
     const handlesilver = (e) => {
         e.preventDefault()
         if (User === null) {
-            toast("Please Login or Signup to Subscribe", { position: "top-center" });
+            toast.error("Please Login or Signup to Subscribe", { position: "top-center" });
             return;
         }
         dispatch(getpremium({ amount: 100, email }, navigate));

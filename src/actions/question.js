@@ -11,8 +11,8 @@ export const askQuestion = (questionData, navigate) => async (dispatch) => {
     navigate("/");
   } catch (error) {
     
-    console.log(error);
-    toast(error.response.data);
+    
+    toast.error(error.response.data);
     <ToastContainer/>
   }
 };
@@ -23,8 +23,8 @@ export const fetchAllquestions = () => async (dispatch) => {
     const { data } = await api.getAllquestions();
     dispatch({ type: "FETCH_ALL_QUESTIONS", payload: data });
   } catch (error) {
-    console.log(error);
-    toast(error.response.data);
+    
+    toast.error(error.response.data);
     <ToastContainer/>
   }
 };
@@ -36,8 +36,8 @@ export const deleteQuestion = (id, navigate) => async (dispatch) => {
 
     navigate("/");
   } catch (error) {
-    console.log(error);
-    toast(error.response.data);
+    
+    toast.error(error.response.data);
     // <ToastContainer/>
   }
 };
@@ -55,8 +55,8 @@ export const postAnswer = (answerData) => async (dispatch) => {
     dispatch({ type: "POST_ANSWER", payload: data });
     dispatch(fetchAllquestions());
   } catch (error) {
-    console.log(error);
-    toast(error.response.data);
+    
+    toast.error(error.response.data);
     <ToastContainer/>
   }
 };
@@ -66,8 +66,8 @@ export const deleteAnswer = (id, answerId, noOfAnswer) => async (dispatch) => {
     const { data } = await api.deleteAnswer(id, answerId, noOfAnswer);
     dispatch(fetchAllquestions());
   } catch (error) {
-    console.log(error);
-    toast(error.response.data);
+    
+    toast.error(error.response.data);
     <ToastContainer/>
   }
 };
@@ -77,8 +77,8 @@ export const voteQuestion =(id,value,userId)=>async(dispatch)=>{
     const {data} =await api.voteQuestion(id,value,userId)
     dispatch(fetchAllquestions())
   } catch (error) {
-    console.log(error);
-    toast(error.response.data);
+   
+    toast.error(error.response.data);
     <ToastContainer/>
   }
 }

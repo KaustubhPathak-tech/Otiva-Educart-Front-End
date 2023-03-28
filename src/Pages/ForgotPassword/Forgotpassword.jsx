@@ -24,7 +24,7 @@ const Forgotpassword = () => {
         setTimeout(() => { setLoading(false) }, 5000)
         if (pass1 === pass2) { dispatch(reset({ email, pass1 }, navigate)) }
         else {
-            toast('new password should be same in both fields !');
+            toast.error('new password should be same in both fields !');
         }
 
     }
