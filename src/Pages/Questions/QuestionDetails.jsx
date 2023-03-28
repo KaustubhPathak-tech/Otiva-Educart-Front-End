@@ -32,12 +32,12 @@ const QuestionDetails = () => {
   const hadlePostAns = (e, answerLength) => {
     e.preventDefault()
     if (User == null) {
-      toast.error('Please Login or Signup to answer a question !', { position: "top-center" });
+      toast.error('Please Login to post answer', { position: "top-center" });
       // Navigate('/login')
     }
     else {
       if (Answer === '') {
-        toast.warning('Enter an Answer before Posting !', { position: "top-center" });
+        toast.warning('Write Answer before Posting', { position: "top-center" });
       }
       else {
         dispatch(postAnswer({ id, noOfAnswer: answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId: User?.result?._id }))
@@ -59,7 +59,7 @@ const QuestionDetails = () => {
   }
   const handleDownVote = (e) => {
     if (User == null) {
-      toast('Please Login to Vote!', { position: "top-center" });
+      toast.error('Please Login to Vote!', { position: "top-center" });
       
     }
     dispatch(voteQuestion(id, 'downVote', User.result._id))
