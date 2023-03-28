@@ -1,9 +1,24 @@
-@media screen and (orientation: landscape) and (max-width:980px) {
-  *{display:none;}
-}
-.landscape{
+#landa{
   display: none;
 }
+@media (max-width:980px) and (min-width:400px){
+  #landa{
+    display: flex;
+  }
+}
+@media screen and (orientation: landscape) and (max-width:980px) {
+  .portrait{display:none;}
+  
+  
+}
+
+.landscape{
+  display: flex;
+}
+.disabled{
+  display: none;
+}
+
 .preloader {
   background-color: #edf2fd;
   align-items: center;
