@@ -174,7 +174,7 @@ const Navbar = () => {
                     to="/signup"
                     className="nav-links nav-btn nav-item fonting"
                     id="special-button"
-                    style={{ marginLeft: "0px", padding: "8px 12px 9px 15px" }}
+                    style={{ marginLeft: "1px", padding: "8px 28px 7px 22px" }}
                   >
                     Sign up
                   </Link>
