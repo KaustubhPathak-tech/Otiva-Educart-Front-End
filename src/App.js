@@ -81,10 +81,11 @@ it returns boolean value*/
   let isMobileDevice = regexp.test(details);
 
   if (isMobileDevice) {
-    setTimeout(() => {
+    
       toast.info("Desktop Mode not recommended due to bad UI/UX.");
-    }, 1000);
+    
   } else {
+    console.log("U r using desktop mode !");
   }
 
   const [dsa, setDsa] = useState(false);
@@ -266,7 +267,7 @@ it returns boolean value*/
           </div>
         </>
       )}
-      <ToastContainer />
+      <ToastContainer limit={1} />
     </div>
   );
 }
