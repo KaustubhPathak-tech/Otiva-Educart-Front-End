@@ -68,25 +68,6 @@ function App() {
   } else {
     setInterval(refresh, diff);
   }
-  /* Storing user's device details in a variable*/
-  let details = navigator.userAgent;
-
-  /* Creating a regular expression
-containing some mobile devices keywords
-to search it in details string*/
-  let regexp = /android|iphone|kindle|ipad/i;
-
-  /* Using test() method to search regexp in details
-it returns boolean value*/
-  let isMobileDevice = regexp.test(details);
-
-  if (isMobileDevice) {
-    
-      toast.info("Desktop Mode not recommended due to bad UI/UX.");
-    
-  } else {
-    console.log("U r using desktop mode !");
-  }
 
   const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
