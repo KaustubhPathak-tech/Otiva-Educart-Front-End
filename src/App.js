@@ -68,6 +68,23 @@ function App() {
   } else {
     setInterval(refresh, diff);
   }
+  /* Storing user's device details in a variable*/
+  let details = navigator.userAgent;
+
+  /* Creating a regular expression
+containing some mobile devices keywords
+to search it in details string*/
+  let regexp = /android|iphone|kindle|ipad/i;
+
+  /* Using test() method to search regexp in details
+it returns boolean value*/
+  let isMobileDevice = regexp.test(details);
+
+  if (isMobileDevice) {
+    alert("Desktop Mode not recommended due to bad UI/UX.")
+  } else {
+   
+  }
 
   const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
@@ -148,40 +165,40 @@ function App() {
 
               <Navbar />
               <ScrolltoTop />
-                <Routes>
-                  {/* This is Home Page Route */}
-                  <Route path="/" element={<Home />} />
+              <Routes>
+                {/* This is Home Page Route */}
+                <Route path="/" element={<Home />} />
 
-                  {/* This is Login Page Route */}
-                  <Route path="/login" element={<Login />}></Route>
-                  <Route
-                    path="/forgotpassword"
-                    element={<Forgotpassword />}
-                  ></Route>
-                  {/* This is Signup Page Route */}
-                  <Route path="/signup" element={<Signup />}></Route>
-                  <Route path="/Pricing" element={<Pricing />}></Route>
-                  <Route
-                    path="/paymentsuccess"
-                    element={<Paymentsuccess />}
-                  ></Route>
-                  <Route path="/verify" element={<VerifyOTP />}></Route>
-                  {/* This is User Page Route */}
-                  <Route path="/users" element={<User />}></Route>
-                  <Route path="/users/:id" element={<UserProfile />}></Route>
-                  {/*This is Question Page Route*/}
-                  <Route path="/Questions" element={<Questions />}></Route>
-                  {/*This is Ask Question Page Route*/}
-                  <Route path="/AskQuestions" element={<AskQuestion />}></Route>
-                  {/*This is Ask Question Page Route*/}
-                  <Route
-                    path="/Questions/:id"
-                    element={<DisplayQuestion />}
-                  ></Route>
-                  {/*This is Tags Page Route*/}
-                  <Route path="/tags" element={<Tags />}></Route>
-                </Routes>
-              
+                {/* This is Login Page Route */}
+                <Route path="/login" element={<Login />}></Route>
+                <Route
+                  path="/forgotpassword"
+                  element={<Forgotpassword />}
+                ></Route>
+                {/* This is Signup Page Route */}
+                <Route path="/signup" element={<Signup />}></Route>
+                <Route path="/Pricing" element={<Pricing />}></Route>
+                <Route
+                  path="/paymentsuccess"
+                  element={<Paymentsuccess />}
+                ></Route>
+                <Route path="/verify" element={<VerifyOTP />}></Route>
+                {/* This is User Page Route */}
+                <Route path="/users" element={<User />}></Route>
+                <Route path="/users/:id" element={<UserProfile />}></Route>
+                {/*This is Question Page Route*/}
+                <Route path="/Questions" element={<Questions />}></Route>
+                {/*This is Ask Question Page Route*/}
+                <Route path="/AskQuestions" element={<AskQuestion />}></Route>
+                {/*This is Ask Question Page Route*/}
+                <Route
+                  path="/Questions/:id"
+                  element={<DisplayQuestion />}
+                ></Route>
+                {/*This is Tags Page Route*/}
+                <Route path="/tags" element={<Tags />}></Route>
+              </Routes>
+
               <Chat />
               <div className="footer">
                 <div className="formalities">
