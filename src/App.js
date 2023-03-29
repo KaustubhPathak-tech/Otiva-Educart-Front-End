@@ -82,7 +82,7 @@ it returns boolean value*/
 
   if (isMobileDevice) {
     setTimeout(() => {
-      alert("Desktop Mode not recommended due to bad UI/UX.");
+      toast.info("Desktop Mode not recommended due to bad UI/UX.");
     }, 1000);
   } else {
   }
