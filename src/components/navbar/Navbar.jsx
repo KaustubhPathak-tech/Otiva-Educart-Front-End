@@ -212,7 +212,7 @@ const Navbar = () => {
 
 
               <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px", marginLeft: "12px" }}>{
-                currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "5px 35px 7px 30px" }}>{premiumcontent}</Link></>)
+                currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "5px 30px 7px 30px" }}>{premiumcontent}</Link></>)
               }</Dropdown.Item>
 
 
