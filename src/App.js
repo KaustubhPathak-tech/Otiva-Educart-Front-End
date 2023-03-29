@@ -81,9 +81,10 @@ it returns boolean value*/
   let isMobileDevice = regexp.test(details);
 
   if (isMobileDevice) {
-    alert("Desktop Mode not recommended due to bad UI/UX.")
+    setTimeout(() => {
+      alert("Desktop Mode not recommended due to bad UI/UX.");
+    }, 1000);
   } else {
-   
   }
 
   const [dsa, setDsa] = useState(false);
