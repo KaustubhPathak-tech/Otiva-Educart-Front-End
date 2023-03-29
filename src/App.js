@@ -37,6 +37,7 @@ import BounceLoader from "react-spinners/BounceLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
+import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
   const [loading, setLoading] = useState(false);
   var payment = useSelector((state) => state.fetch_current_userReducer);
@@ -93,10 +94,10 @@ function App() {
       ) : (
         <>
           <div id="landa">
-            
             <img
               src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg"
-              width="100%" height="320px"
+              width="100%"
+              height="320px"
             ></img>
           </div>
           <div className="portrait">
@@ -146,41 +147,41 @@ function App() {
               </Popup>
 
               <Navbar />
+              <ScrolltoTop />
+                <Routes>
+                  {/* This is Home Page Route */}
+                  <Route path="/" element={<Home />} />
 
-              <Routes>
-                {/* This is Home Page Route */}
-                <Route path="/" element={<Home />} />
-
-                {/* This is Login Page Route */}
-                <Route path="/login" element={<Login />}></Route>
-                <Route
-                  path="/forgotpassword"
-                  element={<Forgotpassword />}
-                ></Route>
-                {/* This is Signup Page Route */}
-                <Route path="/signup" element={<Signup />}></Route>
-                <Route path="/Pricing" element={<Pricing />}></Route>
-                <Route
-                  path="/paymentsuccess"
-                  element={<Paymentsuccess />}
-                ></Route>
-                <Route path="/verify" element={<VerifyOTP />}></Route>
-                {/* This is User Page Route */}
-                <Route path="/users" element={<User />}></Route>
-                <Route path="/users/:id" element={<UserProfile />}></Route>
-                {/*This is Question Page Route*/}
-                <Route path="/Questions" element={<Questions />}></Route>
-                {/*This is Ask Question Page Route*/}
-                <Route path="/AskQuestions" element={<AskQuestion />}></Route>
-                {/*This is Ask Question Page Route*/}
-                <Route
-                  path="/Questions/:id"
-                  element={<DisplayQuestion />}
-                ></Route>
-                {/*This is Tags Page Route*/}
-                <Route path="/tags" element={<Tags />}></Route>
-              </Routes>
-
+                  {/* This is Login Page Route */}
+                  <Route path="/login" element={<Login />}></Route>
+                  <Route
+                    path="/forgotpassword"
+                    element={<Forgotpassword />}
+                  ></Route>
+                  {/* This is Signup Page Route */}
+                  <Route path="/signup" element={<Signup />}></Route>
+                  <Route path="/Pricing" element={<Pricing />}></Route>
+                  <Route
+                    path="/paymentsuccess"
+                    element={<Paymentsuccess />}
+                  ></Route>
+                  <Route path="/verify" element={<VerifyOTP />}></Route>
+                  {/* This is User Page Route */}
+                  <Route path="/users" element={<User />}></Route>
+                  <Route path="/users/:id" element={<UserProfile />}></Route>
+                  {/*This is Question Page Route*/}
+                  <Route path="/Questions" element={<Questions />}></Route>
+                  {/*This is Ask Question Page Route*/}
+                  <Route path="/AskQuestions" element={<AskQuestion />}></Route>
+                  {/*This is Ask Question Page Route*/}
+                  <Route
+                    path="/Questions/:id"
+                    element={<DisplayQuestion />}
+                  ></Route>
+                  {/*This is Tags Page Route*/}
+                  <Route path="/tags" element={<Tags />}></Route>
+                </Routes>
+              
               <Chat />
               <div className="footer">
                 <div className="formalities">
