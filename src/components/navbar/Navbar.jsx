@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../actions/auth";
-
+import decode from "jwt-decode"
 import Dropdown from 'react-bootstrap/Dropdown';
 
 //importing style
@@ -55,6 +55,10 @@ const Navbar = () => {
   useEffect(() => {
 
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+  }, [dispatch]);
+  useEffect(() => {
+    const existingtoken = User?.token;
+    if (existingtoken) { const decodedToken = decode(existingtoken); if (decodedToken.exp * 1000 < new Date().getTime()) { dispatch(setCurrentUser(null)); } }
   }, [dispatch]);
   return (
     <div className="navigation">

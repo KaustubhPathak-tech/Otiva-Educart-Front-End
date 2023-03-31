@@ -5,7 +5,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-
+import jwt_decode from "jwt-decode";
 //importing styles
 
 import "./custom.scss";
@@ -40,11 +40,14 @@ import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
   const [loading, setLoading] = useState(false);
-  var payment = useSelector((state) => state.fetch_current_userReducer);
-  var data = payment?.time;
+  var User = useSelector((state) => (state.fetch_current_userReducer));
+ 
+
+  
   // var stat = payment?.status;
-  var expiry = data + 3600000;
-  var diff = expiry - Date.now();
+  // var expiry = decodedToken.exp*1000;
+  // console.log(expiry);
+  // var diff = expiry - new Date().getTime();
   function refresh() {
     window.location.reload(true);
     localStorage.clear();
@@ -64,10 +67,12 @@ function App() {
       setLoading(false);
     }, 4000);
   }, []);
-  if (isNaN(expiry)) {
-  } else {
-    setInterval(refresh, diff);
-  }
+
+
+  // if (isNaN(expiry)) {
+  // } else {
+  //   setInterval(refresh, diff);
+  // }
 
   const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
@@ -75,8 +80,27 @@ function App() {
     dispatch(fetchAllquestions());
     dispatch(fetchAllUsers());
   }, [dispatch]);
+  function handleCallbackResponse(res) {
+    var googleuser=jwt_decode(res.credential);
+    console.log(googleuser);
+  }
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id:
+        "602166184134-sj45i02o9tsjsc05h931q4mf0q1ogpnf.apps.googleusercontent.com",
+      callback: handleCallbackResponse,
+    });
+    google.accounts.id.renderButton(document.getElementById("signIndiv"), {
+      theme: "outline",
+      size: "large",
+    });
+    // google.accounts.id.prompt();
+  }, []);
   return (
+
     <div className="App">
+      
       {loading ? (
         <>
           <div className="preloader portrait">
@@ -93,6 +117,7 @@ function App() {
         </>
       ) : (
         <>
+        <div id="signIndiv" style={{marginTop:"20vh"}}></div>
           <div id="landa">
             <img
               src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg"
@@ -100,7 +125,9 @@ function App() {
               height="310px"
             ></img>
           </div>
+          
           <div className="portrait">
+          
             <BrowserRouter>
               {/* This is navigation bar */}
 
@@ -181,7 +208,7 @@ function App() {
                 {/*This is Tags Page Route*/}
                 <Route path="/tags" element={<Tags />}></Route>
               </Routes>
-
+              
               <Chat />
               <div className="footer">
                 <div className="formalities">
@@ -224,6 +251,7 @@ function App() {
                   </span>
                 </div>
                 <div className="footer-1">
+                  
                   <p>
                     Made with{" "}
                     <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />{" "}
@@ -239,11 +267,11 @@ function App() {
                   </p>
                 </div>
               </div>
-              {
+              {/* {
                 (window.onbeforeunload = function() {
                   localStorage.clear();
                 })
-              }
+              } */}
             </BrowserRouter>
           </div>
         </>
