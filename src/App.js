@@ -40,7 +40,6 @@ import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
-  
   const [loading, setLoading] = useState(false);
 
   // var stat = payment?.status;
@@ -71,7 +70,7 @@ function App() {
   // } else {
   //   setInterval(refresh, diff);
   // }
-  const [pics,setPics]=useState('');
+  const [pics, setPics] = useState("");
   const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -80,7 +79,7 @@ function App() {
   }, [dispatch]);
   function handleCallbackResponse(res) {
     var googleuser = jwt_decode(res.credential);
-    
+
     let name = googleuser?.name;
     let email = googleuser?.email;
     let pic = googleuser?.picture;
@@ -89,7 +88,6 @@ function App() {
     dispatch(glogin({ name, email, password }));
   }
   var User = useSelector((state) => state.fetch_current_userReducer);
-  
 
   useEffect(() => {
     /* global google */
@@ -134,8 +132,7 @@ function App() {
           <div className="portrait">
             <BrowserRouter>
               {/* This is navigation bar */}
-              
-               
+
               <Popup trigger={dsa} setTrigger={setDsa} onClose={dsa}>
                 <h5 style={{ textAlign: "center" }}>
                   {" "}

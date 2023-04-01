@@ -31,7 +31,7 @@ const Navbar = (src) => {
   var currentplan = (User?.result?.plan);
   var stat = User?.status;
   var premiumcontent = "Get Premium";
-  var srcofPic=src;
+  var srcofPic = src;
   if (currentplan === "Free" || currentplan === "NULL") {
 
     premiumcontent = "Get Premium"
@@ -61,14 +61,14 @@ const Navbar = (src) => {
     if (existingtoken) { const decodedToken = decode(existingtoken); if (decodedToken.exp * 1000 < new Date().getTime()) { dispatch(setCurrentUser(null)); } }
   }, [dispatch]);
   console.log(srcofPic);
-  
-  
+
+
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
-        
+
         <div class="container-fluid">
-          <img src={`${srcofPic?.src}`} alt="_"></img>
+
           <Link to="/" className="nav-logo nav-item">
             <img src={logo} alt="official logo"></img>
           </Link>
@@ -189,6 +189,7 @@ const Navbar = (src) => {
               ) : (
                 <>
                   <div className="avatar" style={{ textAlign: "center" }}>
+
                     <Avatar
                       backgroundColor="#009dff"
                       px="70px"
@@ -201,7 +202,7 @@ const Navbar = (src) => {
                         to={`/users/${User?.result?._id}`}
                         style={{ color: "white", textDecoration: "none" }}
                       >
-                        {User.result.name.charAt(0).toUpperCase()}
+                        {srcofPic ? (<img src={`${srcofPic?.src}`} alt="_"></img>) : (User.result.name.charAt(0).toUpperCase())}
                       </Link>
                     </Avatar>
                   </div>
