@@ -40,6 +40,7 @@ import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
+  var Google;
   const [loading, setLoading] = useState(false);
 
   // var stat = payment?.status;
@@ -79,7 +80,7 @@ function App() {
   }, [dispatch]);
   function handleCallbackResponse(res) {
     var googleuser = jwt_decode(res.credential);
-    console.log(googleuser);
+    Google=googleuser;
     let name = googleuser?.name;
     let email = googleuser?.email;
     let password = googleuser?.sub;
@@ -175,7 +176,7 @@ function App() {
                 <br />
               </Popup>
 
-              <Navbar />
+              <Navbar googleuser={Google}/>
               <ScrolltoTop />
               <Routes>
                 {/* This is Home Page Route */}

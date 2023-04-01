@@ -23,8 +23,8 @@ import { setCurrentUser } from "../../actions/currentUser";
 
 
 //main function goes here
-const Navbar = () => {
-
+const Navbar = (googleuser) => {
+  console.log(googleuser);
   const dispatch = useDispatch();
   var User = useSelector((state) => (state.fetch_current_userReducer));
   const [email, setEmail] = useState(User?.result?.email);
