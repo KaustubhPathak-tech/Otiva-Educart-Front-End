@@ -5,7 +5,7 @@ import "./User.css";
 import LeftSidebar from "../../components/LeftsideBar/LeftsideBar";
 import UsersList from "./UsersList";
 
-const User = () => {
+const UserPage = () => {
  
 
   return (
@@ -21,4 +21,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserPage;

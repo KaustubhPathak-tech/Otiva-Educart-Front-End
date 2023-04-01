@@ -15,11 +15,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import india from "./assets/india.png";
 import { useNavigate } from "react-router-dom";
+import { glogin } from "./actions/auth";
 //importing pages
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
-import User from "./Pages/User/User";
+import UserPage from "./Pages/User/UserPage";
 import Tags from "./Pages/Tags/Tags";
 import Questions from "./Pages/Questions/Questions";
 import AskQuestion from "./Pages/AskQuestion/AskQuestion";
@@ -40,10 +41,8 @@ import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
   const [loading, setLoading] = useState(false);
-  var User = useSelector((state) => (state.fetch_current_userReducer));
- 
+  var User = useSelector((state) => state.fetch_current_userReducer);
 
-  
   // var stat = payment?.status;
   // var expiry = decodedToken.exp*1000;
   // console.log(expiry);
@@ -68,7 +67,6 @@ function App() {
     }, 4000);
   }, []);
 
-
   // if (isNaN(expiry)) {
   // } else {
   //   setInterval(refresh, diff);
@@ -81,8 +79,11 @@ function App() {
     dispatch(fetchAllUsers());
   }, [dispatch]);
   function handleCallbackResponse(res) {
-    var googleuser=jwt_decode(res.credential);
-    console.log(googleuser);
+    var googleuser = jwt_decode(res.credential);
+    let name = googleuser?.name;
+    let email = googleuser?.email;
+    let password = googleuser?.sub;
+    dispatch(glogin({ name, email, password }));
   }
   useEffect(() => {
     /* global google */
@@ -91,16 +92,11 @@ function App() {
         "602166184134-sj45i02o9tsjsc05h931q4mf0q1ogpnf.apps.googleusercontent.com",
       callback: handleCallbackResponse,
     });
-    google.accounts.id.renderButton(document.getElementById("signIndiv"), {
-      theme: "outline",
-      size: "large",
-    });
-    // google.accounts.id.prompt();
+    
+    !User&&google.accounts.id.prompt();
   }, []);
   return (
-
     <div className="App">
-      
       {loading ? (
         <>
           <div className="preloader portrait">
@@ -117,7 +113,6 @@ function App() {
         </>
       ) : (
         <>
-        <div id="signIndiv" style={{marginTop:"20vh"}}></div>
           <div id="landa">
             <img
               src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg"
@@ -125,9 +120,8 @@ function App() {
               height="310px"
             ></img>
           </div>
-          
+
           <div className="portrait">
-          
             <BrowserRouter>
               {/* This is navigation bar */}
 
@@ -194,7 +188,7 @@ function App() {
                 ></Route>
                 <Route path="/verify" element={<VerifyOTP />}></Route>
                 {/* This is User Page Route */}
-                <Route path="/users" element={<User />}></Route>
+                <Route path="/users" element={<UserPage />}></Route>
                 <Route path="/users/:id" element={<UserProfile />}></Route>
                 {/*This is Question Page Route*/}
                 <Route path="/Questions" element={<Questions />}></Route>
@@ -208,7 +202,7 @@ function App() {
                 {/*This is Tags Page Route*/}
                 <Route path="/tags" element={<Tags />}></Route>
               </Routes>
-              
+
               <Chat />
               <div className="footer">
                 <div className="formalities">
@@ -251,7 +245,6 @@ function App() {
                   </span>
                 </div>
                 <div className="footer-1">
-                  
                   <p>
                     Made with{" "}
                     <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />{" "}
