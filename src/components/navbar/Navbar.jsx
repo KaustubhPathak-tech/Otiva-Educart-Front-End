@@ -61,8 +61,8 @@ const Navbar = (src) => {
     if (existingtoken) { const decodedToken = decode(existingtoken); if (decodedToken.exp * 1000 < new Date().getTime()) { dispatch(setCurrentUser(null)); } }
   }, [dispatch]);
   console.log(srcofPic);
-  srcofPic.replace(/["']/g, "");
-  console.log(srcofPic);
+  // srcofPic.replace(/["']/g, "");
+  
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
