@@ -31,7 +31,7 @@ const Navbar = (src) => {
   var currentplan = (User?.result?.plan);
   var stat = User?.status;
   var premiumcontent = "Get Premium";
-
+  var srcofPic=src;
   if (currentplan === "Free" || currentplan === "NULL") {
 
     premiumcontent = "Get Premium"
@@ -60,10 +60,11 @@ const Navbar = (src) => {
     const existingtoken = User?.token;
     if (existingtoken) { const decodedToken = decode(existingtoken); if (decodedToken.exp * 1000 < new Date().getTime()) { dispatch(setCurrentUser(null)); } }
   }, [dispatch]);
+  console.log(srcofPic);
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
-        console.log(src);
+        
         <div class="container-fluid">
           <img src={src}></img>
           <Link to="/" className="nav-logo nav-item">
