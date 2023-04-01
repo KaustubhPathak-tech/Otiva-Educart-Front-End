@@ -68,7 +68,7 @@ const Navbar = (src) => {
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
         
         <div class="container-fluid">
-          <img src={srcofPic} alt="_"></img>
+          <img src={`${srcofPic}`} alt="_"></img>
           <Link to="/" className="nav-logo nav-item">
             <img src={logo} alt="official logo"></img>
           </Link>
