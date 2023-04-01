@@ -397,6 +397,7 @@ const Navbar = (src) => {
                 </Avatar>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src={`${srcofPic?.src}`} alt="_" style={{borderRadius:"50%",width:"50px",height:"50px"}}></img>
                 <Link
                   className="nav-links nav-btn nav-item fonting"
                   onClick={handleLogout}
