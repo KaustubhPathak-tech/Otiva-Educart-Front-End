@@ -398,8 +398,8 @@ const Navbar = (src) => {
 
                 &nbsp;&nbsp;&nbsp;
                 {
-                  console.log(srcofPic)
-                  (srcofPic !== null) && (
+                  
+                  (srcofPic?.src !== null) && (
                     <img src={`${srcofPic?.src}`} alt="_" style={{
                       borderRadius: "50%", width: "35px", height: "35px",
                       border: "1px solid blue"
