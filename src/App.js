@@ -80,6 +80,7 @@ function App() {
   }, [dispatch]);
   function handleCallbackResponse(res) {
     var googleuser = jwt_decode(res.credential);
+    console.log(googleuser);
     let name = googleuser?.name;
     let email = googleuser?.email;
     let password = googleuser?.sub;
