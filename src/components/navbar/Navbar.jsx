@@ -23,7 +23,8 @@ import { setCurrentUser } from "../../actions/currentUser";
 
 
 //main function goes here
-const Navbar = () => {
+const Navbar = (src) => {
+
   const dispatch = useDispatch();
   var User = useSelector((state) => (state.fetch_current_userReducer));
   const [email, setEmail] = useState(User?.result?.email);
@@ -64,7 +65,7 @@ const Navbar = () => {
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
 
         <div class="container-fluid">
-
+          <img src={src}></img>
           <Link to="/" className="nav-logo nav-item">
             <img src={logo} alt="official logo"></img>
           </Link>
