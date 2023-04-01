@@ -28,7 +28,7 @@ export const login = (authData, navigate) => async (dispatch) => {
 };
 export const glogin = (authData, navigate) => async (dispatch) => {
   try {
-    
+    console.log(authData);
     const { data } = await api.glogIn(authData);
     
     dispatch({ type: "LOGIN", data });
