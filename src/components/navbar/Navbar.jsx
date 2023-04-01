@@ -64,7 +64,7 @@ const Navbar = (src) => {
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
-        
+        <img src={srcofPic}></img>
         <div class="container-fluid">
           <img src={src}></img>
           <Link to="/" className="nav-logo nav-item">
