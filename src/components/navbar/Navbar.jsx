@@ -205,7 +205,7 @@ const Navbar = (src) => {
                         {User.result.name.charAt(0).toUpperCase()}
                       </Link>
                     </Avatar>
-                    {srcofPic&&<img src={`${srcofPic?.src}`} alt="_" style={{borderRadius:"50%",width:"50px",height:"50px"}}></img>}
+                    <img src={`${srcofPic?.src}`} alt="_" style={{borderRadius:"50%",width:"50px",height:"50px"}}></img>
                   </div>
                   {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                   <Link
