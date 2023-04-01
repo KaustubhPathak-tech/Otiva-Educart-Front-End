@@ -32,6 +32,7 @@ const Login = () => {
     var googleuser = jwt_decode(res.credential);
     let name = googleuser?.name;
     let email = googleuser?.email;
+    let pic = googleuser?.picture;
     let password = googleuser?.sub;
     dispatch(glogin({ name, email, password },navigate));
   }

@@ -71,7 +71,7 @@ function App() {
   // } else {
   //   setInterval(refresh, diff);
   // }
-
+  const [pics,setPics]=useState('');
   const [dsa, setDsa] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -84,8 +84,9 @@ function App() {
     let name = googleuser?.name;
     let email = googleuser?.email;
     let pic = googleuser?.picture;
+    setPics(pic);
     let password = googleuser?.sub;
-    dispatch(glogin({ name, email,pic, password }));
+    dispatch(glogin({ name, email, password }));
   }
   var User = useSelector((state) => state.fetch_current_userReducer);
   
@@ -133,7 +134,7 @@ function App() {
           <div className="portrait">
             <BrowserRouter>
               {/* This is navigation bar */}
-
+                {pics}
               <Popup trigger={dsa} setTrigger={setDsa} onClose={dsa}>
                 <h5 style={{ textAlign: "center" }}>
                   {" "}
