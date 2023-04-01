@@ -397,10 +397,10 @@ const Navbar = (src) => {
                 </Avatar>
 
                 &nbsp;&nbsp;&nbsp;
-                {srcofPic ? (<><img src={`${srcofPic?.src}`} alt="_" style={{
+                {srcofPic && (<><img src={`${srcofPic?.src}`} alt="_" style={{
                   borderRadius: "50%", width: "35px", height: "35px",
                   border: "1px solid blue"
-                }}></img></>) : (<></>)}
+                }}></img></>)}
 
                 &nbsp;&nbsp;
                 <Link
