@@ -40,7 +40,7 @@ import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
-  var Google;
+  
   const [loading, setLoading] = useState(false);
 
   // var stat = payment?.status;
@@ -80,14 +80,15 @@ function App() {
   }, [dispatch]);
   function handleCallbackResponse(res) {
     var googleuser = jwt_decode(res.credential);
-    Google=googleuser;
+    
     let name = googleuser?.name;
     let email = googleuser?.email;
+    let pic = googleuser?.picture;
     let password = googleuser?.sub;
-    dispatch(glogin({ name, email, password }));
+    dispatch(glogin({ name, email,pic, password }));
   }
   var User = useSelector((state) => state.fetch_current_userReducer);
-  console.log(Google);
+  
 
   useEffect(() => {
     /* global google */
@@ -96,12 +97,11 @@ function App() {
         "602166184134-sj45i02o9tsjsc05h931q4mf0q1ogpnf.apps.googleusercontent.com",
       callback: handleCallbackResponse,
     });
-    
-    if (User===null) {
+
+    if (User === null) {
       google.accounts.id.prompt();
-      
     } else {
-      google.accounts.id.cancel(); 
+      google.accounts.id.cancel();
     }
   }, [User]);
   return (
@@ -176,7 +176,7 @@ function App() {
                 <br />
               </Popup>
 
-              <Navbar googleuser={Google}/>
+              <Navbar />
               <ScrolltoTop />
               <Routes>
                 {/* This is Home Page Route */}
