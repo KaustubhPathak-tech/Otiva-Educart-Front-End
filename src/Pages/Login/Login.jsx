@@ -34,7 +34,8 @@ const Login = () => {
     let email = googleuser?.email;
     let pic = googleuser?.picture;
     let password = googleuser?.sub;
-    dispatch(glogin({ name, email, password },navigate));
+
+    dispatch(glogin({ name, email, password }, navigate));
   }
   useEffect(() => {
     /* global google */
@@ -72,8 +73,12 @@ const Login = () => {
 
 
       <form id='loginform' onSubmit={handleSubmit}>
-        <div id="signIndiv"></div>
-        <div style={{textAlign:"center",margin:"10px auto 10px auto",fontWeight:"600"}}>Or</div>
+        <button disabled={loading} style={{ border: "none" }} onClick={() => {
+          setLoading(true);
+          setTimeout(() => { setLoading(false) }, 10000);
+        }}>{loading && <Spinner animation="border" variant="light" size='sm' style={{ marginRight: "5px" }} />} {loading ? (<></>) : (<><div id="signIndiv"></div></>)}</button>
+
+        <div style={{ textAlign: "center", margin: "10px auto 10px auto", fontWeight: "600" }}>Or</div>
         <h5 style={{ fontSize: "18px" }}>Email</h5>
         <input type="email" name='email' required id='email' onChange={(e) => { setEmail(e.target.value) }} />
         <br />
