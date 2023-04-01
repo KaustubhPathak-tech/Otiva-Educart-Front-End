@@ -202,9 +202,10 @@ const Navbar = (src) => {
                         to={`/users/${User?.result?._id}`}
                         style={{ color: "white", textDecoration: "none" }}
                       >
-                        {srcofPic ? (<img src={`${srcofPic?.src}`} alt="_"></img>) : (User.result.name.charAt(0).toUpperCase())}
+                        {User.result.name.charAt(0).toUpperCase()}
                       </Link>
                     </Avatar>
+                    {srcofPic&&<img src={`${srcofPic?.src}`} alt="_" style={{borderRadius:"50%",width:"50px",height:"50px"}}></img>}
                   </div>
                   {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                   <Link
