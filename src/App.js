@@ -87,7 +87,7 @@ function App() {
     dispatch(glogin({ name, email, password }));
   }
   var User = useSelector((state) => state.fetch_current_userReducer);
-  console.log(User);
+  console.log(Google);
 
   useEffect(() => {
     /* global google */
