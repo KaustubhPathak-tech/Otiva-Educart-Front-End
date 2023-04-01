@@ -23,6 +23,7 @@ import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 const Login = () => {
 
   const [email, setEmail] = useState('');
+  const [pics,setPics]=useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch()
@@ -33,6 +34,7 @@ const Login = () => {
     let name = googleuser?.name;
     let email = googleuser?.email;
     let pic = googleuser?.picture;
+    setPics(pic);
     let password = googleuser?.sub;
 
     dispatch(glogin({ name, email, password }, navigate));
