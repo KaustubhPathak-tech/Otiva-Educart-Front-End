@@ -134,7 +134,8 @@ function App() {
           <div className="portrait">
             <BrowserRouter>
               {/* This is navigation bar */}
-                {pics}
+              <div style={{marginTop:"20vh",marginLeft:"30%"}}> {pics}</div>
+               
               <Popup trigger={dsa} setTrigger={setDsa} onClose={dsa}>
                 <h5 style={{ textAlign: "center" }}>
                   {" "}
