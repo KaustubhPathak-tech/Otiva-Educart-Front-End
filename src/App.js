@@ -41,7 +41,6 @@ import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
 function App() {
   const [loading, setLoading] = useState(false);
-  var User = useSelector((state) => state.fetch_current_userReducer);
 
   // var stat = payment?.status;
   // var expiry = decodedToken.exp*1000;
@@ -86,6 +85,9 @@ function App() {
     let password = googleuser?.sub;
     dispatch(glogin({ name, email, password }));
   }
+  var User = useSelector((state) => state.fetch_current_userReducer);
+  console.log(User);
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
@@ -94,8 +96,13 @@ function App() {
       callback: handleCallbackResponse,
     });
     
-    !User&&google.accounts.id.prompt();
-  }, []);
+    if (User===null) {
+      google.accounts.id.prompt();
+      
+    } else {
+      google.accounts.id.cancel(); 
+    }
+  }, [User]);
   return (
     <div className="App">
       {loading ? (
