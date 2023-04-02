@@ -60,7 +60,6 @@ const Navbar = (src) => {
     const existingtoken = User?.token;
     if (existingtoken) { const decodedToken = decode(existingtoken); if (decodedToken.exp * 1000 < new Date().getTime()) { dispatch(setCurrentUser(null)); } }
   }, [dispatch]);
-  console.log(srcofPic);
 
 
   return (
@@ -380,8 +379,12 @@ const Navbar = (src) => {
               <>
 
 
-
-                <Avatar
+                <Link
+                  to={`/users/${User?.result?._id}`}
+                  style={{ color: "white", textDecoration: "none" }}
+                ><img src={`${User?.result?.avatar}`} alt="" style={{ borderRadius: "50%", width: "37px", height: "37px",boxShadow:"rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }} />
+                </Link>
+                {/* <Avatar
                   backgroundColor="#009dff"
                   px="12px"
                   py="5px"
@@ -391,13 +394,13 @@ const Navbar = (src) => {
                   <Link
                     to={`/users/${User?.result?._id}`}
                     style={{ color: "white", textDecoration: "none" }}
-                  ><img src={`${User?.result?.picture}`} />
+                  >
                     {User.result.name.charAt(0).toUpperCase()}
                   </Link>
-                </Avatar>
+                </Avatar> */}
 
                 &nbsp;&nbsp;&nbsp;
-                
+
 
 
 
