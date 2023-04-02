@@ -9,7 +9,7 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
     const dispatch=useDispatch();
     const [name, setName] = useState(currentUser?.result?.name)
     const [about, setAbout] = useState(currentUser?.result?.about)
-    const [tags, setTags] = useState('')
+    const [tags, setTags] = useState(currentUser?.result?.tags)
     const handleSubmit =(e)=>{
        e.preventDefault()
        toast.info('Changes on navbar are reflected on next login !',{position:"top-center"});
@@ -40,8 +40,8 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
                 </label><br /><br />
                 <label htmlFor="tags">
                     <h4>Watched tags</h4>
-                    <p>Add tags separated by 1 space</p><br />
-                    <input type="text" id='tags' required onChange={(e) => setTags(e.target.value.split(' '))} class="d-flex"/>
+                    <p>Add tags separated by space</p><br />
+                    <input type="text" id='tags' required onChange={(e) => setTags(e.target.value.split(' '))} value={tags} class="d-flex"/>
                 </label><br /><br />
                 <input type="submit" value="Save Profile" className='user-submit-btn' />
                 <button type='button' className='user-cancel-btn' onClick={() => setSwitch(false)}>Cancel</button>
