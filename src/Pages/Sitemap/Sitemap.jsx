@@ -11,7 +11,7 @@ const Sitemap = () => {
         console.log('Your xml file as string', response.data);
      });
   return (
-    <div>
+    <div className='home-container-2'>
       {res}
     </div>
   )
