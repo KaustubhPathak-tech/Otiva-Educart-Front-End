@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/login</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/signup</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/pricing</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/paymentsuccess</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/users</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/users/:id</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/Questions</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/Questions/:id</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/AskQuestions</loc> </url>
-<url> <loc>https://stack-over-flow-clone-2023.vercel.app/tags</loc> </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://stack-over-flow-clone-2023.vercel.app/</loc>
+  <lastmod>2023-04-02T16:59:23+00:00</lastmod>
+</url>
+
+
 </urlset>

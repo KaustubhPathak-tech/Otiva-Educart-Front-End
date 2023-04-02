@@ -39,6 +39,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
+import Sitemap from "./Pages/Sitemap/Sitemap";
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -174,7 +175,7 @@ function App() {
                 </p>
                 <br />
               </Popup>
-
+              
               <Navbar src={pics} />
               <ScrolltoTop />
               <Routes>
@@ -209,6 +210,7 @@ function App() {
                 ></Route>
                 {/*This is Tags Page Route*/}
                 <Route path="/tags" element={<Tags />}></Route>
+                <Route path="/Sitemap" element={<Sitemap />}></Route>
               </Routes>
 
               <Chat />
