@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './Pricing.css'
 import { getpremium } from "../../actions/auth";
+import { logout } from "../../actions/auth";
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
@@ -30,6 +31,9 @@ const Pricing = () => {
             toast.error("Please Login to Subscribe", { position: "top-center" });
             return;
         }
+        dispatch(logout({ email }));
+        dispatch({ type: "LOGOUT" });
+        dispatch(setCurrentUser(null));
         dispatch(getpremium({ amount: 1, email }, navigate));
 
     };
@@ -39,6 +43,9 @@ const Pricing = () => {
             toast.error("Please Login to Subscribe", { position: "top-center" });
             return;
         }
+        dispatch(logout({ email }));
+        dispatch({ type: "LOGOUT" });
+        dispatch(setCurrentUser(null));
         dispatch(getpremium({ amount: 100, email }, navigate));
 
     };
@@ -48,6 +55,9 @@ const Pricing = () => {
             toast.error("Please Login to Subscribe", { position: "top-center" });
             return;
         }
+        dispatch(logout({ email }));
+        dispatch({ type: "LOGOUT" });
+        dispatch(setCurrentUser(null));
         dispatch(getpremium({ amount: 1000, email }, navigate));
 
     };
@@ -71,7 +81,7 @@ const Pricing = () => {
                 </div>
                 <div class="row" style={{ textAlign: "center" }}>
                     <div class="col-lg-4">
-                        <Card style={{ width: '18rem', borderColor: "rgb(245, 149, 6)",boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"}}>
+                        <Card style={{ width: '18rem', borderColor: "rgb(245, 149, 6)", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }}>
                             <Card.Img variant="top" src={free} id="img" />
                             <Card.Body>
                                 <Card.Title style={{ textAlign: "center" }}>Free</Card.Title>
@@ -89,7 +99,7 @@ const Pricing = () => {
                         </Card>
                     </div>
                     <div class="col-lg-4">
-                        <Card style={{ width: '18rem', borderColor: "rgb(245, 149, 6)",boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }}>
+                        <Card style={{ width: '18rem', borderColor: "rgb(245, 149, 6)", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }}>
 
                             <span style={{ fontSize: "20px", textAlign: "center", backgroundColor: "rgb(245, 149, 6)", color: "#fff" }}>Recommended</span>
                             <Card.Img variant="top" src={silver} id="img" />
@@ -108,22 +118,22 @@ const Pricing = () => {
                         </Card></div>
                     <div class="col-lg-4">
                         <Card style={{ width: '18rem', borderColor: "rgb(245, 149, 6)", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }}>
-                        <Card.Img variant="top" src={gold} id="img" />
-                        <Card.Body>
-                            <Card.Title style={{ textAlign: "center" }}>Gold</Card.Title>
-                            <Card.Text>
-                                <h4>₹ 1000 /month</h4>
-                            </Card.Text>
-                        </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Unlimited Questions per day</ListGroup.Item>
-                        </ListGroup>
-                        <Card.Body>
-                            <Button onClick={() => { if (User !== null) { setAbc(true); setTimeout(() => { setAbc(false) }, 20000) } }} style={{ backgroundColor: "white", border: "none" }}><Button variant='warning' onClick={handlegold}>Get Premium</Button></Button>
-                        </Card.Body>
-                    </Card></div>
+                            <Card.Img variant="top" src={gold} id="img" />
+                            <Card.Body>
+                                <Card.Title style={{ textAlign: "center" }}>Gold</Card.Title>
+                                <Card.Text>
+                                    <h4>₹ 1000 /month</h4>
+                                </Card.Text>
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                                <ListGroup.Item>Unlimited Questions per day</ListGroup.Item>
+                            </ListGroup>
+                            <Card.Body>
+                                <Button onClick={() => { if (User !== null) { setAbc(true); setTimeout(() => { setAbc(false) }, 20000) } }} style={{ backgroundColor: "white", border: "none" }}><Button variant='warning' onClick={handlegold}>Get Premium</Button></Button>
+                            </Card.Body>
+                        </Card></div>
+                </div>
             </div>
-        </div>
         </div >
     )
 }

@@ -41,7 +41,7 @@ export const glogin = (authData, navigate) => async (dispatch) => {
 export const logout = (authData) => async (dispatch) => {
   try {
     const { data } = await api.logout(authData);
-    dispatch({ type: "LOGIN", data });
+    dispatch({ type: "LOGOUT", data });
   } catch (error) {
     toast.error(error.response.data, { position: "top-center" });
 
