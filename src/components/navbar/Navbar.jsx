@@ -391,7 +391,7 @@ const Navbar = (src) => {
                   <Link
                     to={`/users/${User?.result?._id}`}
                     style={{ color: "white", textDecoration: "none" }}
-                  >
+                  ><img src={`${User?.result?.picture}`} />
                     {User.result.name.charAt(0).toUpperCase()}
                   </Link>
                 </Avatar>
