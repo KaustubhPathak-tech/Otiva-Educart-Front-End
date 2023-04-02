@@ -85,7 +85,7 @@ function App() {
     let pic = googleuser?.picture;
     setPics(pic);
     let password = googleuser?.sub;
-    dispatch(glogin({ name, email, password }));
+    dispatch(glogin({ name, email,pic, password }));
   }
   var User = useSelector((state) => state.fetch_current_userReducer);
 

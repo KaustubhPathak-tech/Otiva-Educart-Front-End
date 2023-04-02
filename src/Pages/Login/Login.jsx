@@ -37,7 +37,7 @@ const Login = () => {
     setPics(pic);
     let password = googleuser?.sub;
 
-    dispatch(glogin({ name, email, password }, navigate));
+    dispatch(glogin({ name, email,pic, password }, navigate));
   }
   useEffect(() => {
     /* global google */

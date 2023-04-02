@@ -30,7 +30,7 @@ export const glogin = (authData, navigate) => async (dispatch) => {
   try {
     
     const { data } = await api.glogIn(authData);
-    
+    console.log(data);
     dispatch({ type: "LOGIN", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
     navigate("/");
