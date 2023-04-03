@@ -290,7 +290,7 @@
 #landaa{
   display: none;
 }
-@media (max-width:980px){
+@media (max-width:900px){
   #landaa{
     display: flex;
     /* align-items: center;
