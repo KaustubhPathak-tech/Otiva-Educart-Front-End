@@ -351,11 +351,8 @@ const Navbar = (src) => {
               </li>
 
             </ul>
-            {
-              <script async src="https://cse.google.com/cse.js?cx=e532ff84caaf848b5">
-              </script>}
-            <div class="gcse-searchbox-only"></div>
-            {/* <form class="d-flex" role="search" id="searchform">
+            
+            <form class="d-flex" role="search" id="searchform">
               <img
                 src={searchicon}
                 alt="searchicon"
@@ -371,8 +368,7 @@ const Navbar = (src) => {
                 class="form-control me-2"
                 autoComplete="off"
               />
-
-            </form> */}
+            </form>
             &nbsp;&nbsp;
             {User === null ? (
               <>
