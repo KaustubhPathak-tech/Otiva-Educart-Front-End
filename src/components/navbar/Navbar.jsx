@@ -24,7 +24,6 @@ import { setCurrentUser } from "../../actions/currentUser";
 
 //main function goes here
 const Navbar = (src) => {
-
   const dispatch = useDispatch();
   var User = useSelector((state) => (state.fetch_current_userReducer));
   const [email, setEmail] = useState(User?.result?.email);
@@ -60,9 +59,16 @@ const Navbar = (src) => {
     const existingtoken = User?.token;
     if (existingtoken) { const decodedToken = decode(existingtoken); if (decodedToken.exp * 1000 < new Date().getTime()) { dispatch(setCurrentUser(null)); } }
   }, [dispatch]);
+  // <script async src="https://cse.google.com/cse.js?cx=e532ff84caaf848b5">
+  // </script>
+
+
+
+
 
 
   return (
+
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
 
@@ -345,13 +351,18 @@ const Navbar = (src) => {
               </li>
 
             </ul>
-            <form class="d-flex" role="search" id="searchform">
+            {
+              <script async src="https://cse.google.com/cse.js?cx=e532ff84caaf848b5">
+              </script>}
+            <div class="gcse-searchbox-only"></div>
+            {/* <form class="d-flex" role="search" id="searchform">
               <img
                 src={searchicon}
                 alt="searchicon"
                 width="18px"
                 className="searchicon"
               />
+              
               <input
                 type="text"
                 name="searchbox"
@@ -361,7 +372,8 @@ const Navbar = (src) => {
                 autoComplete="off"
               />
 
-            </form>&nbsp;&nbsp;
+            </form> */}
+            &nbsp;&nbsp;
             {User === null ? (
               <>
                 <Link to="/login" className="nav-links nav-btn nav-item fonting">
@@ -382,7 +394,7 @@ const Navbar = (src) => {
                 <Link
                   to={`/users/${User?.result?._id}`}
                   style={{ color: "white", textDecoration: "none" }}
-                ><img src={`${User?.result?.avatar}`} alt="" style={{ borderRadius: "50%", width: "37px", height: "37px",boxShadow:"rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }} />
+                ><img src={`${User?.result?.avatar}`} alt="" style={{ borderRadius: "50%", width: "37px", height: "37px", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }} />
                 </Link>
                 {/* <Avatar
                   backgroundColor="#009dff"
