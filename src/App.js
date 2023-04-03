@@ -108,11 +108,7 @@ function App() {
       {loading ? (
         <>
           <div className="preloader portrait">
-            <script>
-
-            /* global google */
-              google.accounts.id.cancel();
-            </script>
+            
               
             
             <BounceLoader
