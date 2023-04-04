@@ -217,7 +217,7 @@ const Navbar = (src) => {
                     className="nav-links nav-btn nav-item fonting"
                     onClick={handleLogout}
                     id="special-button"
-                    style={{ marginLeft: "20px", padding: "3px 30px 7px 36px" }}
+                    style={{ marginLeft: "20px", padding: "3px 30px 7px 34px" }}
                   >
                     Log out
                   </Link>
@@ -226,7 +226,7 @@ const Navbar = (src) => {
 
 
               <Dropdown.Item href="#/action-3" style={{ marginBottom: "15px", marginLeft: "12px" }}>{
-                currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "5px 30px 7px 35px" }}>{premiumcontent}</Link></>)
+                currentplan === ('Gold') ? (<></>) : (<><Link to="/pricing" className="nav-links nav-btn nav-item fonting" id="special-button" style={{ marginLeft: "8px", padding: "5px 30px 7px 30px" }}>{premiumcontent}</Link></>)
               }</Dropdown.Item>
 
 
