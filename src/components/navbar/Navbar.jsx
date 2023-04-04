@@ -197,7 +197,7 @@ const Navbar = (src) => {
 
                     <Avatar
                       backgroundColor="#009dff"
-                      px="70px"
+                      px="55px"
                       py="7px"
                       borderRadius="5px"
                       color="white"
