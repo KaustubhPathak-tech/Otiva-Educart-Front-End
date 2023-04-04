@@ -217,7 +217,7 @@ const Navbar = (src) => {
                     className="nav-links nav-btn nav-item fonting"
                     onClick={handleLogout}
                     id="special-button"
-                    style={{ marginLeft: "20px", padding: "3px 40px 7px 54px" }}
+                    style={{ marginLeft: "20px", padding: "3px 30px 7px 36px" }}
                   >
                     Log out
                   </Link>
