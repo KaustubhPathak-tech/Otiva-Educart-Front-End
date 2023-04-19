@@ -1,13 +1,15 @@
 //importing packages
 import React from "react";
+
 //importing style
 import "../../App.css";
+
 //importing components
 import LeftsideBar from "../../components/LeftsideBar/LeftsideBar";
 import RightsideBar from "../../components/RightsideBar/RightsideBar";
 import HomemainBar from "../../components/HomemainBar/HomemainBar";
 
-//main function goes here
+//Home function goes here
 const Home = () => {
   return (
     <div className="homePage">
@@ -29,6 +31,8 @@ const Home = () => {
     </div>
   );
 };
+
+
 export default Home;
 
 

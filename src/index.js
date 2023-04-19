@@ -13,6 +13,7 @@ import Reducers from './reducers'
 const store = createStore(Reducers,compose(applyMiddleware(thunk)))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//Through this function, all the content of app.js will be rendered in the index.html file.
 root.render(
   <Provider store={store}>
   <React.StrictMode>

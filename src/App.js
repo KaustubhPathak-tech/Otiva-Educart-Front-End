@@ -1,22 +1,25 @@
 //eshint version:6
 
-//importing packages
+//importing React hooks.
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-//importing styles
 
+
+//importing styles
 import "./custom.scss";
-import Navbar from "./components/navbar/Navbar";
 import "./components/navbar/Navbar.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import india from "./assets/india.png";
-import { useNavigate } from "react-router-dom";
-import { glogin } from "./actions/auth";
-//importing pages
+
+
+//importing pages and components
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
@@ -27,6 +30,8 @@ import AskQuestion from "./Pages/AskQuestion/AskQuestion";
 import DisplayQuestion from "./Pages/Questions/DisplayQuestion";
 import { fetchAllquestions } from "./actions/question";
 import { fetchAllUsers } from "./actions/users";
+import { glogin } from "./actions/auth";
+import Navbar from "./components/navbar/Navbar";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Forgotpassword from "./Pages/ForgotPassword/Forgotpassword";
 import Chat from "./components/Chat";
@@ -35,10 +40,11 @@ import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
 import Pricing from "./Pages/Pricing/Pricing";
 import Popup from "./components/Popup/Popup";
 import BounceLoader from "react-spinners/BounceLoader";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; //main function starts here
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
+
+
+//main function starts here
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -52,14 +58,14 @@ function App() {
   }
   useEffect(() => {
     setTimeout(() => {
-      setDsa(true);
+      setPopup(true);
     }, 0);
     setTimeout(() => {
-      setDsa(false);
+      setPopup(false);
     }, 9000);
     setLoading(true);
     document.addEventListener("mousedown", () => {
-      setDsa(false);
+      setPopup(false);
     });
     setTimeout(() => {
       setLoading(false);
@@ -71,7 +77,7 @@ function App() {
   //   setInterval(refresh, diff);
   // }
   const [pics, setPics] = useState("");
-  const [dsa, setDsa] = useState(false);
+  const [popup, setPopup] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllquestions());
@@ -107,10 +113,8 @@ function App() {
     <div className="App">
       {loading ? (
         <>
+          {/* preloader */}
           <div className="preloader portrait">
-            
-              
-            
             <BounceLoader
               className="App"
               color={"#f59607"}
@@ -124,19 +128,19 @@ function App() {
         </>
       ) : (
         <>
-          <div id="landa">
+          {/* landscape mode content */}
+          <div id="landscape">
             <img
               src="https://storage.googleapis.com/support-forums-api/attachment/thread-54903774-5712120669965295764.jpg"
               width="100%"
               height="310px"
             ></img>
-          </div>
-
+          </div>  
+          {/* portrait mode content */}
           <div className="portrait">
             <BrowserRouter>
-              {/* This is navigation bar */}
-
-              <Popup trigger={dsa} setTrigger={setDsa} onClose={dsa}>
+              {/* This is Welcome Popup */}
+              <Popup trigger={popup} setTrigger={setPopup} onClose={popup}>
                 <h5 style={{ textAlign: "center" }}>
                   {" "}
                   <blink>
@@ -177,45 +181,56 @@ function App() {
                 </p>
                 <br />
               </Popup>
-              
+
+              {/* This is navigation bar */}
               <Navbar src={pics} />
               <ScrolltoTop />
+
+              {/* These are different Pages of website. */}
               <Routes>
-                {/* This is Home Page Route */}
+                
                 <Route path="/" element={<Home />} />
 
-                {/* This is Login Page Route */}
+                
                 <Route path="/login" element={<Login />}></Route>
+
                 <Route
                   path="/forgotpassword"
                   element={<Forgotpassword />}
                 ></Route>
-                {/* This is Signup Page Route */}
+                
                 <Route path="/signup" element={<Signup />}></Route>
+
                 <Route path="/Pricing" element={<Pricing />}></Route>
+
                 <Route
                   path="/paymentsuccess"
                   element={<Paymentsuccess />}
                 ></Route>
+
                 <Route path="/verify" element={<VerifyOTP />}></Route>
-                {/* This is User Page Route */}
+                
                 <Route path="/users" element={<UserPage />}></Route>
+
                 <Route path="/users/:id" element={<UserProfile />}></Route>
-                {/*This is Question Page Route*/}
+
                 <Route path="/Questions" element={<Questions />}></Route>
-                {/*This is Ask Question Page Route*/}
+                
                 <Route path="/AskQuestions" element={<AskQuestion />}></Route>
-                {/*This is Ask Question Page Route*/}
+                
                 <Route
                   path="/Questions/:id"
                   element={<DisplayQuestion />}
                 ></Route>
-                {/*This is Tags Page Route*/}
+
                 <Route path="/tags" element={<Tags />}></Route>
                 
               </Routes>
 
-              <Chat />
+              {/* chatbot */}
+              <Chat /> 
+
+              {/* Footer starts here */}
               <div className="footer">
                 <div className="formalities">
                   <span className="privacy">

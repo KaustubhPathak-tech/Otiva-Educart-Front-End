@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import "./LeftsideBar.css";
-
 import Globe from "../../assets/Globe.svg";
 
 const LeftsideBar = ({ question }) => {
@@ -13,7 +12,9 @@ const LeftsideBar = ({ question }) => {
           <NavLink to="/" className="side-nav-links" activeclassname="active">
             <p>Home</p>
           </NavLink>
+
           <p id="side-nav-div-public">PUBLIC</p>
+
           <NavLink
             to="/Questions"
             className="side-nav-links"
@@ -39,6 +40,7 @@ const LeftsideBar = ({ question }) => {
           >
             <p>Users</p>
           </NavLink>
+          
         </div>
      
     </div>

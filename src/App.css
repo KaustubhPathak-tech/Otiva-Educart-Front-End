@@ -1,9 +1,9 @@
-#landa{
+#landscape{
   display: none;
 }
 
 @media (max-width:900px) and (min-width:400px){
-  #landa{
+  #landscape{
     display: flex;
     align-items: center;
     justify-content: center;
