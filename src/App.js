@@ -140,7 +140,7 @@ function App() {
           <div className="portrait">
             <BrowserRouter>
               {/* This is Welcome Popup */}
-              <Popup trigger={popup} setTrigger={setPopup} onClose={popup}>
+              {/* <Popup trigger={popup} setTrigger={setPopup} onClose={popup}>
                 <h5 style={{ textAlign: "center" }}>
                   {" "}
                   <blink>
@@ -180,7 +180,7 @@ function App() {
                   UPI id: success@razorpay
                 </p>
                 <br />
-              </Popup>
+              </Popup> */}
 
               {/* This is navigation bar */}
               <Navbar src={pics} />
