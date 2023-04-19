@@ -115,7 +115,7 @@ const AskQuestion = () => {
           <br />
           <input
             type="submit"
-            value="Review your Question "
+            value="Submit"
             className="review-btn"
           />
         </form>
