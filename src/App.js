@@ -234,21 +234,21 @@ function App() {
                 >
                   <a
                     href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/privacy" //https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71
-                    target="_blank"
+                    
                   >
                     Privacy Policy
                   </a>
                   &nbsp;&nbsp;
                   <a
                     href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/terms" //https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0
-                    target="_blank"
+                    
                   >
                     Terms and Conditions
                   </a>
                   &nbsp;&nbsp;
                   <a
                     href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/refund" //https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46
-                    target="_blank"
+                    
                   >
                     Refund and Cancellation Policy
                   </a>
@@ -260,7 +260,7 @@ function App() {
                 >
                   <a
                     href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/contact_us" //https://v3056369-qgvho6pwhg5z.demo077.volusion.com/
-                    target="_blank"
+                    
                   >
                     Contact us
                   </a>
@@ -274,7 +274,7 @@ function App() {
                     &nbsp;&nbsp;&nbsp;All rights reserved. &copy;{" "}
                     <a
                       href="https://www.linkedin.com/in/kaustubh-pathak-293116198/"
-                      target="_blank"
+                      
                       id="me"
                     >
                       Kaustubh Pathak
@@ -287,7 +287,7 @@ function App() {
                   <span className="privacy">
                     <a
                       href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/privacy" //https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71
-                      target="_blank"
+                      
                     >
                       Privacy Policy
                     </a>
@@ -295,7 +295,7 @@ function App() {
                   <span className="privacy">
                     <a
                       href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/terms" //https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0
-                      target="_blank"
+                      
                     >
                       Terms and Conditions
                     </a>
@@ -303,7 +303,7 @@ function App() {
                   <span className="privacy">
                     <a
                       href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/refund" //https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46
-                      target="_blank"
+                      
                     >
                       Refund and Cancellation Policy
                     </a>
@@ -311,7 +311,7 @@ function App() {
                   <span className="privacy">
                     <a
                       href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/contact_us" //https://v3056369-qgvho6pwhg5z.demo077.volusion.com/
-                      target="_blank"
+                      
                     >
                       Contact us
                     </a>
@@ -332,7 +332,7 @@ function App() {
                     &nbsp;&nbsp;&nbsp;All rights reserved. &copy;{" "}
                     <a
                       href="https://www.linkedin.com/in/kaustubh-pathak-293116198/"
-                      target="_blank"
+                      
                       id="me"
                     >
                       Kaustubh Pathak
