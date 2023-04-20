@@ -1,3 +1,6 @@
+.mobileFooter{
+  display: none;
+}
 #landscape{
   display: none;
 }
@@ -413,4 +416,34 @@
   .footer {
     display: none;
   }
+  .mobileFooter{
+    width: 100%;
+    display: inline-block;
+    margin-top:0px;
+    padding: 3% 1% 1% 0%;
+    color: #fff;
+    background-color: #363737;
+  }
+  .mobile-footer-content{
+    display: flex;
+
+  }
+
+  .mobile-footer-content a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .mobile-footer-content a:active{
+    color: #fd9001;
+  }
+  .ending a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .ending a:active{
+    color: #fd9001;
+  }
 }
+
+
+
