@@ -69,7 +69,7 @@ function App() {
     });
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 8000);
   }, []);
 
   // if (isNaN(expiry)) {
@@ -235,7 +235,7 @@ function App() {
                 <div className="formalities">
                   <span className="privacy">
                     <a
-                      href="https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71"
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/privacy" //https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71
                       target="_blank"
                     >
                       Privacy Policy
@@ -243,7 +243,7 @@ function App() {
                   </span>
                   <span className="privacy">
                     <a
-                      href="https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0"
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/terms" //https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0
                       target="_blank"
                     >
                       Terms and Conditions
@@ -251,15 +251,15 @@ function App() {
                   </span>
                   <span className="privacy">
                     <a
-                      href="https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46"
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/refund" //https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46
                       target="_blank"
                     >
-                      Return, Refund and Cancellation Policy
+                      Refund and Cancellation Policy
                     </a>
                   </span>
                   <span className="privacy">
                     <a
-                      href="https://v3056369-qgvho6pwhg5z.demo077.volusion.com/"
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/contact_us" //https://v3056369-qgvho6pwhg5z.demo077.volusion.com/
                       target="_blank"
                     >
                       Contact us
