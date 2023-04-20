@@ -1,7 +1,7 @@
 //eshint version:6
-import { inject } from "@vercel/analytics";
-inject();
+
 //importing React hooks.
+
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -42,11 +42,12 @@ import Popup from "./components/Popup/Popup";
 import BounceLoader from "react-spinners/BounceLoader";
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
-
+import { inject } from "@vercel/analytics";
+inject();
 //main function starts here
 function App() {
   const [loading, setLoading] = useState(false);
-
+  
   // var stat = payment?.status;
   // var expiry = decodedToken.exp*1000;
   // console.log(expiry);
@@ -68,7 +69,7 @@ function App() {
     });
     setTimeout(() => {
       setLoading(false);
-    }, 0);
+    }, 5000);
   }, []);
 
   // if (isNaN(expiry)) {
