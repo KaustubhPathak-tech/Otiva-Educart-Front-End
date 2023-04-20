@@ -93,8 +93,7 @@ const Navbar = (src) => {
 
             <Dropdown.Menu style={{ width: "410px" }}>
               <Dropdown.Item href="https://gi009.000webhostapp.com/"><Link
-                to="https://gi009.000webhostapp.com/"
-                target="_blank"
+                to="/About"
                 className="nav-btn nav-item"
 
               >
