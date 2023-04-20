@@ -1,0 +1,27 @@
+#aboutheading{
+    margin-left: 25%;
+}
+#aboutfooter{
+    margin-left: 40%;
+
+}
+@media(max-width:480px){
+    #about-container{
+        padding-top: 30%;
+        margin-left: 0;
+    }
+    #row1{
+        margin-left: 1.5%;
+    }
+    #row2{
+        margin-left: 1.5%;
+        margin-top: 4%;
+    }
+    #aboutheading{
+        margin-left: 0%;
+
+    }
+    #aboutfooter{
+        margin-left: 20%;
+    }
+}

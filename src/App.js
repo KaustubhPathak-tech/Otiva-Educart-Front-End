@@ -2,7 +2,7 @@
 
 //importing React hooks.
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -38,6 +38,7 @@ import Chat from "./components/Chat";
 import VerifyOTP from "./Pages/VerifyOTP/VerifyOTP";
 import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
 import Pricing from "./Pages/Pricing/Pricing";
+import Aboutus from "./Pages/Aboutus/Aboutus";
 import Popup from "./components/Popup/Popup";
 import BounceLoader from "react-spinners/BounceLoader";
 import { setCurrentUser } from "./actions/currentUser";
@@ -224,7 +225,7 @@ function App() {
                 ></Route>
 
                 <Route path="/tags" element={<Tags />}></Route>
-                
+                <Route path="/About" element={<Aboutus/>}></Route>
               </Routes>
 
               {/* chatbot */}
@@ -266,9 +267,11 @@ function App() {
                     </a>
                   </span>
                   <span className="privacy">
-                    <a href="https://gi009.000webhostapp.com/" target="_blank">
+                  <Link to="/About"> About us</Link>
+                    {/* <a href="" target="_blank"> 
+                    //https://gi009.000webhostapp.com
                       About us
-                    </a>
+                    </a> */}
                   </span>
                 </div>
                 <div className="footer-1">
