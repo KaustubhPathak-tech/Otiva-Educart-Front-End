@@ -229,7 +229,7 @@ function App() {
               <Chat />
 
               {/* Footer starts here */}
-              <div className="mobileFooter">
+              {/* <div className="mobileFooter">
                 <div
                   className="mobile-footer-content"
                   style={{ fontSize: "9px" }}
@@ -283,7 +283,7 @@ function App() {
                     </a>
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div className="footer">
                 <div className="formalities">
                   <span className="privacy">
