@@ -127,7 +127,7 @@ const Navbar = (src) => {
                   </a></Dropdown.Item>
                   <Dropdown.Item href="#/action-3"><a
                     class="dropdown-item"
-                    href="https://stack-over-flow-clone-2023.netlify.app/"
+                    href=""
                   >
                     StackOverFlow Clone
                   </a></Dropdown.Item>
@@ -306,7 +306,7 @@ const Navbar = (src) => {
                   <li>
                     <a
                       class="dropdown-item"
-                      href="https://stack-over-flow-clone-2023.netlify.app/"
+                      href=""
                     >
                       StackOverFlow Clone
                     </a>
