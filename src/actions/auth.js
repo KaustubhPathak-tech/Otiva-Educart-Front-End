@@ -36,6 +36,17 @@ export const glogin = (authData, navigate) => async (dispatch) => {
     <ToastContainer />;
   }
 };
+export const flogin = (authData, navigate) => async (dispatch) => {
+  try {
+    const { data } = await api.flogIn(authData);
+    dispatch({ type: "LOGIN", data });
+    dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+    navigate("/");
+  } catch (error) {
+    toast.error(error.response.data, { position: "top-center" });
+    <ToastContainer />;
+  }
+};
 export const logout = (authData) => async (dispatch) => {
   try {
     const { data } = await api.logout(authData);

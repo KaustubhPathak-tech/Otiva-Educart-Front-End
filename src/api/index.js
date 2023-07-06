@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://stack-overflow-server.vercel.app" }); // http://localhost:7000
+const API = axios.create({ baseURL: "https://stack-overflow-server.vercel.app" }); // http://localhost:7000 https://stack-overflow-server.vercel.app
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
     req.headers.authorization = `Bearer ${
@@ -11,6 +11,7 @@ API.interceptors.request.use((req) => {
 });
 export const logIn = (authData) => API.post("/user/login", authData);
 export const glogIn = (authData) => API.post("/user/glogin", authData);
+export const flogIn = (authData) => API.post("/user/flogin", authData);
 export const logout = (authData) => API.post("/user/logout", authData);
 export const getPremium = (authData) => API.post("/payment/checkout", authData);
 export const VerifiedPayment = (authData) => API.post("/payment/paymentverification", authData);

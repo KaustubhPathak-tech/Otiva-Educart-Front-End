@@ -70,7 +70,7 @@ const Navbar = (src) => {
             <img src={logo} alt="official logo"></img>
           </Link>
           <Dropdown
-            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
+            className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
             id="drops"
             type="Button"
             // data-bs-toggle="collapse"
