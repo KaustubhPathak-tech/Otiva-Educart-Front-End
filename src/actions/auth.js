@@ -15,7 +15,6 @@ export const signup = (authData, navigate) => async (dispatch) => {
 };
 export const login = (authData, navigate) => async (dispatch) => {
   try {
-    
     const { data } = await api.logIn(authData);
 
     dispatch({ type: "LOGIN", data });
@@ -28,8 +27,18 @@ export const login = (authData, navigate) => async (dispatch) => {
 };
 export const glogin = (authData, navigate) => async (dispatch) => {
   try {
-    
     const { data } = await api.glogIn(authData);
+    dispatch({ type: "LOGIN", data });
+    dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+    navigate("/");
+  } catch (error) {
+    toast.error(error.response.data, { position: "top-center" });
+    <ToastContainer />;
+  }
+};
+export const flogin = (authData, navigate) => async (dispatch) => {
+  try {
+    const { data } = await api.flogIn(authData);
     dispatch({ type: "LOGIN", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
     navigate("/");
@@ -97,7 +106,7 @@ export const reset = (authData, navigate) => async (dispatch) => {
   try {
     const { data } = await api.reset(authData);
     dispatch({ type: "RESET", data });
-    alert("If user exists then password will be updated ! Click Ok to login !");
+    toast.success("Password Reset Successful !", { position: "top-center" });
     navigate("/login");
   } catch (error) {
     toast.error(error.response.data);

@@ -287,11 +287,11 @@
     background-color: #0086d8;
   }
 }
-#landaa{
+#drops{
   display: none;
 }
 @media (max-width:900px){
-  #landaa{
+  #drops{
     display: flex;
     /* align-items: center;
     justify-content: center; */

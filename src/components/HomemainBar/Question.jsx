@@ -10,7 +10,6 @@ const Question = ({ question }) => {
             <div className="display-votes-ans">
                 <p>
                     {question.upVote.length - question.downVote.length}
-
                 </p>
 
                 <p>

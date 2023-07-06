@@ -7,7 +7,6 @@ import User from './Users'
 
 const UsersList = () => {
   const users = useSelector((state) => state.usersReducer)
-  
   return (
     <div className="userList-container">
       {

@@ -63,10 +63,11 @@ function App() {
     setTimeout(() => {
       setPopup(false);
     }, 9000);
-    setLoading(true);
     document.addEventListener("mousedown", () => {
       setPopup(false);
     });
+    
+    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 5000);

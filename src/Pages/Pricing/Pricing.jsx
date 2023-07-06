@@ -82,6 +82,7 @@ const Pricing = () => {
                 <div class="row" style={{ textAlign: "center" }}>
                     <div class="col-lg-4">
                         <Card style={{ width: '18rem', borderColor: "rgb(245, 149, 6)", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }}>
+                            {/* inline styling */}
                             <Card.Img variant="top" src={free} id="img" />
                             <Card.Body>
                                 <Card.Title style={{ textAlign: "center" }}>Free</Card.Title>
