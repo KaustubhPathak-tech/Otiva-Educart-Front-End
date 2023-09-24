@@ -36,8 +36,7 @@ const Signup = () => {
     setLoading(true);
     setTimeout(()=>{setLoading(false)},8000);
     dispatch(signup({ name, email, password }, navigate))
-
-
+    localStorage.setItem("EMAIL",email);
   }
   const handleCopy = () => {
     copy(email)
@@ -75,19 +74,17 @@ const Signup = () => {
               <form id='signupform' onSubmit={handleSubmit}>
 
                 <label htmlFor="name">
-                  <h4 style={{ paddingTop: "10px" }}>Display name</h4>
+                  <h4 style={{ paddingTop: "10px" }}>Name</h4>
                   <input type="text" required name='name' id='name' onChange={(e) => { setName(e.target.value) }} />
                 </label><br />
                 <label htmlFor="email">
                   <h4>Email</h4>
                   <input type="email" required name='email' id='email' onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter Active Email id" ></input><br /><br />
-                  <span style={{color:"red"}}>ALERT </span>
-                  <button type="button" onClick={handleCopy} className='copy'>Click here to Copy Email !</button><br />
-                  <p>You have to Enter email during Verification.</p>
+                  
                 </label>
                 <br />
                 <label htmlFor="password">
-                  <h4 id='pass'>Password</h4><br />
+                  <h4 id='pass'>Password</h4>
                   <input type="password" name="password" required id="password" onChange={(e) => { setPassword(e.target.value) }} /><br />
                   <p>Passwords must contain at least eight characters,<br /> including at least 1 letter and 1 number.</p>
 

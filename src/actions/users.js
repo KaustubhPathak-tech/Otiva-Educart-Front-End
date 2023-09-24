@@ -22,8 +22,7 @@ export const deleteAccount = (id, navigate) => async (dispatch) => {
     const { data } = api.deleteaccount(id);
     dispatch(fetchAllUsers());
     toast.success("Account deleted successfully !",{ position: "top-center" });
-    setTimeout(()=>{navigate("/");},5000);
-    
+    navigate("/");    
   } catch (error) {
     toast.error(error.response.data, { position: "top-center" });
   }

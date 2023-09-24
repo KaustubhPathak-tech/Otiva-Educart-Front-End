@@ -1,4 +1,4 @@
-//eshint version:6
+
 
 //importing React hooks.
 
@@ -33,7 +33,6 @@ import { glogin } from "./actions/auth";
 import Navbar from "./components/navbar/Navbar";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Forgotpassword from "./Pages/ForgotPassword/Forgotpassword";
-import Chat from "./components/Chat";
 import VerifyOTP from "./Pages/VerifyOTP/VerifyOTP";
 import Paymentsuccess from "./Pages/Payment/Paymentsuccess";
 import Pricing from "./Pages/Pricing/Pricing";
@@ -42,8 +41,7 @@ import Popup from "./components/Popup/Popup";
 import BounceLoader from "react-spinners/BounceLoader";
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
-import { inject } from "@vercel/analytics";
-inject();
+
 //main function starts here
 function App() {
   const [loading, setLoading] = useState(false);
@@ -56,7 +54,10 @@ function App() {
     window.location.reload(true);
     localStorage.clear();
   }
+
+
   useEffect(() => {
+    
     setTimeout(() => {
       setPopup(true);
     }, 0);
@@ -95,7 +96,6 @@ function App() {
     dispatch(glogin({ name, email, pic, password }));
   }
   var User = useSelector((state) => state.fetch_current_userReducer);
-
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
@@ -227,7 +227,6 @@ function App() {
               </Routes>
 
               {/* chatbot */}
-              <Chat />
 
               {/* Footer starts here */}
               {/* <div className="mobileFooter">

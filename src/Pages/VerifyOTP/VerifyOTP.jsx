@@ -14,7 +14,8 @@ import Card from 'react-bootstrap/esm/Card';
 const VerifyOTP = () => {
 
     const [loading, setLoading] = useState(false);
-    const [email, setEmail] = useState('');
+    // const [email, setEmail] = useState(localStorage.getItem("EMAIL"));
+    const email=localStorage.getItem("EMAIL");
     const [otp, setOtp] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -33,7 +34,7 @@ const VerifyOTP = () => {
             </div>
             <div className="home-container-2" id='verification'>
                 <div className="verify_header" style={{ display: "block" }}>
-                    <h4 style={{ marginBottom: "20px" }}>Verify Your Account! </h4>
+                    <h4 style={{ marginBottom: "20px" }}>Verify Your Account </h4>
                 </div>
                 <div className="alert" style={{  display: "block" }}>
                     <p style={{ color: "red" }}>Do not Refresh the Page</p>
@@ -43,11 +44,7 @@ const VerifyOTP = () => {
                     <Card style={{ width: '18rem' }} className="card-container">
                         <Card.Body>
                             <Form onSubmit={handleVerify}>
-                                <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Email Id</Form.Label>
-                                    <Form.Control type="email" placeholder="Paste or Enter Copied email  " name="email" required onChange={(e) => { setEmail(e.target.value) }} style={{ fontSize: "12px" }} autoComplete="off" />
-
-                                </Form.Group>
+                                
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>OTP</Form.Label><br />

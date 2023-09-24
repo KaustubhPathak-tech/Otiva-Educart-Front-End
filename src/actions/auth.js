@@ -6,8 +6,6 @@ export const signup = (authData, navigate) => async (dispatch) => {
   try {
     const { data } = await api.signUp(authData);
     dispatch({ type: "SIGNUP", data });
-    // dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    // alert("Sign Up Successful! login session expires in 1 hour!");
     navigate("/verify");
   } catch (error) {
     toast.error(error.response.data, { position: "top-center" });

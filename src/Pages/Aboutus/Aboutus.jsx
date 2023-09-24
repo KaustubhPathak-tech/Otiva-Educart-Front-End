@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Aboutus.css";
-import icon from "../../assets/final logo.webp";
+import icon from "../../assets/otiva.png";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
@@ -50,11 +50,11 @@ const Aboutus = () => {
                   <b>
                     {" "}
                     <span style={{color: "blue" }} id="aboutheading">
-                      Welcome To Stack Over Flow Clone 2023
+                      Welcome To  Otiva Educart
                     </span>{" "}
                   </b>{" "}
                   <br /><br />
-                  Stack Over Flow Clone 2023 is a Professional Educational
+                  Otiva Educart is a Professional Educational
                   Platform. Here we will provide you only interesting content,
                   which you will like very much. We're dedicated to providing
                   you the best of Educational, with a focus on dependability and

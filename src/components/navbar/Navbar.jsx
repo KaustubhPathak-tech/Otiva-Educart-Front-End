@@ -8,7 +8,7 @@ import decode from "jwt-decode";
 import Dropdown from "react-bootstrap/Dropdown";
 
 //importing style
-import logo from "../../assets/logo.png";
+import logo from "../../assets/otiva.png";
 import searchicon from "../../assets/searchicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -66,8 +66,8 @@ const Navbar = (src) => {
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
         <div class="container-fluid">
-          <Link to="/" className="nav-logo nav-item">
-            <img src={logo} alt="official logo"></img>
+          <Link to="/" className="nav-logo">
+            <img src={logo} alt="official logo" width="150px" ></img>
           </Link>
           <Dropdown
             className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
@@ -147,7 +147,7 @@ const Navbar = (src) => {
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
                         <a class="dropdown-item" href="">
-                          StackOverFlow Clone
+                          Otiva Educart
                         </a>
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
@@ -351,7 +351,7 @@ const Navbar = (src) => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="">
-                      StackOverFlow Clone
+                    Otiva Educart
                     </a>
                   </li>
 
