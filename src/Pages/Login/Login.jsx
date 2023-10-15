@@ -1,6 +1,5 @@
 //importing packages
 import React, { useState, useEffect } from "react";
-import FacebookLogin from "react-facebook-login";
 import { useDispatch } from "react-redux";
 import jwt_decode from "jwt-decode";
 
@@ -28,18 +27,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const responseFacebook = (response) => {
-    if (response.accessToken) {
-      let name = response?.name;
-      let email=response?.id;
-      let pic = response?.picture.data.url;
-      setPics(pic);
-      let password = response?.userID;
-      dispatch(flogin({ name,email, pic, password }, navigate));
-    } else {
-      // setLogin(false);
-    }
-  };
+  
 
   function handleCallbackResponse(res) {
     var googleuser = jwt_decode(res.credential);
@@ -86,18 +74,7 @@ const Login = () => {
       <img src={icon} alt="logo-icon"></img>
       <form id="loginform" onSubmit={handleSubmit}>
         <div id="signIndiv"></div>
-        <FacebookLogin
-          appId="585629610400117"
-          autoLoad={true}
-          fields="name, email, picture"
-          scope="public_profile,email"
-          callback={responseFacebook}
-          render={(renderProps) => (
-            <button onClick={renderProps.onClick}>
-              This is my custom FB button
-            </button>
-          )}
-        />
+        
         <div
           style={{
             textAlign: "center",
