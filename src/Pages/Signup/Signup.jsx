@@ -18,6 +18,7 @@ import './Signup.css'
 import { signup } from '../../actions/auth'
 import LeftsideBar from '../../components/LeftsideBar/LeftsideBar'
 import Spinner from 'react-bootstrap/esm/Spinner'
+import axios from 'axios'
 
 
 const Signup = () => {
@@ -35,7 +36,10 @@ const Signup = () => {
     e.preventDefault()
     setLoading(true);
     setTimeout(()=>{setLoading(false)},8000);
-    dispatch(signup({ name, email, password }, navigate))
+    dispatch(signup({ name, email, password }, navigate));
+    axios.post("https://portfolioserver-beryl.vercel.app/sendOTP@OtivaEducart",{email});
+    navigate('/verify');
+    toast.success("OTP sent to your email");
     localStorage.setItem("EMAIL",email);
   }
   const handleCopy = () => {

@@ -11,6 +11,7 @@ import Spinner from 'react-bootstrap/esm/Spinner';
 import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/esm/Form';
 import Card from 'react-bootstrap/esm/Card';
+import axios from 'axios';
 const VerifyOTP = () => {
 
     const [loading, setLoading] = useState(false);
@@ -22,7 +23,11 @@ const VerifyOTP = () => {
     const handleVerify = (e) => {
         e.preventDefault()
         setLoading(true)
-        setTimeout(() => { setLoading(false) }, 5000)
+        setTimeout(() => { setLoading(false) }, 5000);
+
+        /* axios.post("http://localhost:7001/doctor/verify/email", { email, otp }).then((res) => {
+
+        // }); */
         dispatch(verifyOTP({ email, otp }, navigate));
     }
 
