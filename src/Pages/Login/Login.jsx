@@ -11,7 +11,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
-import icon from "../../assets/icon.png";
+import icon from "../../assets/favicon.png";
 
 //importing component
 import { login } from "../../actions/auth";
@@ -71,7 +71,7 @@ const Login = () => {
         <LeftsideBar />
       </div>
 
-      <img src={icon} alt="logo-icon"></img>
+      <img src={icon} alt="logo-icon" width="40px"></img>
       <form id="loginform" onSubmit={handleSubmit}>
         <div id="signIndiv"></div>
         

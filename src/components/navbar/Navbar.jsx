@@ -65,7 +65,7 @@ const Navbar = (src) => {
   return (
     <div className="navigation">
       <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid myfavnav">
           <Link to="/" className="nav-logo">
             <img src={logo} alt="official logo" width="150px" ></img>
           </Link>
