@@ -22,6 +22,7 @@ import Button from "react-bootstrap/esm/Button";
 //main function goes here
 const Navbar = (src) => {
   const [searchKeyword, setSearchKeyword] = useState("");
+  console.log(searchKeyword);
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   var User = useSelector((state) => state.fetch_current_userReducer);
@@ -59,8 +60,6 @@ const Navbar = (src) => {
       }
     }
   }, [dispatch]);
-  // <script async src="https://cse.google.com/cse.js?cx=e532ff84caaf848b5">
-  // </script>
 
   return (
     <div className="navigation">
@@ -73,9 +72,6 @@ const Navbar = (src) => {
             className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
             id="drops"
             type="Button"
-            // data-bs-toggle="collapse"
-            // data-bs-target="#navbarSupportedContent"
-            // aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
@@ -186,35 +182,12 @@ const Navbar = (src) => {
                   </Dropdown>
                 </li>
               </ul>
-              <form
-                className="d-flex"
-                role="search"
-                id="searchform"
-                style={{ marginLeft: "24px", width: "50%" }}
-              >
-                <img
-                  src={searchicon}
-                  alt="searchicon"
-                  width="18px"
-                  className="searchicon"
-                />
-                <input
-                  type="text"
-                  name="searchbox"
-                  id="searchinput"
-                  placeholder="Search..."
-                  className="form-control me-2"
-                  autoComplete="off"
-                />
-              </form>
-              <br />
               <Dropdown.Item href="">
                 {User === null ? (
-                  <>
+                  <div className="accounts">
                     <Link
                       to="/login"
                       className="nav-links nav-btn nav-item fonting"
-                      style={{ marginLeft: "21px" }}
                     >
                       Log in
                     </Link>
@@ -229,7 +202,7 @@ const Navbar = (src) => {
                     >
                       Sign up
                     </Link>
-                  </>
+                  </div>
                 ) : (
                   <>
                     <div className="avatar" style={{ textAlign: "center" }}>
@@ -248,14 +221,14 @@ const Navbar = (src) => {
                         </Link>
                       </Avatar>
                     </div>
-                    {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                     <Link
                       className="nav-links nav-btn nav-item fonting"
                       onClick={handleLogout}
                       id="special-button"
                       style={{
+                        marginBottom: "30px",
                         marginLeft: "20px",
-                        padding: "3px 30px 7px 34px",
+                        padding: "5px 30px 6px 30px",
                       }}
                     >
                       Log out
@@ -263,7 +236,7 @@ const Navbar = (src) => {
                   </>
                 )}
               </Dropdown.Item>
-
+              <br />
               <Dropdown.Item
                 href="#/action-3"
                 style={{ marginBottom: "15px", marginLeft: "12px" }}
@@ -278,7 +251,7 @@ const Navbar = (src) => {
                       id="special-button"
                       style={{
                         marginLeft: "8px",
-                        padding: "5px 30px 7px 30px",
+                        padding: "5px 34px 7px 34px",
                       }}
                     >
                       {premiumcontent}
@@ -288,23 +261,7 @@ const Navbar = (src) => {
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          {/* <button
-            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
-            id="toggle-button"
-            type="Button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
 
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
-
-
-          </button> */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li>
@@ -430,50 +387,11 @@ const Navbar = (src) => {
                         )
                     )}
                 </div>
-                {/* <div
-                  class="modal fade"
-                  id="formModel3"
-                  tabindex="-1"
-                  aria-labelledby="formModelLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                          Enquiry Form
-                        </h5>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="row">
-                          <div class="col-md-6 popup_form"></div>
-                          <div class="col-md-6 form_img">
-                            <img
-                              src="https://cdn3d.iconscout.com/3d/premium/thumb/registration-form-5228737-4379744.png?f=webp"
-                              alt="form_dummy"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#magneticGrilModel"
-                data-bs-dismiss="modal" data-bs-target="#formModel">Go to Details</button>
-            </div>
-                    </div>
-                  </div>
-                </div> */}
               </>
             )}
             &nbsp;&nbsp;
             {User === null ? (
-              <>
+              <div>
                 <Link
                   to="/login"
                   className="nav-links nav-btn nav-item fonting"
@@ -487,7 +405,7 @@ const Navbar = (src) => {
                 >
                   Sign up
                 </Link>
-              </>
+              </div>
             ) : (
               <>
                 <Link

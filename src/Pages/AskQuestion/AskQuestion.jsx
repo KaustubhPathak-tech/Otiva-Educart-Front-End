@@ -17,23 +17,25 @@ const AskQuestion = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(User!=null){
-    dispatch(
-      askQuestion(
-        {
-          questionTitle,
-          questionBody,
-          questionTags,
-          userPosted: User.result.name,
-          userId: User?.result?._id,
-        },
-        navigate
-      )
-    
-    )}else{toast.error("Please Login to ask Question",{position:"top-center"})};
-    
+    if (User != null) {
+      dispatch(
+        askQuestion(
+          {
+            questionTitle,
+            questionBody,
+            questionTags,
+            userPosted: User.result.name,
+            userId: User?.result?._id,
+          },
+          navigate
+        )
+      );
+    } else {
+      toast.error("Please Login to ask Question", { position: "top-center" });
+    }
+
     dispatch(setCurrentUser(null));
-     //may be modified further
+    //may be modified further
   };
 
   const handleEnter = (e) => {
@@ -48,10 +50,8 @@ const AskQuestion = () => {
       </div>
 
       <div className="ask-ques-container">
-        
-          
-          <h1>Ask a Public Question</h1>
-       
+        <h3>Ask a Public Question</h3>
+
         <form onSubmit={handleSubmit}>
           <div className="ask-form-container">
             <label htmlFor="ask-ques-tite">
@@ -113,11 +113,9 @@ const AskQuestion = () => {
             </label>
           </div>
           <br />
-          <input
-            type="submit"
-            value="Submit"
-            className="review-btn"
-          />
+          <div className="submitbtnend">
+            <input type="submit" value="Submit" className="review-btn" />
+          </div>
         </form>
       </div>
       <ToastContainer />

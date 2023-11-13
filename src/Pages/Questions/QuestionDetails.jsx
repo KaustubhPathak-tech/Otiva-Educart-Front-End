@@ -84,7 +84,7 @@ const QuestionDetails = () => {
             .map((question) => (
               <div key={question._id}>
                 <section className="questions-details-container">
-                  <h1>{question.questionTitle}</h1>
+                  <h4>{question.questionTitle}</h4>
                   <div className="question-details-container-2">
                     <div className="question-votes">
                       <img
@@ -151,7 +151,7 @@ const QuestionDetails = () => {
                 <hr />
                 {question.noOfAnswer !== 0 && (
                   <section>
-                    <h3>{question.noOfAnswer} Answers</h3>
+                    <h5>{question.noOfAnswer} Answers</h5>
                     <DisplayAnswer
                       key={question._id}
                       question={question}

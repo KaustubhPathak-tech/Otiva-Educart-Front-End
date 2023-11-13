@@ -1,9 +1,18 @@
+#aboutHead{
+    font-size: 20px;
+    font-weight: 600;
+    color: #009dff;
+}
 #aboutheading{
     margin-left: 35%;
 }
 #aboutfooter{
     margin-left: 40%;
 
+}
+
+.aboutUspara p{
+    font-size: 16px;
 }
 @media(max-width:480px){
     #about-container{

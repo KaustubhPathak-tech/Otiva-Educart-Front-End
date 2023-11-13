@@ -73,10 +73,10 @@ const Pricing = () => {
 
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
 
-                    <h1>
-                        Pricing
+                    <h3>
+                        Plans &nbsp;&nbsp;
                         <img src={subscribe} alt="subscribe" width="40px" />
-                    </h1>
+                    </h3>
 
                 </div>
                 <div class="row" style={{ textAlign: "center" }}>
@@ -87,7 +87,7 @@ const Pricing = () => {
                             <Card.Body>
                                 <Card.Title style={{ textAlign: "center" }}>Free</Card.Title>
                                 <Card.Text>
-                                    <h4>₹ 1 /month</h4>
+                                    <h4>₹ 1 / month</h4>
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
@@ -107,7 +107,7 @@ const Pricing = () => {
                             <Card.Body>
                                 <Card.Title style={{ textAlign: "center" }}>Silver</Card.Title>
                                 <Card.Text>
-                                    <h4>₹ 100 /month</h4>
+                                    <h4>₹ 100 / month</h4>
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
@@ -123,7 +123,7 @@ const Pricing = () => {
                             <Card.Body>
                                 <Card.Title style={{ textAlign: "center" }}>Gold</Card.Title>
                                 <Card.Text>
-                                    <h4>₹ 1000 /month</h4>
+                                    <h4>₹ 1000 / month</h4>
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
