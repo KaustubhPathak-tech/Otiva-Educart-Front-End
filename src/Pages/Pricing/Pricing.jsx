@@ -74,7 +74,7 @@ const Pricing = () => {
                 <div className="heading" style={{ textAlign: "center", margin: "2% auto" }}>
 
                     <h3>
-                        Plans &nbsp;&nbsp;
+                        <b>Plans</b> &nbsp;&nbsp;
                         <img src={subscribe} alt="subscribe" width="40px" />
                     </h3>
 
