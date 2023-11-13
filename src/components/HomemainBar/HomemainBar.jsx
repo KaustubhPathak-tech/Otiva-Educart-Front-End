@@ -34,9 +34,9 @@ const Homemainbar = () => {
     <div className="home-main-bar">
       <div className="intro-container">
         {location.pathname === "/" ? (
-          <h1>Top Questions</h1>
+          <h3>Top Questions</h3>
         ) : (
-          <h1>All Questions</h1>
+          <h3>All Questions</h3>
         )}
         <button className="ask-btn" onClick={redirect}>
           Ask Question
@@ -50,7 +50,7 @@ const Homemainbar = () => {
           <h1>Loading...</h1>
         ) : (
           <>
-            <p id="noOfQuestions">{questionsList.data.length} Questions </p>
+            {/* <p id="noOfQuestions">{questionsList.data.length} Questions </p> */}
             <QuestionList questionsList={questionsList.data} />
           </>
         )}

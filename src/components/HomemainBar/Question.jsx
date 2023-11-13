@@ -12,7 +12,8 @@ const Question = ({ question }) => {
                     {question.upVote.length - question.downVote.length}
                 </p>
 
-                <p>
+                <p className='question-detail-columns'>
+                    
                     Votes
                 </p>
 
@@ -22,19 +23,19 @@ const Question = ({ question }) => {
                     {question.noOfAnswer}
 
                 </p>
-                <p>Answers</p>
+                <p className='question-detail-columns'>Answers</p>
 
 
             </div>
             <div className='display-question-details'>
-                <Link to={`/Questions/${question._id}`} className='question-title-link'>
+                <Link to={`/Questions/${question._id}`} className='question-title-link question-detail-columns'>
                     {question.questionTitle}
                 </Link>
                 <div className="display-tags-time">
                     <div className="display-tags">
                         {
                             question.questionTags.map((tags) => (
-                                <p key={tags}>{tags}</p>
+                                <p key={tags} className='favTags'>{tags}</p>
                             ))
                         }
                     </div>

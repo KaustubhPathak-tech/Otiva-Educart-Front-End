@@ -37,10 +37,6 @@ const Signup = () => {
     setLoading(true);
     setTimeout(()=>{setLoading(false)},8000);
     dispatch(signup({ name, email, password }, navigate));
-    axios.post("https://portfolioserver-beryl.vercel.app/sendOTP@OtivaEducart",{email});
-    navigate('/verify');
-    toast.success("OTP sent to your email");
-    localStorage.setItem("EMAIL",email);
   }
   const handleCopy = () => {
     copy(email)

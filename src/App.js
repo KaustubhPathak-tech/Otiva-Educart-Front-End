@@ -1,5 +1,3 @@
-
-
 //importing React hooks.
 
 import React from "react";
@@ -45,7 +43,7 @@ import ScrolltoTop from "./components/ScrolltoTop";
 //main function starts here
 function App() {
   const [loading, setLoading] = useState(false);
-  
+
   // var stat = payment?.status;
   // var expiry = decodedToken.exp*1000;
   // console.log(expiry);
@@ -55,9 +53,7 @@ function App() {
     localStorage.clear();
   }
 
-
   useEffect(() => {
-    
     setTimeout(() => {
       setPopup(true);
     }, 0);
@@ -67,7 +63,7 @@ function App() {
     document.addEventListener("mousedown", () => {
       setPopup(false);
     });
-    
+
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -98,17 +94,19 @@ function App() {
   var User = useSelector((state) => state.fetch_current_userReducer);
   useEffect(() => {
     /* global google */
-    google.accounts.id.initialize({
-      client_id:
-        "602166184134-sj45i02o9tsjsc05h931q4mf0q1ogpnf.apps.googleusercontent.com",
-      callback: handleCallbackResponse,
-    });
+    setTimeout(() => {
+      google.accounts.id.initialize({
+        client_id:
+          "602166184134-sj45i02o9tsjsc05h931q4mf0q1ogpnf.apps.googleusercontent.com",
+        callback: handleCallbackResponse,
+      });
 
-    if (User === null) {
-      google.accounts.id.prompt();
-    } else {
-      google.accounts.id.cancel();
-    }
+      if (User === null) {
+        google.accounts.id.prompt();
+      } else {
+        google.accounts.id.cancel();
+      }
+    }, 3000);
   }, [User]);
   return (
     <div className="App">
@@ -288,28 +286,28 @@ function App() {
                 <div className="formalities">
                   <span className="privacy">
                     <a
-                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/privacy" //https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/privacy" target="_blank"//https://www.freeprivacypolicy.com/live/38db0dd9-fbb6-4061-9c25-1592ab0c2b71
                     >
                       Privacy Policy
                     </a>
                   </span>
                   <span className="privacy">
                     <a
-                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/terms" //https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/terms" target="_blank" //https://www.termsandconditionsgenerator.com/live.php?token=tYqQECMeMDgxJcCqTI7Xp3663TywnoK0
                     >
                       Terms and Conditions
                     </a>
                   </span>
                   <span className="privacy">
                     <a
-                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/refund" //https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/refund" target="_blank" //https://www.freeprivacypolicy.com/live/2c6571f4-af7f-4e1b-bc44-d892c53f4b46
                     >
                       Refund and Cancellation Policy
                     </a>
                   </span>
                   <span className="privacy">
                     <a
-                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/contact_us" //https://v3056369-qgvho6pwhg5z.demo077.volusion.com/
+                      href="https://merchant.razorpay.com/policy/LQDvDu1f8iCWFD/contact_us" target="_blank" //https://v3056369-qgvho6pwhg5z.demo077.volusion.com/
                     >
                       Contact us
                     </a>

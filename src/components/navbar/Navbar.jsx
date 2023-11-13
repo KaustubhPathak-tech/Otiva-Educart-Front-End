@@ -17,9 +17,11 @@ import "./Navbar.css";
 //importing components
 import Avatar from "./Avatar";
 import { setCurrentUser } from "../../actions/currentUser";
+import Button from "react-bootstrap/esm/Button";
 
 //main function goes here
 const Navbar = (src) => {
+  const [searchKeyword, setSearchKeyword] = useState("");
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   var User = useSelector((state) => state.fetch_current_userReducer);
@@ -35,7 +37,7 @@ const Navbar = (src) => {
   } else if (currentplan === "Gold" && stat === "no") {
     premiumcontent = "!";
   }
-  
+  const questionsList = useSelector((state) => state.questionReducer);
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(logout({ email }));
@@ -44,11 +46,9 @@ const Navbar = (src) => {
     Navigate("/");
   };
 
-
   useEffect(() => {
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
   }, [dispatch]);
-
 
   useEffect(() => {
     const existingtoken = User?.token;
@@ -64,10 +64,10 @@ const Navbar = (src) => {
 
   return (
     <div className="navigation">
-      <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
-        <div class="container-fluid myfavnav">
+      <nav className="navbar navbar-expand-md fixed-top bg-body-tertiary">
+        <div className="container-fluid myfavnav">
           <Link to="/" className="nav-logo">
-            <img src={logo} alt="official logo" width="150px" ></img>
+            <img src={logo} alt="official logo" width="150px"></img>
           </Link>
           <Dropdown
             className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around "
@@ -95,12 +95,12 @@ const Navbar = (src) => {
             <Dropdown.Menu style={{ width: "410px" }}>
               <Dropdown.Item href="https://gi009.000webhostapp.com/">
                 <Link to="/About" className="nav-btn nav-item">
-                  About
+                  <b>About</b>
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item href="">
                 <Link to="/pricing" className="nav-btn nav-item">
-                  Pricing
+                  <b>Pricing</b>
                 </Link>
               </Dropdown.Item>
               <ul type="none">
@@ -123,14 +123,14 @@ const Navbar = (src) => {
                           marginLeft: "-10px",
                         }}
                       >
-                        Project
+                        <b>Project</b>
                       </span>
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
                       <Dropdown.Item href="#/action-1">
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="https://myportfolio-pink-eta.vercel.app/"
                         >
                           My Portfolio
@@ -139,20 +139,20 @@ const Navbar = (src) => {
                       <Dropdown.Item href="#/action-2">
                         {" "}
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="https://gi-qnx4.onrender.com/"
                         >
                           News Letter Subscription
                         </a>
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
-                        <a class="dropdown-item" href="">
+                        <a className="dropdown-item" href="">
                           Otiva Educart
                         </a>
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="https://kaustubhpathak-tech.github.io/simon_game/"
                         >
                           Simon Game !
@@ -160,7 +160,7 @@ const Navbar = (src) => {
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="https://kaustubhpathak-tech.github.io/tindog-project/"
                         >
                           Tindog
@@ -168,7 +168,7 @@ const Navbar = (src) => {
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="https://easy-e-life.web.app/"
                         >
                           Easy-e-Life
@@ -176,7 +176,7 @@ const Navbar = (src) => {
                       </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
                         <a
-                          class="dropdown-item"
+                          className="dropdown-item"
                           href="https://sites.google.com/view/gayatrirubberindustries-vasai/home?pli=1"
                         >
                           Gayatri Industries Vasai
@@ -187,7 +187,7 @@ const Navbar = (src) => {
                 </li>
               </ul>
               <form
-                class="d-flex"
+                className="d-flex"
                 role="search"
                 id="searchform"
                 style={{ marginLeft: "24px", width: "50%" }}
@@ -203,7 +203,7 @@ const Navbar = (src) => {
                   name="searchbox"
                   id="searchinput"
                   placeholder="Search..."
-                  class="form-control me-2"
+                  className="form-control me-2"
                   autoComplete="off"
                 />
               </form>
@@ -244,7 +244,7 @@ const Navbar = (src) => {
                           to={`/users/${User?.result?._id}`}
                           style={{ color: "white", textDecoration: "none" }}
                         >
-                          {User.result.name.charAt(0).toUpperCase()}
+                          {User?.result?.name.charAt(0).toUpperCase()}
                         </Link>
                       </Avatar>
                     </div>
@@ -305,37 +305,32 @@ const Navbar = (src) => {
 
 
           </button> */}
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li>
-                <Link
-                  to="https://gi009.000webhostapp.com/"
-                  target="_blank"
-                  className="nav-btn nav-item"
-                >
-                  About
+                <Link to="/About" className="nav-btn nav-item">
+                  <b>About</b>
                 </Link>
               </li>
               <li>
                 <Link to="/pricing" className="nav-btn nav-item">
-                  Pricing
+                  <b>Pricing</b>
                 </Link>
               </li>
-              <li class="dropdown">
+              <li className="dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle nav-item nav-btn"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  className="nav-item nav-btn"
                 >
-                  Projects
+                  <b>Projects</b>
                 </a>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="https://myportfolio-pink-eta.vercel.app/"
                     >
                       My Portfolio
@@ -343,21 +338,21 @@ const Navbar = (src) => {
                   </li>
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="https://gi-qnx4.onrender.com/"
                     >
                       News Letter Subscription
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="">
-                    Otiva Educart
+                    <a className="dropdown-item" href="">
+                      Otiva Educart
                     </a>
                   </li>
 
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="https://kaustubhpathak-tech.github.io/simon_game/"
                     >
                       Simon Game !
@@ -365,7 +360,7 @@ const Navbar = (src) => {
                   </li>
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="https://kaustubhpathak-tech.github.io/tindog-project/"
                     >
                       Tindog
@@ -373,7 +368,7 @@ const Navbar = (src) => {
                   </li>
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="https://easy-e-life.web.app/"
                     >
                       Easy-e-Life
@@ -381,7 +376,7 @@ const Navbar = (src) => {
                   </li>
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="https://sites.google.com/view/gayatrirubberindustries-vasai/home?pli=1"
                     >
                       Gayatri Industries Vasai
@@ -390,23 +385,92 @@ const Navbar = (src) => {
                 </ul>
               </li>
             </ul>
-            <form class="d-flex" role="search" id="searchform">
+            <form className="d-flex" role="search" id="searchform">
               <img
                 src={searchicon}
                 alt="searchicon"
-                width="18px"
+                width="28px"
                 className="searchicon"
               />
 
               <input
                 type="text"
-                name="searchbox"
+                name="searchKeyword"
+                value={searchKeyword}
+                onChange={(e) => setSearchKeyword(e.target.value)}
                 id="searchinput"
                 placeholder="Search..."
-                class="form-control me-2"
                 autoComplete="off"
               />
             </form>
+            {searchKeyword && (
+              <>
+                <div className="searchResult">
+                  {questionsList.data
+                    .filter((city) =>
+                      city.questionTitle
+                        .toLowerCase()
+                        .includes(searchKeyword.toLocaleLowerCase())
+                    )
+                    .map(
+                      (city, index) =>
+                        index < 5 && (
+                          <Link
+                            to={`/Questions/${city._id}`}
+                            onClick={() => {
+                              setSearchKeyword("");
+                            }}
+                            style={{ textDecoration: "none", color: "inherit" }}
+                          >
+                            <div className="specialSearchResult">
+                              <img src={searchicon} width="15px" /> &nbsp;&nbsp;{" "}
+                              {city.questionTitle}
+                            </div>
+                          </Link>
+                        )
+                    )}
+                </div>
+                {/* <div
+                  class="modal fade"
+                  id="formModel3"
+                  tabindex="-1"
+                  aria-labelledby="formModelLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Enquiry Form
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6 popup_form"></div>
+                          <div class="col-md-6 form_img">
+                            <img
+                              src="https://cdn3d.iconscout.com/3d/premium/thumb/registration-form-5228737-4379744.png?f=webp"
+                              alt="form_dummy"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#magneticGrilModel"
+                data-bs-dismiss="modal" data-bs-target="#formModel">Go to Details</button>
+            </div>
+                    </div>
+                  </div>
+                </div> */}
+              </>
+            )}
             &nbsp;&nbsp;
             {User === null ? (
               <>

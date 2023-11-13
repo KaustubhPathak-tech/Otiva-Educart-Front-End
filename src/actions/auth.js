@@ -1,12 +1,24 @@
+import axios from "axios";
 import * as api from "../api";
 import { setCurrentUser } from "./currentUser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export const signup = (authData, navigate) => async (dispatch) => {
+  const { name, email, password } = authData;
   try {
-    const { data } = await api.signUp(authData);
+    const res = await api.signUp(authData);
+    const { data } = res;
+    console.log(res);
     dispatch({ type: "SIGNUP", data });
-    navigate("/verify");
+    if (res.status === 200) {
+      axios.post(
+        "https://portfolioserver-beryl.vercel.app/sendOTP@OtivaEducart",
+        { email }
+      );
+      toast.success("OTP sent to your email");
+      localStorage.setItem("EMAIL", email);
+      navigate("/verify");
+    }
   } catch (error) {
     toast.error(error.response.data, { position: "top-center" });
   }

@@ -21,6 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .intro-container h1 {
@@ -28,7 +29,8 @@
 }
 
 .intro-container .ask-btn {
-  padding: 10px 15px;
+  padding: 8px 15px;
+  
   border-radius: 4px;
   background-color: #009dff;
   color: #fff;
@@ -49,13 +51,20 @@
 }
 
 .display-question-container {
- height: fit-content;
+  height: fit-content;
+  border-radius: 5px;
   width: 105%;
   display: flex;
   align-items: center;
   background-color: #fdf7e2;
-  border-bottom: 1px solid #807a7a;
-  margin-bottom: 5px;
+  /* border-bottom: 1px solid #807a7a; */
+  margin-bottom: 15px;
+  transition: 0.5s;
+}
+.display-question-container:hover{
+  /* box-shadow:rgba(158, 158, 158, 0.25) 0px 4px 5px,
+  rgba(207, 207, 207, 0.12) 0px 4px 5px, rgba(227, 227, 227, 0.12) 0px 4px 6px,rgba(227, 227, 227, 0.12) 0px 4px 6px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .display-question-container .display-votes-ans {
@@ -82,12 +91,21 @@
 .display-question-details p {
   padding: 4px;
   margin: 0%;
+  
+}
+
+.question-detail-columns{
+  font-weight: 400;
 }
 
 .display-tags-time .display-tags {
   display: flex;
   flex-wrap: wrap;
 }
+.favTags{
+  border-radius: 5px;
+}
+
 .display-tags-time {
   display: flex;
   flex-wrap: wrap;

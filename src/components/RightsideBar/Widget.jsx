@@ -36,7 +36,7 @@ const Widget = () => {
           </p>
         </div>
         <div className="right-sidebar-div-2">
-          <img src={blacklogo} alt="pen" width='18' />
+          <img src={comment} alt="pen" width='18' />
           <p>Does your professor pass the Turing test? (Ep. 537)
           </p>
         </div>
