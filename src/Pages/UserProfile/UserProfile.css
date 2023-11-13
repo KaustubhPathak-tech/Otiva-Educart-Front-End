@@ -66,12 +66,6 @@
 
   background-color: white;
 }
-@media(max-width:450px){
-  .editaccountbutton{
-  margin-top: 10px;
-  width: 152px;
-  }
-}
 
 .user-submit-btn {
   padding: 5px 5px;
