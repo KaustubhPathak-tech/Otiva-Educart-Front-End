@@ -160,7 +160,7 @@ const QuestionDetails = () => {
                   </section>
                 )}
                 <section className="post-ans-container">
-                  <h3>Your Answer</h3>
+                  <h4>Your Answer</h4>
                   <form
                     onSubmit={(e) => {
                       hadlePostAns(e, question.answer.length);
