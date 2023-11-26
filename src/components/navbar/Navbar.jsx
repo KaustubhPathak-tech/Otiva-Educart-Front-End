@@ -1,5 +1,8 @@
 //importing packages
 import React, { useEffect, useState } from "react";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -11,16 +14,35 @@ import Dropdown from "react-bootstrap/Dropdown";
 import logo from "../../assets/otiva.png";
 import searchicon from "../../assets/searchicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faMicrophone,
+  faStop,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 //importing components
 import Avatar from "./Avatar";
 import { setCurrentUser } from "../../actions/currentUser";
 import Button from "react-bootstrap/esm/Button";
+import Popup from "../Popup/Popup";
 
 //main function goes here
 const Navbar = (src) => {
+  //speech recognition
+  var [listen, setListen] = useState(false);
+  const startListening = () =>
+    SpeechRecognition.startListening({ continuous: true });
+  var {
+    transcript,
+    browserSupportsSpeechRecognition,
+    resetTranscript,
+  } = useSpeechRecognition();
+
+  // const resetTranscript = () => SpeechRecognition.stopListening();
+
+  transcript && console.log(transcript);
+
   const [searchKeyword, setSearchKeyword] = useState("");
   console.log(searchKeyword);
   const dispatch = useDispatch();
@@ -342,7 +364,14 @@ const Navbar = (src) => {
                 </ul>
               </li>
             </ul>
-            <form className="d-flex" role="search" id="searchform">
+            <form
+              className="d-flex"
+              role="search"
+              id="searchform"
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
+            >
               <img
                 src={searchicon}
                 alt="searchicon"
@@ -353,21 +382,67 @@ const Navbar = (src) => {
               <input
                 type="text"
                 name="searchKeyword"
-                value={searchKeyword}
-                onChange={(e) => setSearchKeyword(e.target.value)}
-                id="searchinput"
-                placeholder="Search..."
+                value={searchKeyword || transcript}
+                onChange={(e) => {
+                  setSearchKeyword(e.target.value);
+                  if (e.target.value.length === 0) {
+                    resetTranscript();
+                  }
+                }}
+                placeholder="Search ... "
                 autoComplete="off"
               />
+
+              <div className="voiceBtn">
+                {listen ? (
+                  <>
+                    <button
+                      onClick={() => {
+                        SpeechRecognition.stopListening();
+                        setListen(false);
+                      }}
+                      data-toggle="tooltip"
+                      title="Stop Listening"
+                      className="voiceBtn"
+                    >
+                      <FontAwesomeIcon icon={faStop}></FontAwesomeIcon>
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => {
+                        startListening();
+                        setListen(true);
+                      }}
+                      data-toggle="tooltip"
+                      title="Search by voice"
+                      className="voiceBtn"
+                    >
+                      <FontAwesomeIcon icon={faMicrophone}></FontAwesomeIcon>
+                    </button>
+                  </>
+                )}
+              </div>
             </form>
-            {searchKeyword && (
+            <div>
+              <Popup
+                trigger={listen}
+                setTrigger={setListen}
+                onClose={listen}
+              ></Popup>
+            </div>
+            {(searchKeyword || transcript) && (
               <>
                 <div className="searchResult">
                   {questionsList.data
                     .filter((city) =>
                       city.questionTitle
                         .toLowerCase()
-                        .includes(searchKeyword.toLocaleLowerCase())
+                        .includes(
+                          searchKeyword.toLocaleLowerCase() ||
+                            transcript.toLocaleLowerCase()
+                        )
                     )
                     .map(
                       (city, index) =>
@@ -376,8 +451,12 @@ const Navbar = (src) => {
                             to={`/Questions/${city._id}`}
                             onClick={() => {
                               setSearchKeyword("");
+                              resetTranscript();
                             }}
-                            style={{ textDecoration: "none", color: "inherit" }}
+                            style={{
+                              textDecoration: "none",
+                              color: "inherit",
+                            }}
                           >
                             <div className="specialSearchResult">
                               <img src={searchicon} width="15px" /> &nbsp;&nbsp;{" "}
@@ -387,6 +466,20 @@ const Navbar = (src) => {
                         )
                     )}
                 </div>
+                {questionsList.data.filter((city) =>
+                  city.questionTitle
+                    .toLowerCase()
+                    .includes(
+                      searchKeyword.toLocaleLowerCase() ||
+                        transcript.toLocaleLowerCase()
+                    )
+                ).length === 0 ? (
+                  <>
+                    <div className="searchResult">No Results Found</div>
+                  </>
+                ) : (
+                  <></>
+                )}
               </>
             )}
             &nbsp;&nbsp;

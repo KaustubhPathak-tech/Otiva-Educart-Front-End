@@ -1,25 +1,41 @@
 .popup{
     position: fixed;
-    top:0;
+    top:7vh;
     left:0;
-    width: 100%;
+    width: 100vw;
     /* padding-top: 1vh; */
-    height: 100vh;
+    height: 93vh;
     background-color: rgba(13, 13, 13, 0.688);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 30;
 }
+
+.popup h4{
+    color: white;
+    z-index: 10;
+    opacity: 2.0;
+}
+
+#voiceimg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
 .popup-inner{
     position: relative;
     /* margin-top: 10vh; */
+    /* border: 1px solid black; */
     padding: 7%;
-    width: 100%;
-    max-width: 640px;
+    width: 0%;
+    height: 10vh;
+    /* max-width: 640px; */
     background-color: #fff;
     border-radius: 5px;
-
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .popup-inner .close-btn{
     position: absolute;

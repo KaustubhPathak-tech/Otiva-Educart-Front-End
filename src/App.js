@@ -43,11 +43,6 @@ import ScrolltoTop from "./components/ScrolltoTop";
 //main function starts here
 function App() {
   const [loading, setLoading] = useState(false);
-
-  // var stat = payment?.status;
-  // var expiry = decodedToken.exp*1000;
-  // console.log(expiry);
-  // var diff = expiry - new Date().getTime();
   function refresh() {
     window.location.reload(true);
     localStorage.clear();
@@ -67,7 +62,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 1000);
   }, []);
 
   // if (isNaN(expiry)) {
