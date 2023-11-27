@@ -380,6 +380,8 @@ const Navbar = (src) => {
                             to={`/Questions/${city._id}`}
                             onClick={() => {
                               setSearchKeyword("");
+                              SpeechRecognition.stopListening();
+                              setListen(false);
                               resetTranscript();
                             }}
                             style={{
@@ -411,6 +413,8 @@ const Navbar = (src) => {
                             target="_blank"
                             onClick={() => {
                               setSearchKeyword("");
+                              SpeechRecognition.stopListening();
+                              setListen(false);
                               resetTranscript();
                             }}
                             style={{

@@ -15,7 +15,7 @@ const StackExchangeComponent = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://stack-overflow-server.vercel.app/api/stackexchange"
+          "https://stack-overflow-server.vercel.app/api/stackexchange"  //
         );
         setQuestions(response.data.items);
         dispatch({ type: "STACK_EXCHANGE", payload: response.data.items });
