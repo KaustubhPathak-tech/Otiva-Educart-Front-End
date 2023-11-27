@@ -39,6 +39,8 @@ import Popup from "./components/Popup/Popup";
 import BounceLoader from "react-spinners/BounceLoader";
 import { setCurrentUser } from "./actions/currentUser";
 import ScrolltoTop from "./components/ScrolltoTop";
+import StackExchangeComponent from "./Pages/StackExchange/StackExchangeComponent";
+import { fetchStackquestions } from "./actions/stackquestion";
 
 //main function starts here
 function App() {
@@ -62,19 +64,16 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 1000);
   }, []);
 
-  // if (isNaN(expiry)) {
-  // } else {
-  //   setInterval(refresh, diff);
-  // }
   const [pics, setPics] = useState("");
   const [popup, setPopup] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAllquestions());
     dispatch(fetchAllUsers());
+    dispatch(fetchStackquestions());
   }, [dispatch]);
   function handleCallbackResponse(res) {
     var googleuser = jwt_decode(res.credential);
@@ -133,48 +132,7 @@ function App() {
           {/* portrait mode content */}
           <div className="portrait">
             <BrowserRouter>
-              {/* This is Welcome Popup */}
-              {/* <Popup trigger={popup} setTrigger={setPopup} onClose={popup}>
-                <h5 style={{ textAlign: "center" }}>
-                  {" "}
-                  <blink>
-                    <div style={{ color: "red", textAlign: "center" }}>
-                      <b>ALERT !</b>{" "}
-                    </div>
-                  </blink>{" "}
-                  <br />
-                  &nbsp;&nbsp;All Payments are in{" "}
-                  <b style={{ color: "red" }}>Test Mode</b>
-                </h5>
-                <br />
-                <h5 style={{ textAlign: "center" }}>
-                  Use these Card Details ⬇️
-                </h5>
-                <p style={{ position: "absolute", marginLeft: "16%" }}>
-                  Card No : 4111 1111 1111 1111
-                </p>
-                <br />
-                <p style={{ position: "absolute", marginLeft: "16%" }}>
-                  Expiry : Any future date
-                </p>
-                <br />
-                <p style={{ position: "absolute", marginLeft: "16%" }}>
-                  Card Holder's Name : Any Name
-                </p>
-                <br />
-                <p style={{ position: "absolute", marginLeft: "16%" }}>
-                  CVV : Any number
-                </p>
-                <br />
-                <br />
-                <h5 style={{ textAlign: "center" }}>
-                  Use these UPI Details ⬇️
-                </h5>
-                <p style={{ position: "absolute", marginLeft: "16%" }}>
-                  UPI id: success@razorpay
-                </p>
-                <br />
-              </Popup> */}
+              
 
               {/* This is navigation bar */}
               <Navbar src={pics} />
@@ -215,6 +173,7 @@ function App() {
                   element={<DisplayQuestion />}
                 ></Route>
 
+                <Route path="/stackexchange" element={<StackExchangeComponent />}></Route>
                 <Route path="/tags" element={<Tags />}></Route>
                 <Route path="/About" element={<Aboutus />}></Route>
               </Routes>

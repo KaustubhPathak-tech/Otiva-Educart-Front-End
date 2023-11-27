@@ -44,7 +44,7 @@ const Navbar = (src) => {
   transcript && console.log(transcript);
 
   const [searchKeyword, setSearchKeyword] = useState("");
-  console.log(searchKeyword);
+  // console.log(searchKeyword);
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   var User = useSelector((state) => state.fetch_current_userReducer);
@@ -61,6 +61,7 @@ const Navbar = (src) => {
     premiumcontent = "!";
   }
   const questionsList = useSelector((state) => state.questionReducer);
+  const stacklist = useSelector((state) => state.stackReducer);
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(logout({ email }));
@@ -121,89 +122,12 @@ const Navbar = (src) => {
                   <b>Pricing</b>
                 </Link>
               </Dropdown.Item>
-              <ul type="none">
-                <li>
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      variant="info"
-                      id="dropdown-basic"
-                      style={{
-                        backgroundColor: "white",
-                        border: "none",
-                        color: "white",
-                      }}
-                    >
-                      <span
-                        style={{
-                          color: "black",
-                          fontSize: "13px",
-                          fontWeight: "600",
-                          marginLeft: "-10px",
-                        }}
-                      >
-                        <b>Project</b>
-                      </span>
-                    </Dropdown.Toggle>
+              <Dropdown.Item href="">
+                <Link to="/stackexchange" className="nav-btn nav-item">
+                  <b>Exchangehub</b>
+                </Link>
+              </Dropdown.Item>
 
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">
-                        <a
-                          className="dropdown-item"
-                          href="https://myportfolio-pink-eta.vercel.app/"
-                        >
-                          My Portfolio
-                        </a>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        {" "}
-                        <a
-                          className="dropdown-item"
-                          href="https://gi-qnx4.onrender.com/"
-                        >
-                          News Letter Subscription
-                        </a>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        <a className="dropdown-item" href="">
-                          Otiva Educart
-                        </a>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        <a
-                          className="dropdown-item"
-                          href="https://kaustubhpathak-tech.github.io/simon_game/"
-                        >
-                          Simon Game !
-                        </a>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        <a
-                          className="dropdown-item"
-                          href="https://kaustubhpathak-tech.github.io/tindog-project/"
-                        >
-                          Tindog
-                        </a>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        <a
-                          className="dropdown-item"
-                          href="https://easy-e-life.web.app/"
-                        >
-                          Easy-e-Life
-                        </a>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        <a
-                          className="dropdown-item"
-                          href="https://sites.google.com/view/gayatrirubberindustries-vasai/home?pli=1"
-                        >
-                          Gayatri Industries Vasai
-                        </a>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </li>
-              </ul>
               <Dropdown.Item href="">
                 {User === null ? (
                   <div className="accounts">
@@ -296,7 +220,12 @@ const Navbar = (src) => {
                   <b>Pricing</b>
                 </Link>
               </li>
-              <li className="dropdown">
+              <li>
+                <Link to="/stackexchange" className="nav-btn nav-item">
+                  <b>Exchangehub</b>
+                </Link>
+              </li>
+              {/* <li className="dropdown">
                 <a
                   className="nav-link dropdown-toggle nav-item nav-btn"
                   href="#"
@@ -362,7 +291,7 @@ const Navbar = (src) => {
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
             <form
               className="d-flex"
@@ -463,6 +392,37 @@ const Navbar = (src) => {
                               {city.questionTitle}
                             </div>
                           </Link>
+                        )
+                    )}
+                  {stacklist?.data
+                    ?.filter((city) =>
+                      city?.title
+                        .toLowerCase()
+                        .includes(
+                          searchKeyword.toLocaleLowerCase() ||
+                            transcript.toLocaleLowerCase()
+                        )
+                    )
+                    .map(
+                      (city, index) =>
+                        index < 5 && (
+                          <a
+                            href={city.link}
+                            target="_blank"
+                            onClick={() => {
+                              setSearchKeyword("");
+                              resetTranscript();
+                            }}
+                            style={{
+                              textDecoration: "none",
+                              color: "inherit",
+                            }}
+                          >
+                            <div className="specialSearchResult">
+                              <img src={searchicon} width="15px" /> &nbsp;&nbsp;{" "}
+                              {city.title}
+                            </div>
+                          </a>
                         )
                     )}
                 </div>

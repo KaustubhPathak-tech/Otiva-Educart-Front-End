@@ -44,6 +44,28 @@
   background-color: #0086d8;
 }
 
+.headimgs{
+  display: inline-block;
+  padding-top: 1vh;
+  padding-left: 3vw;
+  height: 60px;
+  width: 100%;
+}
+.spinner_exchange{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 85vw;
+
+}
+
+.exchangehumain{
+  display: flex;
+  width: 75vw;
+}
+
+
 #noOfQuestions{
     margin-left: 5%;
     font-size: 22px;
@@ -140,5 +162,26 @@
      border-bottom: 1px solid #807a7a;
      margin-bottom: 5px;
    }
+
+   .headimgs{
+    display: inline-block;
+    padding-top: 3vh;
+    padding-left: 10vw;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .spinner_exchange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 90vw;
+  
+  }
+   .exchangehumain{
+    width: 100vw;
+    margin-left: -30px;
+  }
 
 }
