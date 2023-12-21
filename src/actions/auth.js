@@ -75,7 +75,6 @@ export const getpremium = (authData, navigate) => async (dispatch) => {
     const { data } = await api.getPremium(authData);
 
     dispatch({ type: "GET_PREMIUM", data });
-
     const options = {
       key: key, // Enter the Key ID generated from the Dashboard
       amount: data.order.amount, //order.amount Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -86,7 +85,7 @@ export const getpremium = (authData, navigate) => async (dispatch) => {
       image:
         "https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-official.svg",
       order_id: data.order.id, //order.id This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: `https://stack-overflow-server.vercel.app/payment/paymentverification/${data.order.receipt}/${data.order.amount}`, // https://stack-overflow-server-f2uu.onrender.com
+      callback_url: `https://stack-overflow-server.vercel.app/payment/paymentverification/${data.order.receipt}/${data.order.amount}`, //http://localhost:7000 
       modal: {
         backdropclose: "true",
       },
